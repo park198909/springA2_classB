@@ -1,5 +1,8 @@
 # springA2_classB
 오후반 스프링 조별 포트폴리오
+
+## git mind 링크 : 링크: https://gitmind.com/app/docs/mebxr6jf 비밀번호: 2595
+
 ## 주제.
 
 ### 1. 온라인 쇼핑몰 웹사이트
