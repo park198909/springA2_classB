@@ -20,6 +20,7 @@
 ![Product Plan](https://github.com/park198909/springA2_classB/assets/133085347/fe345c23-ac19-4192-8da6-172e09202602)
 
 ## 기획서
+<p align="center">
 <img width="640" alt="슬라이드0001" src="https://github.com/park198909/springA2_classB/assets/133085347/7eaedc65-d09b-4515-bdfb-e3476883087f">
 <img width="640" alt="슬라이드0002" src="https://github.com/park198909/springA2_classB/assets/133085347/95e0e160-feb9-430f-90f9-db6c9cb734d9">
 <img width="640" alt="슬라이드0003" src="https://github.com/park198909/springA2_classB/assets/133085347/663b7281-a195-414f-b1eb-f7a07335953e">
@@ -51,3 +52,4 @@
 <img width="640" alt="슬라이드0029" src="https://github.com/park198909/springA2_classB/assets/133085347/c05d062d-03c4-4eab-9484-5da3f8f211bc">
 <img width="640" alt="슬라이드0030" src="https://github.com/park198909/springA2_classB/assets/133085347/3be9181a-612d-4ef2-984e-cc467a3f94f6">
 <img width="640" alt="슬라이드0031" src="https://github.com/park198909/springA2_classB/assets/133085347/c645d965-c6ef-48f9-812c-9e14ef8d9ccd">
+  </
