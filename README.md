@@ -17,4 +17,4 @@
 - outlines - header, footer 작성
 
 #### - 참고한 링크
-<a href="https://github.com/yonggyo1125/springboard">github.com</a>
+<a href="https://github.com/yonggyo1125/springboard" target="_blank"><img src="https://img.shields.io/badge/github-181717?style=plastic&logo=github&logoColor=white"/></a>
