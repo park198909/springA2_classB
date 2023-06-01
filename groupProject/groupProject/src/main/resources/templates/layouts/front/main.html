@@ -5,6 +5,7 @@
         <meta name="_csrf" th:content="${_csrf.token}">
         <meta name="_csrf_header" th:content="${_csrf.headerName}">
         <title th:if="${pageTitle != null}" th:text="${pageTitle}"></title>
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
         <link rel="stylesheet" type="text/css" th:href="@{/css/front/style.css?v={v}(v=${cssJsVersion})}">
         <link rel="stylesheet" type="text/css" th:each="file : ${addCss}"
               th:href="@{/css/front/{cssFile}.css?v={v}(cssFile=${file}, v=${cssJsVersion})}">
@@ -21,7 +22,7 @@
         <header th:replace="~{outlines/front/header::common}"></header>
         <main layout:fragment="content"></main>
         <footer th:replace="~{outlines/front/footer::common}"></footer>
-        <iframe name="ifrmProcess" class="dn" visibility="hidden" ></iframe>
+        <iframe name="ifrmProcess" class="dn"></iframe>
     </body>
 
 </html>
