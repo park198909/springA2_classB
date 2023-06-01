@@ -28,6 +28,12 @@
         - ojdbc8
         - querydsl
         - ModelMapper
+    
+    application.properties 
+        - server.port
+        - livereload
+        - thymeleaf
+
 
 - layouts - main 작성
 - outlines - header, footer 작성
