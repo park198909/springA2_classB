@@ -28,6 +28,7 @@
         - ojdbc8
         - querydsl
         - ModelMapper
+        - thymeleaf layout
     
     application.properties 
         - server.port
