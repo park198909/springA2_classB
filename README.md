@@ -19,7 +19,7 @@
 ## 로고 시안
 <img width="480" alt="로고시안" src="https://github.com/park198909/springA2_classB/assets/133085347/248b96ca-06ba-418e-961c-db45947e0a92">
 
-![001](https://github.com/park198909/springA2_classB/assets/133085347/e31bc0bb-0a1b-4d7b-9c54-1b8ce249b398)
-![002](https://github.com/park198909/springA2_classB/assets/133085347/71a72590-03b7-43f2-ada2-514bff280b25)
-![003](https://github.com/park198909/springA2_classB/assets/133085347/304fa254-30d8-4d53-9fd6-d21739425801)
-![004](https://github.com/park198909/springA2_classB/assets/133085347/c0becd17-3605-4775-af47-a89a11577c64)
+![001](https://github.com/park198909/springA2_classB/assets/133085347/fb21a5e8-0dc3-44af-88d6-716844019cab)
+![002](https://github.com/park198909/springA2_classB/assets/133085347/4262c27d-444c-4fe6-99c1-90aa4c527cae)
+![003](https://github.com/park198909/springA2_classB/assets/133085347/1a60dc9e-4a91-41df-8ba2-586e60956f67)
+![004](https://github.com/park198909/springA2_classB/assets/133085347/c00da140-87ab-4f85-b181-f1dd1942496a)
