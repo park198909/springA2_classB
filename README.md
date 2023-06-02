@@ -15,3 +15,6 @@
 
 
                - 부가 기능 : , 상담||후기||퀴즈, 카테고리 나누기, 관리자페이지
+
+## 로고 시안
+<img width="480" alt="로고시안" src="https://github.com/park198909/springA2_classB/assets/133085347/248b96ca-06ba-418e-961c-db45947e0a92">
