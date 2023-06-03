@@ -7,8 +7,45 @@
 
 ### 1. 온라인 쇼핑몰 웹사이트
 
+    - 필요한 기능 : 메인페이지, 마이페이지(회원 정보 변경), 회원가입&로그인, 아이디&비밀번호 찾기, 메뉴 페이지, 메뉴 상세페이지(), 장바구니, 주문내역확인(조회), 결제 페이지, 결제완료 페이지 검색
+
+    - 부가 기능 : , 상담||후기||퀴즈, 카테고리 나누기, 관리자페이지
+               
+
+## 2023/06/01
+### 프론트 (main, header, footer) 만들기
+
+### Log
+- 개발 환경 설정
+    - 의존성(spring initializr)
+        - Spring Boot Devtools
+        - Lombok
+        - Spring Web
+        - Thymeleaf
+        - Spring Security
+        - Spring Data JPA
+        - Validation
+        - H2 Database
+        
+    - 의존성(maven repository) 
+        - ojdbc8
+        - querydsl
+        - ModelMapper
+        - thymeleaf layout
+    
+    application.properties 
+        - server.port
+        - livereload
+        - thymeleaf
 
 
+<<<<<<< HEAD
+- layouts - main 작성
+- outlines - header, footer 작성
+
+#### - 참고한 링크
+<a href="https://github.com/yonggyo1125/springboard" target="_blank"><img src="https://img.shields.io/badge/github-181717?style=plastic&logo=github&logoColor=white"/></a>
+=======
               - 필요한 기능 : 메인페이지, 마이페이지(회원 정보 변경), 회원가입&로그인, 아이디&비밀번호 찾기, 
                              메뉴 페이지, 메뉴 상세페이지(), 장바구니, 주문내역확인(조회), 결제 페이지,
                              결제완료 페이지 검색
@@ -54,3 +91,4 @@
 <img width="640" alt="슬라이드0030" src="https://github.com/park198909/springA2_classB/assets/133085347/3be9181a-612d-4ef2-984e-cc467a3f94f6">
 <img width="640" alt="슬라이드0031" src="https://github.com/park198909/springA2_classB/assets/133085347/c645d965-c6ef-48f9-812c-9e14ef8d9ccd">
   </
+>>>>>>> 4cf97a03fd9df83da24cc5241718dcf19fbf6c16
