@@ -38,9 +38,6 @@
         - livereload
         - thymeleaf
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 - layouts - main 작성
 - outlines - header, footer 작성
 
@@ -100,3 +97,14 @@
 #### - 참고한 링크
 <a href="https://github.com/yonggyo1125/springboard" target="_blank"><img src="https://img.shields.io/badge/github-181717?style=plastic&logo=github&logoColor=white"/></a>
 >>>>>>> 4973180dd7e4454b2bbabfd5f8af171bf0d3195d
+
+
+## 2023/06/03
+
+### 프론트 (footer alert 스크립트 구현)
+
+### Log
+
+- SweetAlert2 외부 라이브러리 주입
+- Footer에 이용약관, 개인정보취급방침 클릭시 alert() 발생 구현
+- 외부 라이브러리를 이용해 alert 메세지 꾸미기
