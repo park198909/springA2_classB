@@ -14,8 +14,8 @@
             <a href="#">atc</a>
         </nav>
         <div id="right_header">
-            <i class="xi-log-in"></i>
-            <i class="xi-user-plus-o"></i>
+            <i class="xi-log-in" th:if="${member == null}"></i>
+            <i class="xi-user-plus-o" th:if="${member == null}" ></i>
             <i class="xi-user-o"></i>
             <i class="xi-cart-o"></i>
             <i class="xi-log-out"></i>
