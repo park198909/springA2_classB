@@ -9,22 +9,22 @@ html { font-size: 13px; }
 
 /** 헤더 - 로고,메뉴 영역 S */
 header #logo_menus { display: flex; justify-content: space-between; padding: 18px 15px; border-bottom: 1px solid #ddd; align-items:center}
-header section a img { width:500px; height:80px}
-.xi-log-in{ font-size: 80px; visibility:hidden }
-.xi-user-plus-o{ font-size: 80px; visibility:hidden }
-.xi-user-o{ font-size: 80px }
-.xi-cart-o{ font-size: 80px }
-.xi-log-out{ font-size: 80px }
+header section a img { width:500px; height:100px}
+.xi-log-in{ font-size: 80px; }
+.xi-user-plus-o{ font-size: 80px; }
+.xi-user-o{ font-size: 80px; display:none }
+.xi-cart-o{ font-size: 80px; display:none }
+.xi-log-out{ font-size: 80px; display:none }
 #main_logo{ text-align:center }
 #right_header{ width:450px; text-align:right}
 #left_header{ width:450px}
 /** 헤더 - 로고,메뉴 영역 E */
 
 /** 푸터 영역 S */
-footer { background-color:skyblue; height:300px }
-footer a img { width:300px; height:80px; margin:30px 0px 0px 30px}
-footer ul { margin:0px 30px }
+footer { background-color:#ddd; height:300px }
+footer a img { width:300px; height:80px; margin:10px 0px 0px 10px}
+footer ul { margin:0px 10px }
 footer ul li { font-size : 20px}
-footer div { background-color:grey; height:60px;  display: flex; align-items:center; }
-footer div a { font-size:20px; padding:30px}
+footer div { height:60px;  display: flex; align-items:center; }
+footer div a { font-size:20px; padding:10px}
 /** 푸터 영역 E */
