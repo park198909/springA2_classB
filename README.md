@@ -40,6 +40,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 - layouts - main 작성
 - outlines - header, footer 작성
 
@@ -92,3 +93,10 @@
 <img width="640" alt="슬라이드0031" src="https://github.com/park198909/springA2_classB/assets/133085347/c645d965-c6ef-48f9-812c-9e14ef8d9ccd">
   </
 >>>>>>> 4cf97a03fd9df83da24cc5241718dcf19fbf6c16
+=======
+- layouts - main 작성
+- outlines - header, footer 작성
+
+#### - 참고한 링크
+<a href="https://github.com/yonggyo1125/springboard" target="_blank"><img src="https://img.shields.io/badge/github-181717?style=plastic&logo=github&logoColor=white"/></a>
+>>>>>>> 4973180dd7e4454b2bbabfd5f8af171bf0d3195d
