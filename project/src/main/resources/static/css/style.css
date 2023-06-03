@@ -25,5 +25,6 @@ footer { background-color:#ddd; height:210px }
 footer ul { margin:0px 10px }
 footer ul li { font-size : 20px}
 footer div { height:60px;  display: flex; align-items:center; }
-footer div a { font-size:20px; padding:10px}
+footer div p { font-size:20px; padding:10px}
+.footer_p {cursor: pointer;}
 /** 푸터 영역 E */
