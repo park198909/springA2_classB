@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/main}">
+    <main layout:fragment="content">
+
+        <section class=".ad_nav">
+            <div><a href="#">회원관리</a></div>
+            <div><a href="#">상품관리</a></div>
+            <div><a href="#">주문관리</a></div>
+        </section>
+
+        <section>
+            <table class="ad_table1">
+                <thead>
+                    <tr>
+                        <th>회원번호</th>
+                        <th>아이디</th>
+                        <th>회원명</th>
+                        <th>주소</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>user01</td>
+                        <td>사용자01</td>
+                        <td>인천광역시 부평구</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+</html>
