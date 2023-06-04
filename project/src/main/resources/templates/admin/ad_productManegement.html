@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/main}">
+
+<main layout:fragment="content">
+  <section class=".ad_nav">
+    <div><a href="#">회원관리</a></div>
+    <div><a href="#">상품관리</a></div>
+    <div><a href="#">주문관리</a></div>
+  </section>
+
+  <section>
+    <table class="ad_table1">
+      <thead>
+      <tr>
+        <th>상품번호</th>
+        <th>카테고리</th>
+        <th>상품명</th>
+        <th>상품가격</th>
+        <th>상품상태</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>1</td>
+        <td>coffee</td>
+        <td>아메리카노</td>
+        <td>5000</td>
+        <td>Y</td>
+      </tr>
+      </tbody>
+    </table>
+  </section>
+
+</main>
+</html>
