@@ -6,14 +6,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+@RequestMapping("/member")
 public class MemberController {
 
     @GetMapping("/join")
     public String join(Model model) {
 
-        String member = "ssdklfghdsjk";
-        model.addAttribute(member);
+        String mem = "member";
+        model.addAttribute("member", mem);
 
-        return "redirect:/";
+        return "member/join";
     }
 }
