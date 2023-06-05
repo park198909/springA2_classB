@@ -39,12 +39,23 @@ footer div p { font-size:20px; padding:10px; cursor:pointer;}
 /** 푸터 영역 E */
 
 /** menu view S */
-#layoutAll { margin : 0 auto; width:1200px; height:470px; }
+#layoutAll { margin : 0 auto; width:auto; height:auto; clear:both;}
 .layout1 {float : left;}
 .layout1 img { width:450px; height:auto; margin:10px 10px; border:1px solid grey;}
+
 .layout2 {left-margin : 5px;}
 .layout2 p{margin:0;}
+.layout2 .price {margin-bottom : 235px;}
+
+.layout3 .minus {margin-left : 600px; width:30px;}
+.layout3 .plus {width : 30px;}
 .layout3 .count {width:30px; text-align:center;}
-.layout2, layout3, layout4 {font-size:3rem;}
+.layout2, .layout3, .layout4 {font-size:3rem;}
 input {font-size : 2rem;}
+
+.layout4 {margin-bottom:10px;}
+.layout4 .bt1 {margin-left:370px;}
+
+.layout5 {border:1px solid grey; width : auto; font-size : 2rem; margin-left:10px;}
+
 /** menu view E */
