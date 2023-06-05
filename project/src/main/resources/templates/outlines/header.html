@@ -4,7 +4,7 @@
 <header th:fragment="common">
     <section id="logo_menus">
         <a href="#">
-            <img src="images/logo.png" alt="메인 로고" id="main_logo">
+            <img src="/images/logo.png" alt="메인 로고" id="main_logo">
         </a>
         <nav id="center_menu">
             <a href="#">Coffee</a>
@@ -15,11 +15,11 @@
             <a href="#">atc</a>
         </nav>
         <div id="right_header">
-            <a href="#"><i class="xi-log-in"></i></a>
-            <a href="#"><i class="xi-user-plus-o"></i></a>
-            <a href="#"><i class="xi-user-o"></i></a>
-            <a href="#"><i class="xi-cart-o"></i></a>
-            <a href="#"><i class="xi-log-out"></i></a>
+            <i class="xi-log-in" th:if="${member} != member"></i>
+            <i class="xi-user-plus-o" th:if="${member} != member"></i>
+            <i class="xi-user-o"th:if="${member} == member"></i>
+            <i class="xi-cart-o"th:if="${member} == member"></i>
+            <i class="xi-log-out"th:if="${member} == member"></i>
         </div>
     </section>
 </header>
