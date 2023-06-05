@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <title>CAFE</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=yes, initial-scale=1.0, maxmum-scale=3.0, minimun-scale=0.5"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;500;700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+
+    <script th:src="@{/js/common.js}"></script>
+</head>
+<body>
+    <header th:replace="~{outlines/header::common}"></header>
+
+    <section id="layoutAll"><!-- 초반부 레이아웃 -->
+        <div class="layout1">
+            <img src="/images/americano.png" alt="아메리카노">
+        </div>
+
+        <div class="layout2">
+            <div class="explanation">
+                <p class="coffeename">아이스 아메리카노</p>
+                <p class="price">5,000원</p>
+            </div>
+        </div>
+        <div class="button">
+            <div class="layout3">
+                <input type="button" value="-">
+                <input type="text" class="count" value="1">
+                <input type="button" value="+">
+            </div>
+
+            <div class="layout4">
+                <input type="button" value="장바구니 담기">
+                <input type="button" value="바로 결제하기">
+            </div>
+        </div>
+    </section>
+
+    <footer th:replace="~{outlines/footer::common}"></footer>
+
+
+</body>
+</html>
