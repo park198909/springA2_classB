@@ -1,0 +1,39 @@
+/** 공통 스타일 */
+* { outline: none; font-family: 'Noto Sans KR', sans-serif; box-sizing: border-box; color: #212121; }
+body { margin: 0; }
+ul,ol { list-style-type: none; margin: 0; padding: 0; }
+li { margin: 0; padding: 0; }
+a { text-decoration: none; }
+img { border: 0; }
+html { font-size: 13px; }
+
+/** 헤더 - 로고,메뉴 영역 S */
+header #logo_menus { display: flex; justify-content: space-between; border-bottom: 1px solid #ddd; align-items:center; margin-bottom: 4rem}
+header section a img { width:300px; height:100px; margin:10px 0px;}
+header section nav a { font-size:35px; margin:0px 30px; }
+.xi-log-in{ font-size: 5rem; }
+.xi-user-plus-o{ font-size: 5rem; }
+.xi-user-o{ font-size: 5rem; }
+.xi-cart-o{ font-size: 5rem; }
+.xi-log-out{ font-size: 5rem; }
+#main_logo{ text-align:center }
+#right_header{ width:300px; text-align:right; margin-right: 2rem}
+#right_header i { padding:0.5rem }
+/** 헤더 - 로고,메뉴 영역 E */
+
+/** 메인 - 메뉴 영역 S */
+main #main_menu { display: flex; justify-content: center; flex-direction:column; border-bottom: 1px solid #ddd; align-items:center}
+main #main_menu div { display: flex; text-align: center;}
+main #main_menu div a { padding: 2rem; width:auto; height:auto }
+main #main_menu div a img { width:300px; height:300px }
+main #main_menu div a p { font-size:2rem }
+/** 메인 - 메뉴 영역 E */
+
+
+/** 푸터 영역 S */
+footer { background-color:#ddd; height:210px }
+footer ul { margin:0px 10px }
+footer ul li { font-size : 20px}
+footer div { height:60px;  display: flex; align-items:center; }
+footer div p { font-size:20px; padding:10px; cursor:pointer;}
+/** 푸터 영역 E */
