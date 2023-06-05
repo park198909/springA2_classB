@@ -19,6 +19,10 @@ header section nav a { font-size:35px; margin:0px 30px; }
 #main_logo{ text-align:center }
 #right_header{ width:300px; text-align:right; margin-right: 2rem}
 #right_header i { padding:0.5rem }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 18620dc3ec9819a96010bd3afca8e56c891852e1
 /** 헤더 - 로고,메뉴 영역 E */
 
 /** 메인 - 메뉴 영역 S */
@@ -29,11 +33,31 @@ main #main_menu div a img { width:300px; height:300px }
 main #main_menu div a p { font-size:2rem }
 /** 메인 - 메뉴 영역 E */
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 18620dc3ec9819a96010bd3afca8e56c891852e1
 /** 푸터 영역 S */
 footer { background-color:#ddd; height:210px }
 footer ul { margin:0px 10px }
 footer ul li { font-size : 20px}
 footer div { height:60px;  display: flex; align-items:center; }
+<<<<<<< HEAD
 footer div p { font-size:20px; padding:10px; cursor:pointer;}
 /** 푸터 영역 E */
+=======
+footer div p { font-size:20px; padding:10px}
+.footer_p {cursor: pointer;}
+/** 푸터 영역 E */
+
+
+
+
+/** 관리자 페이지 공통 영역 S */
+.ad_nav { display: flex; width: auto; height: auto; }
+.ad_nav div { width: 25% height: 50px; }
+.ad_table1 { width : 80%; height: auto; }
+.ad_table1 { width : 80%; height: auto; }
+.ad_order_updateBtn { width: 300px; height: 50px; color: #ddd }
+.ad_order_deleteBtn { width: 300px; height: 50px; color: #ddd }
+>>>>>>> 18620dc3ec9819a96010bd3afca8e56c891852e1
