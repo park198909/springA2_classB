@@ -37,6 +37,7 @@
 ## 제작해야하는 화면(front)
 <details>
 <summary>기획안 페이지 기준 체크리스트</summary>
+
 - [ ] 메인페이지 (9,10)
 - [ ] 푸터 (11)
 - [ ] 헤더
@@ -58,7 +59,9 @@
 - [ ] 주문관리 (30)
 - [ ] 주문관리 상세 (31)
 </details>
+
 <br>
+
 ## 로고 시안
 <img width="480" alt="로고시안" src="https://github.com/park198909/springA2_classB/assets/133085347/248b96ca-06ba-418e-961c-db45947e0a92">
 
@@ -69,6 +72,7 @@
 ![003](https://github.com/park198909/springA2_classB/assets/133085347/1a60dc9e-4a91-41df-8ba2-586e60956f67)
 ![004](https://github.com/park198909/springA2_classB/assets/133085347/c00da140-87ab-4f85-b181-f1dd1942496a)
 </details>
+
 <br>
 
 ## 사이트맵
