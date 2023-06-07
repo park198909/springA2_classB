@@ -39,7 +39,7 @@ footer div p { font-size:20px; padding:10px; cursor:pointer;}
 /** 푸터 영역 E */
 
 /** menu view S */
-#layoutAll { margin : 0 auto; width:auto; height:auto; clear:both;}
+#layoutAll { margin : 0 auto; width:1300px; height:auto; clear:both;}
 .layout1 {float : left;}
 .layout1 img { width:450px; height:auto; margin:10px 10px; border:1px solid grey;}
 
