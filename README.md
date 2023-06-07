@@ -67,6 +67,7 @@
 
 <details>
 <summary>최종 로고 시안 확인</summary>
+
 ![001](https://github.com/park198909/springA2_classB/assets/133085347/fb21a5e8-0dc3-44af-88d6-716844019cab)
 ![002](https://github.com/park198909/springA2_classB/assets/133085347/4262c27d-444c-4fe6-99c1-90aa4c527cae)
 ![003](https://github.com/park198909/springA2_classB/assets/133085347/1a60dc9e-4a91-41df-8ba2-586e60956f67)
