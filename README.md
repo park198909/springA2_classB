@@ -84,7 +84,34 @@
 
 ### Log
 
-- 회원가입 페이지 구현
-- Java Class 들 추가
+#### 프론트 구현
+- Templates
+    - Join.html 추가
+    - Login.html 추가
 
-    -[[*{address.addr1}]]
+#### 자바 클래스 구현
+- commons
+    - constants
+        - MemberType
+    - validators
+        - MobileValidator
+    
+- controller.member
+    - Address.java
+    - JoinForm.java
+    - JoinValidator.java
+    - LoginForm.java
+
+- entities
+    - BaseEntity
+    - Member
+
+- models.member
+    - JoinService
+    - LoginFailureHandler
+    - LoginSuccessHandler
+    - LoginValidationException
+    - MemberInfo
+    - MemberInfoService
+
+- [[*{address.addr1}]] 
