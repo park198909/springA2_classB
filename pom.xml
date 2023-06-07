@@ -99,7 +99,10 @@
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 14efcc179c75639ba70c7ee47c9468e6cc8e984b
 	</dependencies>
 
 	<build>

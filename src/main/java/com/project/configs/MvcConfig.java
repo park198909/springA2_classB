@@ -6,15 +6,21 @@ import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ResourceBundleMessageSource;
+<<<<<<< HEAD
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.web.filter.HiddenHttpMethodFilter;
+=======
+>>>>>>> 14efcc179c75639ba70c7ee47c9468e6cc8e984b
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 @RequiredArgsConstructor
+<<<<<<< HEAD
 @EnableJpaAuditing
+=======
+>>>>>>> 14efcc179c75639ba70c7ee47c9468e6cc8e984b
 public class MvcConfig implements WebMvcConfigurer {
 
     @Value("${file.upload.path}")
@@ -42,8 +48,11 @@ public class MvcConfig implements WebMvcConfigurer {
         return ms;
     }
 
+<<<<<<< HEAD
     public HiddenHttpMethodFilter httpMethodFilter() { // GET, POST 이외의 것들
         return new HiddenHttpMethodFilter();
     }
 
+=======
+>>>>>>> 14efcc179c75639ba70c7ee47c9468e6cc8e984b
 }
