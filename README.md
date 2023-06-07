@@ -30,6 +30,10 @@
 
 ## 2023/06/05
 - 상품 상세페이지(menu_view.html) 제작
+
+## 2023/06/07
+- Spring Security를 활용한 로그인/회원가입 제작
+
 </details>
 
 <br>
