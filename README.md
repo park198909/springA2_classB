@@ -1,7 +1,8 @@
 # springA2_classB
 오후반 스프링 조별 포트폴리오
 
-## git mind 링크 : https://gitmind.com/app/docs/mebxr6jf 비밀번호: 2595
+### git mind 링크 : https://gitmind.com/app/docs/mebxr6jf 
+### 비밀번호: 2595
 
 ## 주제.
 
@@ -14,6 +15,7 @@
 
 ### Log
 <details>
+<summary>작업 로그 확인</summary>
 
 ## 2023/05/27
 - 프로젝트 기획서 1차 작성 및 공유
@@ -30,7 +32,11 @@
 - 상품 상세페이지(menu_view.html) 제작
 </details>
 
+<br>
+
 ## 제작해야하는 화면(front)
+<details>
+<summary>기획안 페이지 기준 체크리스트</summary>
 - [ ] 메인페이지 (9,10)
 - [ ] 푸터 (11)
 - [ ] 헤더
@@ -51,19 +57,25 @@
 - [ ] 상품관리 상세 (29)
 - [ ] 주문관리 (30)
 - [ ] 주문관리 상세 (31)
+</details>
 
 ## 로고 시안
 <img width="480" alt="로고시안" src="https://github.com/park198909/springA2_classB/assets/133085347/248b96ca-06ba-418e-961c-db45947e0a92">
 
+<details>
+<summary>최종 로고 시안 확인</summary>
 ![001](https://github.com/park198909/springA2_classB/assets/133085347/fb21a5e8-0dc3-44af-88d6-716844019cab)
 ![002](https://github.com/park198909/springA2_classB/assets/133085347/4262c27d-444c-4fe6-99c1-90aa4c527cae)
 ![003](https://github.com/park198909/springA2_classB/assets/133085347/1a60dc9e-4a91-41df-8ba2-586e60956f67)
 ![004](https://github.com/park198909/springA2_classB/assets/133085347/c00da140-87ab-4f85-b181-f1dd1942496a)
+</details>
 
 ## 사이트맵
 ![Product Plan](https://github.com/park198909/springA2_classB/assets/133085347/fe345c23-ac19-4192-8da6-172e09202602)
 
 ## 기획서
+<details>
+<summary>최종 기획안</summary>
 <p align="center">
 <img width="640" alt="슬라이드0001" src="https://github.com/park198909/springA2_classB/assets/133085347/7eaedc65-d09b-4515-bdfb-e3476883087f">
 <img width="640" alt="슬라이드0002" src="https://github.com/park198909/springA2_classB/assets/133085347/95e0e160-feb9-430f-90f9-db6c9cb734d9">
@@ -96,5 +108,5 @@
 <img width="640" alt="슬라이드0029" src="https://github.com/park198909/springA2_classB/assets/133085347/c05d062d-03c4-4eab-9484-5da3f8f211bc">
 <img width="640" alt="슬라이드0030" src="https://github.com/park198909/springA2_classB/assets/133085347/3be9181a-612d-4ef2-984e-cc467a3f94f6">
 <img width="640" alt="슬라이드0031" src="https://github.com/park198909/springA2_classB/assets/133085347/c645d965-c6ef-48f9-812c-9e14ef8d9ccd">
-  </
+</details>
 
