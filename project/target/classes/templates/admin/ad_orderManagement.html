@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/main}">
+<main layout:fragment="content">
+
+    <section class=".ad_nav">
+        <div><a href="#">회원관리</a></div>
+        <div><a href="#">상품관리</a></div>
+        <div><a href="#">주문관리</a></div>
+    </section>
+
+    <section>
+        <table class="ad_table1">
+            <thead>
+            <tr>
+                <th>주문번호</th>
+                <th>주문내용</th>
+                <th>주문상태</th>
+                <th>주문금액</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>날짜(2023~)</td>
+                <td>상품(아메리카노)</td>
+                <td>배송완료(접수완료, 배송중)</td>
+                <td>5000</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+</main>
+
+</html>
