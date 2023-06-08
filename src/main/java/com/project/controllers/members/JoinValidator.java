@@ -1,5 +1,6 @@
 package com.project.controllers.members;
 
+import com.project.commons.validators.PasswordValidator;
 import com.project.repositories.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -7,7 +8,7 @@ import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 @Component
 @RequiredArgsConstructor
-public class JoinValidator implements Validator {
+public class JoinValidator implements Validator, PasswordValidator {
 
     private final MemberRepository memberRepository;
 
@@ -34,5 +35,12 @@ public class JoinValidator implements Validator {
             errors.rejectValue("userPwRe", "Validation.incorrect.userPwRe");
         }
 
+        // 비밀번호 복잡성 체크 (영문, 특수문자, 숫자)
+        if(userPw != null && !userPw.isBlank()
+                && (!alphaCheck(userPw, false) || !numberCheck(userPw) || !specialCharsCheck(userPw))) {;
+            errors.rejectValue("userPw", "Validation.complexity.password");
+        }
+
     }
-}
+
+    }
