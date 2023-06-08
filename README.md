@@ -115,3 +115,26 @@
     - MemberInfoService
 
 - [[*{address.addr1}]] 
+
+
+## 2023/06/07
+
+### 주소 Daum api 연동 구현
+
+### *oAuth 인증 
+- 제 3자를 통한 인증 (클라이언트와 서버가 서로 신뢰하지 못하기 때문에 믿을수 있는 oAuth를 이용해서 인증하는 방식)
+
+### 카카오 로그인 기능
+- 콜백 URL : http://localhost:3000/social/login
+- RestApi key : 1c257c7802994947e970b10a7c06cc76 (client_id)
+
+
+- https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=1c257c7802994947e970b10a7c06cc76&redirect_uri=http://localhost:3000/social/login
+- client_id=1c257c7802994947e970b10a7c06cc76&redirect_uri=http://localhost:3000/social/login&response_type=code
+
+
+
+- Jackson
+    - ObjectMapper
+        - readValue : JSON 문자열 -> 자바객체
+        - writeValueAsString : 자바객체 -> JSON 문자열

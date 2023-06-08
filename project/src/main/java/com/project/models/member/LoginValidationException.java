@@ -1,4 +1,14 @@
 package com.project.models.member;
 
-public class LoginValidationException {
+public class LoginValidationException extends RuntimeException {
+    private String field;
+
+    public LoginValidationException(String field, String message) {
+        super(message);
+        this.field = field;
+    }
+
+    public String getField() {
+        return field;
+    }
 }

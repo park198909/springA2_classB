@@ -27,5 +27,6 @@
             <button type="submit" th:text="#{member.btn.login}"></button>
 
         </form>
+        <a th:href="${@socialLogin.getAuthUrl()}">카카오 로그인</a>
     </main>
 </html>
