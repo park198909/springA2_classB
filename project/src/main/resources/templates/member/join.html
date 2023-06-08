@@ -4,7 +4,7 @@
       layout:decorate="~{layouts/main}">
 
     <main layout:fragment="content">
-        <form method="post" th:action="@{/member/join}" th:object="${joinForm}">
+        <form name="frmJoin" method="post" th:action="@{/member/join}" th:object="${joinForm}">
             <div class="errors" th:each="err : ${#fields.globalErrors()}" th:text="${err}"></div>
 
             <dl>
@@ -52,7 +52,18 @@
             </dl>
 
 
+            <dl>
+                <dt>주소</dt>
+                <dd>
+                    <div>
+                        <input type="text" name="zipcode" id="zipcode1" th:field="*{zipcode}" readonly>
+                        <button type="button" class="search_address" data-address-id="address1" data-zipcode-id="zipcode1">주소찾기</button>
+                    </div>
 
+                    <input type="text" name="address" id="adress1" th:field="*{address}" readonly>
+                    <input type="text" name="addressSub" th:field="*{addressSub}">
+                </dd>
+            </dl>
 
             <div>
                 <input type="checkbox" name="agree" value="true" id="agree" th:field="*{agree}">

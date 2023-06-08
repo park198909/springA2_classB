@@ -28,8 +28,9 @@ public class JoinForm {
 
     private String mobile;
 
-    @NotBlank
-    private Address address;
+    private String zipcode;
+    private String address;
+    private String addressSub;
 
     @AssertTrue
     private boolean agree;

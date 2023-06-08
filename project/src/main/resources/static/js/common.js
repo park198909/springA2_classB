@@ -10,3 +10,34 @@ window.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+
+window.addEventListener("DOMContentLoaded", function() {
+    /** 주소 찾기 팝업 처리 */
+    const searchAddressEls = document.getElementsByClassName("search_address");
+    for (const el of searchAddressEls) {
+        el.addEventListener("click", function() {
+            const dataset = this.dataset;
+            new daum.Postcode({
+                    oncomplete: function(data) {
+                        // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분입니다.
+                        // 예제를 참고하여 다양한 활용법을 확인해 보세요.
+                        if (typeof searchAddressCallback == 'function') {
+                            searchAddressCallback(data);
+                            return;
+                        }
+
+                        const addressId = dataset.addressId;
+                        const zipcodeId = dataset.zipcodeId;
+                        if (!addressId || !zipcodeId) {
+                        return;
+                        }
+
+                        const zipcodeEl = document.getElementById(zipcodeId);
+                        const addressEl = document.getElementById(addressId);
+                        if (zipcodeEl) zipcodeEl.value = data.zonecode;
+                        if (addressEl) addressEl.value = data.roadAddress;
+                    }
+                }).open();
+        });
+    }
+});

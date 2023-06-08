@@ -31,5 +31,12 @@ public class Member {
     @Column(length = 11)
     private String mobile;
 
+    @Column(length = 10)
+    private String zipcode;
+    @Column(length = 100)
+    private String address;
+    @Column(length = 100)
+    private String addressSub;
+
     private MemberType type = MemberType.USER;
 }
