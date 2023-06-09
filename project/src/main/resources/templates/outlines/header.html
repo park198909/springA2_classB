@@ -15,11 +15,17 @@
             <a href="#">atc</a>
         </nav>
         <div id="right_header">
-            <i class="xi-log-in" th:if="${member} != member"></i>
-            <i class="xi-user-plus-o" th:if="${member} != member"></i>
+            <a th:href="@{/member/login}">
+                <i class="xi-log-in" th:if="${member} != member"></i>
+            </a>
+            <a th:href="@{/member/join}">
+                <i class="xi-user-plus-o" th:if="${member} != member"></i>
+            </a>
             <i class="xi-user-o"th:if="${member} == member"></i>
             <i class="xi-cart-o"th:if="${member} == member"></i>
-            <i class="xi-log-out"th:if="${member} == member"></i>
+            <a th:href="@{/member/logout}">
+                <i class="xi-log-out"th:if="${member} == member"></i>
+            </a>
         </div>
     </section>
 </header>

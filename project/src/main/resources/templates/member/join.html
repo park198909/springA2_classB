@@ -6,6 +6,13 @@
     <main layout:fragment="content">
         <form name="frmJoin" method="post" th:action="@{/member/join}" th:object="${joinForm}">
             <div class="errors" th:each="err : ${#fields.globalErrors()}" th:text="${err}"></div>
+            <th:block th:if="${session.kakao != null}">
+                <input type="hidden" name="socialChannel" value="kakao">
+                <dl>
+                    <dt></dt>
+                    <dd>카카오 계정으로 회원가입</dd>
+                </dl>
+            </th:block>
 
             <dl>
                 <dt th:text="#{userId}"></dt>
@@ -14,14 +21,14 @@
                     <div class="errors" th:each="err : ${#fields.errors('userId')}" th:text="${err}"></div>
                 </dd>
             </dl>
-            <dl>
+            <dl th:if="${session.kakao == null}">
                 <dt th:text="#{userPw}"></dt>
                 <dd>
                     <input type="password" name="userPw" th:field="*{userPw}">
                     <div class="errors" th:each="err : ${#fields.errors('userPw')}" th:text="${err}"></div>
                 </dd>
             </dl>
-            <dl>
+            <dl th:if="${session.kakao == null}">
                 <dt th:text="#{userPwRe}"></dt>
                 <dd>
                     <input type="password" name="userPwRe" th:field="*{userPwRe}">

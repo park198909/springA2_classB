@@ -19,7 +19,7 @@ public class Member {
     @Column(length = 40, nullable = false, unique = true)
     private String userId;
 
-    @Column(length = 65, nullable = false)
+    @Column(length = 65)
     private String userPw;
 
     @Column(length = 40, nullable = false)
@@ -37,6 +37,12 @@ public class Member {
     private String address;
     @Column(length = 100)
     private String addressSub;
+
+    @Column(length = 10)
+    private String socialChannel;
+
+    @Column(length = 40)
+    private String socialId;
 
     private MemberType type = MemberType.USER;
 }

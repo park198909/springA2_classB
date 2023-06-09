@@ -13,11 +13,9 @@ public class JoinForm {
     @Size(min = 6, max = 16)
     private String userId;
 
-    @NotBlank
     @Size(min = 8)
     private String userPw;
 
-    @NotBlank
     private String userPwRe;
 
     @NotBlank
