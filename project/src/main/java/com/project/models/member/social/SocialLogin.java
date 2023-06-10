@@ -1,16 +1,28 @@
 package com.project.models.member.social;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.project.configs.SocialConfig;
+import com.project.repositories.MemberRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.Buffer;
+import java.util.Map;
 
 @Component
+@RequiredArgsConstructor
 public class SocialLogin {
+    private final MemberRepository repository;
+
+    public void login(String channel, Long id) {
+        return repository.exists(channel, String.valueOf(id));
+    }
+
     public String getAuthUrl() {
         String url = String.format("https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=%s&redirect_uri=%s&response_type=code", SocialConfig.restApiKey, SocialConfig.restApiCallback);
         return url;
@@ -79,6 +91,8 @@ public class SocialLogin {
                         sb.append(line);
                     }
 
+
+
                 } catch (IOException e2) {
                     e2.printStackTrace();
                 }
@@ -89,7 +103,7 @@ public class SocialLogin {
         return accessToken;
     }
 
-    public void getProfile(String code) {
+    public ProfileResult getProfile(String code) {
         String accessToken = getAccessToken(code);
         if (accessToken == null || accessToken.isBlank()) {
             throw new RuntimeException("잘못된 요청 접근 입니다");
@@ -118,7 +132,13 @@ public class SocialLogin {
                 }
 
                 String result = sb.toString();
-                System.out.println(result);
+                ObjectMapper om = new ObjectMapper();
+                om.registerModule(new JavaTimeModule());
+                ProfileResult profileResult = om.readValue(result, ProfileResult.class);
+
+                return profileResult;
+
+
             }
         } catch (Exception e){
             e.printStackTrace();
@@ -131,11 +151,14 @@ public class SocialLogin {
                     while ((line = br.readLine()) != null) {
                         sb.append(line);
                     }
+
                     System.out.println(sb.toString());
                 } catch (IOException e2) {
                     e2.printStackTrace();
                 }
             }
         }
+
+        return null;
     }
 }

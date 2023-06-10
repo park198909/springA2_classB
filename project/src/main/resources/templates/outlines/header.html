@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<header th:fragment="common">
+    <section id="logo_menus">
+        <a href="#">
+            <img src="/images/logo.png" alt="메인 로고" id="main_logo">
+        </a>
+        <nav id="center_menu">
+            <a href="#">Coffee</a>
+            <a href="#">Non-Coffee</a>
+            <a href="#">Ade</a>
+            <a href="#">Tea</a>
+            <a href="#">Desert</a>
+            <a href="#">atc</a>
+        </nav>
+        <div id="right_header">
+            <a th:href="@{/member/login}">
+                <i class="xi-log-in" th:if="${member} != member"></i>
+            </a>
+            <a th:href="@{/member/join}">
+                <i class="xi-user-plus-o" th:if="${member} != member"></i>
+            </a>
+            <i class="xi-user-o"th:if="${member} == member"></i>
+            <i class="xi-cart-o"th:if="${member} == member"></i>
+            <a th:href="@{/member/logout}">
+                <i class="xi-log-out"th:if="${member} == member"></i>
+            </a>
+        </div>
+    </section>
+</header>
+</html>
