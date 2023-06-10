@@ -35,6 +35,19 @@
                 <div class="errors" th:each="err : ${#fields.errors('mobile')}" th:text="${err}"></div>
             </div>
 
+            <dl>
+                <dt>주소</dt>
+                <dd>
+                    <div>
+                        <input type="text" name="zipcode" id="zipcode1" th:field="*{zipcode}" readonly>
+                        <button type="button" class="search_address" data-address-id="address1" data-zipcode-id="zipcode1">주소찾기</button>
+                    </div>
+
+                    <input type="text" name="address" id="address1" th:field="*{address}" readonly>
+                    <input type="text" name="addressSub" th:field="*{addressSub}">
+                </dd>
+            </dl>
+
             <div>
                 <pre class="terms" th:text="${@siteConf.get('joinTerms')}"></pre>
                 <input type="checkbox" name="agrees" value="true" id="agrees">
@@ -43,4 +56,5 @@
             <button type="submit" th:text="#{member.action.join}"></button>
         </form>
     </main>
+
 </html>

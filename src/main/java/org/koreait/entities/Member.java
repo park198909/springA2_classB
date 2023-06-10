@@ -32,6 +32,13 @@ public class Member extends BaseEntity {
     @Column(length=11)
     private String mobile; // 휴대전화번호
 
+    @Column(length = 10)
+    private String zipcode;
+    @Column(length = 100)
+    private String address;
+    @Column(length = 100)
+    private String addressSub;
+
     @Lob
     private String termsAgree; // 약관 동의 내역
 
