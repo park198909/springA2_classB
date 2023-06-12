@@ -53,8 +53,8 @@ public class ProductController {
 
         List<String> addScript = new ArrayList<>();
         if (subMenuCode.equals("save")) {
-            addScript.add("admin/ckeditor/ckeditor");
-            addScript.add("admin/product/form");
+            addScript.add("ckeditor/ckeditor");
+            addScript.add("product/form");
         }
 
         model.addAttribute("addScript", addScript);
