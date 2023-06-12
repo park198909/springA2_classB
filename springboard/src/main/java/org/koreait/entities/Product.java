@@ -9,18 +9,24 @@ import lombok.NoArgsConstructor;
 @Entity @Data @Builder
 @NoArgsConstructor @AllArgsConstructor
 public class Product extends BaseEntity{
+    @Id @GeneratedValue // 상품번호
+    private Long pNo;
 
-    @Id
-    @GeneratedValue
-    private Long id;
+    @Column(length=60, nullable = false)
+    private String gid;
 
-    @Column(length = 10, nullable = false)
-    private String productNm;
+    @Column(length=45)
+    private String cateCd; // 상품분류
 
-    @Column(length = 100)
+    @Column(nullable = false)
+    private String pName; // 상품명
+
+    private long consumerPrice; // 소비자가
+    private long salePrice; // 판매가
+    private long stock; // 재고
+
+    private String shortDescription;
+
     @Lob
-    private String detail;
-
-    @Column(length = 20, nullable = false)
-    private Integer price;
+    private String description;
 }

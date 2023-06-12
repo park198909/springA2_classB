@@ -6,10 +6,10 @@ import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
-@Component
+//@Component
 @RequiredArgsConstructor
-public class ProductValidator implements Validator {
-
+public class ProductValidator /** implements Validator */ {
+    /**
     private final ProductRepository productRepository;
 
     @Override
@@ -25,8 +25,10 @@ public class ProductValidator implements Validator {
         /*
         * 상품명 중복 체크
         */
+    /**
         if (productNm != null && !productNm.isBlank() && productRepository.exists(productNm)) {
             errors.rejectValue("productNm", "Validation.duplicate.productNm");
         }
     }
+     */
 }

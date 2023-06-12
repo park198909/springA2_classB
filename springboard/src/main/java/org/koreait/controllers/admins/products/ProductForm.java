@@ -1,26 +1,29 @@
 package org.koreait.controllers.admins.products;
 
-import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Data @Builder
 @NoArgsConstructor @AllArgsConstructor
 public class ProductForm {
+    private Long pNo; // 상품번호
+    private String gid = UUID.randomUUID().toString();
+
+    private String cateCd; // 상품 분류
 
     @NotBlank
-    @Size(min=3, max=10)
-    private String productNm; // 상품명
+    private String pName; // 상품명
 
-    @NotBlank
-    private Integer price; // 가격
+    private long consumerPrice; // 소비자가
+    private long salePrice; // 판매가
+    private int stockType; // 0 - 무제한, 1 - 특정 재고
+    private long stock; // 재고
 
-    @Size(max=100)
-    private String detail; // 상품 상세설명
+    private String shortDescription; // 짧은 설명
+    private String description; // 상세 설명
 }

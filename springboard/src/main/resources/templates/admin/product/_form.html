@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-    <th:block th:fragment="form">
+    <th:block th:fragment="form" th:object="${productForm}">
+        <input type="hidden" name="gid" th:field="*{gid}">
         <table class="table-cols">
             <tr>
                 <th>상품분류</th>
@@ -9,7 +10,7 @@
             <tr>
                 <th>상품명</th>
                 <td>
-                    <input type="text" name="pName">
+                    <input type="text" name="pName" th:field="*{pName}">
                 </td>
             </tr>
             <tr>
@@ -29,25 +30,25 @@
             <tr>
                 <th>소비자가</th>
                 <td>
-                    <input type="text" name="consumerPrice">
+                    <input type="text" name="consumerPrice" th:field="*{consumerPrice}">
                 </td>
             </tr>
             <tr>
                 <th>판매가</th>
                 <td>
-                    <input type="text" name="salePrice">
+                    <input type="text" name="salePrice" th:field="*{salePrice}">
                 </td>
             </tr>
             <tr>
                 <th>재고</th>
                 <td>
-                    <input type="radio" name="stockType" value="0" id="stockType_0">
+                    <input type="radio" name="stockType" value="0" id="stockType_0" th:field="*{stockType}">
                     <label for="stockType_0">무제한</label>
 
-                    <input type="radio" name="stockType" value="1" id="stockType_1">
+                    <input type="radio" name="stockType" value="1" id="stockType_1" th:field="*{stockType}">
                     <label for="stockType_1">고정수량</label>
-                    <div class="stocks">
-                        <input type="number" name="stock">
+                    <div class="stocks" th:classappend="${stock == 0 ? ' dn':''}">
+                        <input type="number" name="stock" th:field="*{stock}">
                     </div>
                 </td>
             </tr>
@@ -61,6 +62,7 @@
                 <th>상세 설명</th>
                 <td>
                     <textarea name="description" id="description"></textarea>
+                    <button type="button" class="uploadFiles editor"></button>
                 </td>
             </tr>
         </table>

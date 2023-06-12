@@ -5,11 +5,13 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.koreait.commons.MenuDetail;
 import org.koreait.commons.Menus;
-import org.koreait.models.product.ProductAddService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,10 +32,40 @@ public class ProductController {
     }
 
     @GetMapping("/add")
-    public String register(Model model) {
+    public String register(@ModelAttribute ProductForm productForm, Model model) {
         commonProcess(model, "상품등록");
 
         return "admin/product/register";
+    }
+
+    @PostMapping("/save")
+    public String save(@Valid ProductForm productForm, Errors errors, Model model) {
+        Long pNo = productForm.getPNo();
+        String title = null;
+        String tpl = "admin/product/";
+        if (pNo == null) { // 상품 등록
+            title = "상품등록";
+            tpl += "register";
+        } else { // 상품 수정
+            title = "상품수정";
+            tpl += "update";
+        }
+
+        commonProcess(model, title);
+
+        if (productForm.getStock() == 0) {
+            productForm.setStockType(0);
+        }  else {
+            productForm.setStockType(1);
+        }
+
+        if (errors.hasErrors()) {
+            return tpl;
+        }
+
+        // 상품 등록/수정 처리
+
+        return "redirect:/admin/product"; // 상품 등록/수정 성공 -> 상품 목록
     }
 
     private void commonProcess(Model model, String title) {
