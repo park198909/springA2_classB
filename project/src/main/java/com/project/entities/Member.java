@@ -3,6 +3,9 @@ package com.project.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity @Data @Builder
 @AllArgsConstructor @NoArgsConstructor
 public class Member extends BaseEntity{
@@ -26,4 +29,7 @@ public class Member extends BaseEntity{
 
     @Column(length = 250)
     private String address; //주소
+
+    @OneToMany(mappedBy = "member")
+    private List<BoardData> boardDatas = new ArrayList<>();
 }
