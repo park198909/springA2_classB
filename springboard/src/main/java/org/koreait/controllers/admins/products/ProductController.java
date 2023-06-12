@@ -24,7 +24,15 @@ public class ProductController {
     public String index(Model model) {
         commonProcess(model, "상품목록");
 
+
         return "admin/product/index";
+    }
+
+    @GetMapping("/add")
+    public String register(Model model) {
+        commonProcess(model, "상품등록");
+
+        return "admin/product/register";
     }
 
     private void commonProcess(Model model, String title) {
@@ -32,6 +40,8 @@ public class ProductController {
 
         // 서브 메뉴 처리
         String subMenuCode = Menus.getSubMenuCode(request);
+        if (title.equals("상품등록") ||  title.equals("상품수정")) subMenuCode = "save";
+
         model.addAttribute("subMenuCode", subMenuCode);
 
         List<MenuDetail> submenus = Menus.gets("product");
