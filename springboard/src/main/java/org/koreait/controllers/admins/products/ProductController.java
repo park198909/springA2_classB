@@ -11,6 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -49,5 +50,13 @@ public class ProductController {
 
         model.addAttribute("pageTitle", title);
         model.addAttribute("title", title);
+
+        List<String> addScript = new ArrayList<>();
+        if (subMenuCode.equals("save")) {
+            addScript.add("admin/ckeditor/ckeditor");
+            addScript.add("admin/product/form");
+        }
+
+        model.addAttribute("addScript", addScript);
     }
 }

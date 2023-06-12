@@ -1,6 +1,68 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
     <th:block th:fragment="form">
+        <table class="table-cols">
+            <tr>
+                <th>상품분류</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>상품명</th>
+                <td>
+                    <input type="text" name="pName">
+                </td>
+            </tr>
+            <tr>
+                <th>상품이미지(상세)</th>
+                <td>
+                    <div class="main_image"></div>
+                    <button type="button" class="uploadFiles sbtn">이미지 추가</button>
+                </td>
+            </tr>
+            <tr>
+                <th>상품이미지(목록)</th>
+                <td>
+                    <div class="list_image"></div>
+                    <button type="button" class="uploadFiles sbtn">이미지 추가</button>
+                </td>
+            </tr>
+            <tr>
+                <th>소비자가</th>
+                <td>
+                    <input type="text" name="consumerPrice">
+                </td>
+            </tr>
+            <tr>
+                <th>판매가</th>
+                <td>
+                    <input type="text" name="salePrice">
+                </td>
+            </tr>
+            <tr>
+                <th>재고</th>
+                <td>
+                    <input type="radio" name="stockType" value="0" id="stockType_0">
+                    <label for="stockType_0">무제한</label>
 
+                    <input type="radio" name="stockType" value="1" id="stockType_1">
+                    <label for="stockType_1">고정수량</label>
+                    <div class="stocks">
+                        <input type="number" name="stock">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>짧은 설명</th>
+                <td>
+                    <input type="text" name="shortDescription">
+                </td>
+            </tr>
+            <tr>
+                <th>상세 설명</th>
+                <td>
+                    <textarea name="description" id="description"></textarea>
+                </td>
+            </tr>
+        </table>
     </th:block>
 </html>
