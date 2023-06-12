@@ -37,7 +37,7 @@ window.addEventListener("DOMContentLoaded", function() {
             Swal.fire({
                 icon : 'info',
                 title : '사이트 설정 안내',
-                html: '<a href="https://www.github.com/jongpyo-hong">링크</a>',
+                html: '<a href="https://www.github.com/jongpyo-hong">링크(클릭 하세요)</a>',
 
 
             })
@@ -52,7 +52,7 @@ window.addEventListener("DOMContentLoaded", function() {
             Swal.fire({
                 icon : 'info',
                 title : '게시판 관리 안내',
-                html: '<a href="https://www.github.com/jongpyo-hong">링크</a>'
+                html: '<a href="https://www.github.com/jongpyo-hong">링크(클릭 하세요)</a>'
             })
         });
     }

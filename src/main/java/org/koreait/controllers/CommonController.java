@@ -6,6 +6,7 @@ import org.koreait.commons.CommonException;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @ControllerAdvice("org.koreait.controllers")
 public class CommonController {
