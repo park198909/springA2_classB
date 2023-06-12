@@ -14,6 +14,24 @@
                     게시판 관리
                 </a>
             </li>
+            <li>
+                <a th:href="@{/admin/board}" th:classappend="${menuCode} == 'board' ? 'on'">
+                    <i class="xi-view-list"></i>
+                    상품 관리
+                </a>
+            </li>
+            <li>
+                <a th:href="@{/admin/board}" th:classappend="${menuCode} == 'board' ? 'on'">
+                    <i class="xi-view-list"></i>
+                    주문 관리
+                </a>
+            </li>
+            <li>
+                <a th:href="@{/admin/board}" th:classappend="${menuCode} == 'board' ? 'on'">
+                    <i class="xi-view-list"></i>
+                    고객 관리
+                </a>
+            </li>
         </ul>
     </aside>
 </html>

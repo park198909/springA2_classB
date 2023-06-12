@@ -32,12 +32,11 @@ input[type='radio']:checked+label { background:url("../../images/radio-on.png") 
 /** 기본 약관 스타일 */
 .terms { height: 200px; overflow-y: scroll; border: 1px solid #d5d5d5; padding: 10px; border-radius: 3px; word-break: break-all; }
 
-
 /** 헤더 - 로고,메뉴 영역 S */
 header #logo_menus { display: flex; justify-content: space-between; border-bottom: 1px solid #ddd; align-items:center; margin-bottom: 4rem}
-header section a img { width:300px; height:100px; margin:10px 0px;}
-#center_menu a{ font-size:35px; margin:0px 30px; }
-.xi-log-in{ font-size: 5rem; }
+header #main_logo { width:300px; height:100px; margin:10px 0px;}
+#center_menu a{ font-size: 3.5rem; margin:0px 15px; }
+.xi-log-in{ font-size: 5rem;}
 .xi-user-plus-o{ font-size: 5rem; }
 .xi-user-o{ font-size: 5rem; }
 .xi-cart-o{ font-size: 5rem; }
@@ -45,7 +44,6 @@ header section a img { width:300px; height:100px; margin:10px 0px;}
 #main_logo{ text-align:center }
 #right_header{ width:300px; text-align:right; margin-right: 2rem}
 #right_header i { padding:0.5rem }
-
 /** 헤더 - 로고,메뉴 영역 E */
 
 /** 메인 - 메뉴 영역 S */
@@ -64,9 +62,6 @@ footer div { height:60px;  display: flex; align-items:center; }
 footer div p { font-size:20px; padding:10px}
 .footer_p {cursor: pointer;}
 /** 푸터 영역 E */
-
-
-
 
 /** 관리자 페이지 공통 영역 S */
 .ad_nav { display: flex; width: auto; height: auto; }
