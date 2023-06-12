@@ -1,5 +1,7 @@
 # springA2_classB
 오후반 스프링 조별 포트폴리오
+## 06/10
+### 브랜치 초기화
 
 ## git mind 링크 : 링크: https://gitmind.com/app/docs/mebxr6jf 비밀번호: 2595
 
@@ -43,7 +45,6 @@
 
 #### - 참고한 링크
 <a href="https://github.com/yonggyo1125/springboard" target="_blank"><img src="https://img.shields.io/badge/github-181717?style=plastic&logo=github&logoColor=white"/></a>
-=======
 
 
 ## 2023/06/03
@@ -143,3 +144,5 @@
 
     - footer -> 약관 추가
         - 이용안내, 개인정보... -> script 구현
+## 06/12
+### 상품관리 기능 구현
