@@ -119,6 +119,7 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			<!--
 			<plugin>
 				<groupId>com.mysema.maven</groupId>
 				<artifactId>apt-maven-plugin</artifactId>
@@ -135,6 +136,7 @@
 					</execution>
 				</executions>
 			</plugin>
+			-->
 		</plugins>
 	</build>
 
