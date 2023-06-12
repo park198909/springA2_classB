@@ -9,30 +9,13 @@ import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-@RequestMapping("/product")
+@RequestMapping("/admin/product")
 @RequiredArgsConstructor
 public class ProductController {
 
-    private final ProductValidator productValidator;
-    private final ProductAddService addService;
+    @GetMapping
+    public String index() {
 
-    @GetMapping("/add")
-    public String add(@ModelAttribute ProductForm productForm) {
-
-        return "product/add";
-    }
-
-    @PostMapping("/add")
-    public String addPs(@Valid ProductForm productForm, Errors errors, Model model) {
-
-        productValidator.validate(productForm, errors);
-
-        if (errors.hasErrors()) {
-            return "product/add";
-        }
-
-        addService.add(productForm);
-
-        return "redirect:/product/add";
+        return "admin/product/index";
     }
 }
