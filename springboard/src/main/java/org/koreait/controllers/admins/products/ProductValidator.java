@@ -1,4 +1,4 @@
-package org.koreait.controllers.products;
+package org.koreait.controllers.admins.products;
 
 import lombok.RequiredArgsConstructor;
 import org.koreait.repositories.ProductRepository;

@@ -1,14 +1,17 @@
 package org.koreait.entities;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Entity
-@Data
+@Entity @Data @Builder
+@NoArgsConstructor @AllArgsConstructor
 public class Product extends BaseEntity{
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue
     private Long id;
 
     @Column(length = 10, nullable = false)
