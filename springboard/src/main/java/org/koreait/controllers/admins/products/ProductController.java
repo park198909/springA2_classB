@@ -1,38 +1,90 @@
 package org.koreait.controllers.admins.products;
 
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.koreait.models.product.ProductAddService;
+import org.koreait.commons.MenuDetail;
+import org.koreait.commons.Menus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Controller
-@RequestMapping("/product")
+@RequestMapping("/admin/product")
 @RequiredArgsConstructor
 public class ProductController {
 
-    private final ProductValidator productValidator;
-    private final ProductAddService addService;
+    private final HttpServletRequest request;
+
+    @GetMapping
+    public String index(Model model) {
+        commonProcess(model, "상품목록");
+
+
+        return "admin/product/index";
+    }
 
     @GetMapping("/add")
-    public String add(@ModelAttribute ProductForm productForm) {
+    public String register(@ModelAttribute ProductForm productForm, Model model) {
+        commonProcess(model, "상품등록");
 
-        return "product/add";
+        return "admin/product/register";
     }
+    
+    @PostMapping("/save")
+    public String save(@Valid ProductForm productForm, Errors errors, Model model) {
+        Long pNo = productForm.getPNo();
+        String title = null;
+        String tpl = "admin/product/";
+        if (pNo == null) {    // 상품 추가
+            title = "상품등록";
+            tpl += "register";
+        } else {    // 상품 수정
+            title = "상품수정";
+            tpl += "update";
+        }
+        commonProcess(model, title);
 
-    @PostMapping("/add")
-    public String addPs(@Valid ProductForm productForm, Errors errors, Model model) {
-
-        productValidator.validate(productForm, errors);
-
-        if (errors.hasErrors()) {
-            return "product/add";
+        if (productForm.getStock() == 0) {
+            productForm.setStockType(0);
+        } else {
+            productForm.setStockType(1);
         }
 
-        addService.add(productForm);
+        if (errors.hasErrors()) {
+            return tpl;
+        }
 
-        return "redirect:/product/add";
+        // 상품 등록/수정 처리
+
+        return "redirect:/admin/product"; // 상품 등록/수정 성공 -> 상품 등록
     }
+
+    private void commonProcess(Model model, String title) {
+        String URI = request.getRequestURI();
+
+        // 서브 메뉴 처리
+        String subMenuCode = Menus.getSubMenuCode(request);
+        if (title.equals("상품등록") ||  title.equals("상품수정")) subMenuCode = "save";
+
+        model.addAttribute("subMenuCode", subMenuCode);
+
+        List<MenuDetail> submenus = Menus.gets("product");
+        model.addAttribute("submenus", submenus);
+
+        model.addAttribute("pageTitle", title);
+        model.addAttribute("title", title);
+
+        List<String> addScript = new ArrayList<>();
+        if (subMenuCode.equals("save")) {
+            addScript.add("ckeditor/ckeditor");
+            addScript.add("product/form");
+        }
+        model.addAttribute("addScript", addScript);
+    }
+
 }
