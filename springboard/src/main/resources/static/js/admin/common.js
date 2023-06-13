@@ -1,4 +1,38 @@
+const commonLib = {
+    responseType : "json",
+    // 응답 형식
+    setResponseType(type) {
+        this.responseType = type;
+        return this;
+    },
+    ajaxLoad(url, method, data) {
+        method = method || "GET";
+        data = data || null;
+        return new Promise((resolve, reject) => {
+            const xhr = new XMLHttpRequest();
+            xhr.open(method, url);
 
+            xhr.onreadystatechange = function() {
+                if (xhr.status == 200 && xhr.readyState == XMLHttpRequest.DONE) {
+                    let res = xhr.responseText;
+                    if (type && type.toLowerCase() == 'json') res = JSON.parse(res);
+
+                    resolve(res); // 성공시 응답
+                }
+            };
+
+            xhr.onerror = function(err) {
+                reject(err);
+            };
+
+            xhr.onabort = function(err) {
+                reject(err);
+            };
+
+            xhr.send(data);
+        });
+    }
+};
 
 
 /** 공통 이벤트 처리 */
