@@ -43,7 +43,6 @@
 
 #### - 참고한 링크
 <a href="https://github.com/yonggyo1125/springboard" target="_blank"><img src="https://img.shields.io/badge/github-181717?style=plastic&logo=github&logoColor=white"/></a>
-=======
 
 
 ## 2023/06/03
@@ -155,6 +154,21 @@
 
 - 서버 호스팅
 
+
+## 2023/06/14
+
+### Log
+
+- 에러페이지 커스텀 (eunji)
+
+- templates 연동 (mayeeun)
+    - member
+        - mypage
+        - order
+
+- 관리자 페이지 상품 분류 기능 추가 (미구현, 500에러 발생)
+    - category 관련 Service, Entity, validator... 추가
+    - category templates 추가 (500)
 
 - 참고 사이트
 

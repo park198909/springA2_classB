@@ -1,14 +1,15 @@
 const commonLib = {
     responseType : "json",
+    // 응답 형식
     setResponseType(type) {
         this.responseType = type;
-
         return this;
     },
     ajaxLoad(url, method, data) {
         method = method || "GET";
         data = data || null;
         const { header, token } = this.getCsrf();
+
         return new Promise((resolve, reject) => {
             const xhr = new XMLHttpRequest();
             xhr.open(method, url);
@@ -17,9 +18,9 @@ const commonLib = {
 
             xhr.onreadystatechange = function() {
                 if (xhr.status == 200 && xhr.readyState == XMLHttpRequest.DONE) {
-                    let res = xhr.responseTest;
+                    let res = xhr.responseText;
                     const type = fileManager.responseType;
-                    if (type && type.toLowerCase() == "json") res = JSON.parse(res);
+                    if (type && type.toLowerCase() == 'json') res = JSON.parse(res);
 
                     resolve(res); // 성공시 응답
                 }
@@ -80,6 +81,7 @@ window.addEventListener("DOMContentLoaded", function() {
     }
 });
 
+/** 관리자 페이지 설명 - 사이트설정 */
 window.addEventListener("DOMContentLoaded", function() {
     const terms_use2 = document.querySelectorAll('.ad_explain1')
     for (const el of terms_use2) {
@@ -95,6 +97,7 @@ window.addEventListener("DOMContentLoaded", function() {
     }
 });
 
+/** 관리자 페이지 설명 - 게시판 관리 */
 window.addEventListener("DOMContentLoaded", function() {
     const terms_use3 = document.querySelectorAll('.ad_explain2')
     for (const el of terms_use3) {

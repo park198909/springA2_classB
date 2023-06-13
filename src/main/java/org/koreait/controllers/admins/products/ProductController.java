@@ -2,10 +2,13 @@ package org.koreait.controllers.admins.products;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.koreait.commons.CommonException;
 import org.koreait.commons.MenuDetail;
 import org.koreait.commons.Menus;
+import org.koreait.models.category.CategorySaveService;
+import org.koreait.models.category.DuplicateCateCdException;
 import org.koreait.models.product.ProductInfoService;
 import org.koreait.models.product.ProductSaveService;
 import org.springframework.stereotype.Controller;
@@ -24,6 +27,7 @@ public class ProductController {
     private final HttpServletRequest request;
     private final ProductSaveService productSaveService;
     private final ProductInfoService productInfoService;
+    private final CategorySaveService categorySaveService;
 
     @GetMapping
     public String index(Model model) {
@@ -32,6 +36,32 @@ public class ProductController {
 
         return "admin/product/index";
     }
+
+    @GetMapping("/category")
+    public String category(Model model) {
+        commonProcess(model, "상품목록");
+        CategoryForm categoryForm = new CategoryForm();
+        model.addAttribute("categoryForm", categoryForm);
+
+        return "admin/product/category";
+
+    }
+
+    @PostMapping
+    public String categoryPs(@Valid CategoryForm categoryForm, Errors errors) {
+        try {
+            categorySaveService.save(categoryForm, errors);
+        } catch (DuplicateCateCdException e) {
+            errors.rejectValue("cateCd", "Duplicate.categoryForm.cateCd");
+        }
+
+        if (errors.hasErrors()) {
+            return "admin/product/category";
+        }
+
+        return "redirect:/admin/product";
+    }
+
 
     @GetMapping("/add")
     public String register(@ModelAttribute ProductForm productForm, Model model) {

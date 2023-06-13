@@ -12,10 +12,10 @@ const fileManager = {
 
         try {
             if (!files || files.length == 0) {
-                throw new Error("업로드 할 파일을 선택하세요");
+                throw new Error("업로드할 파일을 선택하세요.");
             }
 
-            const formData = new FormData(); // content-type -> multipart
+            const formData = new FormData();
 
             // 이미지 파일만 업로드 체크 S
             if (imageOnly) {
@@ -28,11 +28,11 @@ const fileManager = {
             }
             // 이미지 파일만 업로드 체크 E
 
-            /** 파일 양식에 첨부 S */
+            /* 파일 양식에 첨부 S */
             for (const file of files) {
                 formData.append("files", file);
             }
-            /** 파일 양식에 첨부 E */
+            /* 파일 양식에 첨부 E */
 
             if (gid && gid.trim()) {
                 formData.append("gid", gid);
@@ -45,14 +45,14 @@ const fileManager = {
             /** 파일 업로드 처리 */
             const url = "/file/upload";
             commonLib
-                    .setResponseType("json")
-                    .ajaxLoad(url, "POST", formData)
-                    .then((res) => {
-                        console.log(res);
-                    })
-                    .catch((err) => console.error(err));
+                .setResponseType("json")
+                .ajaxLoad(url, "POST", formData)
+                .then((res) => {
+                    console.log(res);
+                })
+                .catch((err) => console.error(err));
 
-        } catch {
+        } catch(err) {
             console.error(err);
             alert(err.message);
         }
@@ -69,35 +69,33 @@ const fileManager = {
 window.addEventListener("DOMContentLoaded", function() {
     /** 파일 업로드 버튼 처리 S */
     const uploadFiles = document.getElementsByClassName("uploadFiles");
-
     let fileEl = fileManager.fileEl;
-
-    if (fileEl == null) { // 없는 경우는 파일 DOM 추가
+    if (fileEl == null) { //없는 경우는 파일 DOM 추가
         fileEl = document.createElement("input");
         fileEl.type="file";
         fileEl.multiple = true;
         fileManager.fileEl = fileEl;
 
-    } else { // 있는 경우는 파일 초기화
+    } else { // 있는 경우는 파일 값 초기화
         fileEl.value = "";
     }
 
     for (const el of uploadFiles) {
-        el.addEventListener('click', function() {
+        el.addEventListener("click", function() {
             fileEl.gid = el.dataset.gid;
             fileEl.location = el.dataset.location;
             fileEl.click();
         });
     }
-     /** 파일 업로드 버튼 처리 E */
-     /** 파일 선택 처리 S */
-     fileManager.fileEl.addEventListener("change", function(e) {
+    /** 파일 업로드 버튼 처리 E */
+    /** 파일 선택 처리 S */
+    fileManager.fileEl.addEventListener("change", function(e) {
         const files = this.files;
         const gid = this.gid;
         const location = this.location;
 
         fileManager.upload(files, gid, location, true);
         this.value = "";
-     });
-     /** 파일 선택 처리 E */
+    });
+    /** 파일 선택 처리 E */
 });
