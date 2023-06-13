@@ -8,6 +8,9 @@ import lombok.NoArgsConstructor;
 
 @Entity @Data @Builder
 @NoArgsConstructor @AllArgsConstructor
+@Table(indexes={
+        @Index(name="idx_cateCd_desc", columnList = "cateCd DESC")
+})
 public class Product extends BaseEntity{
     @Id @GeneratedValue // 상품번호
     private Long pNo;

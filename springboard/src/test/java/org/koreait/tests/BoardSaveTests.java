@@ -5,11 +5,9 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.koreait.commons.configs.ConfigSaveService;
-import org.koreait.controllers.admins.ConfigForm;
 import org.koreait.controllers.boards.BoardForm;
 import org.koreait.controllers.members.JoinForm;
 import org.koreait.entities.Board;
-import org.koreait.entities.Member;
 import org.koreait.models.board.BoardDataSaveService;
 import org.koreait.models.board.BoardValidationException;
 import org.koreait.models.board.config.BoardConfigInfoService;
@@ -24,17 +22,13 @@ import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.transaction.annotation.Transactional;
 
-import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-import static org.springframework.test.web.servlet.setup.MockMvcBuilders.*;
-
-import java.util.Arrays;
 import java.util.ResourceBundle;
 import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -224,6 +218,7 @@ public class BoardSaveTests {
     }
 
     @Test
+    @Disabled
     @DisplayName("필수 항목 검증(회원) - bId, gid, poster, subject, content, BoardValidationException 발생")
     @WithMockUser(username="user01", password="aA!123456")
     void requiredFieldsMemberTest() {

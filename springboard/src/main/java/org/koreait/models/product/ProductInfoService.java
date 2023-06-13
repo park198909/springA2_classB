@@ -9,13 +9,19 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class ProductAddService {
+public class ProductInfoService {
 
     private final ProductRepository productRepository;
 
-    public void add(ProductForm productForm) {
-        Product product = new ModelMapper().map(productForm, Product.class);
-        productRepository.saveAndFlush(product);
+    public Product get(Long pNo) {
+        Product product = productRepository.findById(pNo).orElseThrow(ProductNotFoundException::new);
+
+        return product;
     }
 
+    public ProductForm getFormData(Long pNo) {
+        Product product = get(pNo);
+
+        return new ModelMapper().map(product, ProductForm.class);
+    }
 }

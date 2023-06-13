@@ -17,14 +17,14 @@
                 <th>상품이미지(상세)</th>
                 <td>
                     <div class="main_image"></div>
-                    <button type="button" class="uploadFiles sbtn">이미지 추가</button>
+                    <button type="button" class="uploadFiles sbtn" data-location="main">이미지 추가</button>
                 </td>
             </tr>
             <tr>
                 <th>상품이미지(목록)</th>
                 <td>
                     <div class="list_image"></div>
-                    <button type="button" class="uploadFiles sbtn">이미지 추가</button>
+                    <button type="button" class="uploadFiles sbtn" data-location="list">이미지 추가</button>
                 </td>
             </tr>
             <tr>
@@ -55,14 +55,14 @@
             <tr>
                 <th>짧은 설명</th>
                 <td>
-                    <input type="text" name="shortDescription">
+                    <input type="text" name="shortDescription" th:field="*{shortDescription}">
                 </td>
             </tr>
             <tr>
                 <th>상세 설명</th>
                 <td>
-                    <textarea name="description" id="description"></textarea>
-                    <button type="button" class="uploadFiles editor"></button>
+                    <textarea name="description" id="description" th:field="*{description}"></textarea>
+                    <button type="button" class="uploadFiles sbtn" data-location="editor">이미지 추가</button>
                 </td>
             </tr>
         </table>
