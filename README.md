@@ -173,6 +173,3 @@
 - 참고 사이트
 
 - http://n-mk.kr:3003/
-
-- id = admin@test.org
-- password = aA!123456
