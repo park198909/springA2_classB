@@ -34,6 +34,7 @@ public class ProductController {
     public String register(@ModelAttribute ProductForm productForm, Model model) {
         commonProcess(model, "상품등록");
 
+
         return "admin/product/register";
     }
 
