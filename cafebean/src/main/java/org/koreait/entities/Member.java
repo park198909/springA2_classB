@@ -43,7 +43,6 @@ public class Member extends BaseEntity {
     private String termsAgree; // 약관 동의 내역
 
     @Enumerated(EnumType.STRING)
-
     @Column(length=10, nullable = false)
     private Role roles = Role.USER;
 }
