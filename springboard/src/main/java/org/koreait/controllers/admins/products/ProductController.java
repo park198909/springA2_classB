@@ -1,7 +1,6 @@
 package org.koreait.controllers.admins.products;
 
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.koreait.commons.MenuDetail;
 import org.koreait.commons.Menus;
@@ -36,7 +35,7 @@ public class ProductController {
     }
     
     @PostMapping("/save")
-    public String save(@Valid ProductForm productForm, Errors errors, Model model) {
+    public String save(ProductForm productForm, Errors errors, Model model) {
         Long pNo = productForm.getPNo();
         String title = null;
         String tpl = "admin/product/";
@@ -56,7 +55,7 @@ public class ProductController {
         }
 
         if (errors.hasErrors()) {
-            return tpl;
+            return "tpl";
         }
 
         // 상품 등록/수정 처리
@@ -86,5 +85,4 @@ public class ProductController {
         }
         model.addAttribute("addScript", addScript);
     }
-
 }
