@@ -14,7 +14,7 @@
 	<name>board</name>
 	<description>board for portfolio</description>
 	<properties>
-		<java.version>20</java.version>
+		<java.version>19</java.version>
 	</properties>
 	<dependencies>
 		<dependency>

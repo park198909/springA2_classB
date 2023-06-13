@@ -1,16 +1,17 @@
 package org.koreait.controllers.admins.products;
 
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
+import org.koreait.commons.CommonException;
 import org.koreait.commons.MenuDetail;
 import org.koreait.commons.Menus;
+import org.koreait.models.product.ProductInfoService;
+import org.koreait.models.product.ProductSaveService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +22,8 @@ import java.util.List;
 public class ProductController {
 
     private final HttpServletRequest request;
+    private final ProductSaveService productSaveService;
+    private final ProductInfoService productInfoService;
 
     @GetMapping
     public String index(Model model) {
@@ -35,6 +38,16 @@ public class ProductController {
         commonProcess(model, "상품등록");
 
         return "admin/product/register";
+    }
+
+    @GetMapping("/update/{pNo}")
+    public String update(@PathVariable Long pNo, Model model) {
+        commonProcess(model, "상품수정");
+
+        ProductForm productForm = productInfoService.getFormData(pNo);
+        model.addAttribute("productForm", productForm);
+
+        return "admin/product/update";
     }
 
     @PostMapping("/save")
@@ -62,7 +75,16 @@ public class ProductController {
             return "tpl";
         }
 
-        // 상품 등록/수정 처리
+        try {
+            // 상품 등록/수정 처리
+            productSaveService.save(productForm);
+        } catch (CommonException e) {
+            e.printStackTrace();
+
+            errors.reject("productSaveErr", e.getMessage());
+        }
+
+
         return "redirect:/admin/product"; // 상품 등록/수정 성공 -> 상품 목록
     }
 
@@ -83,11 +105,23 @@ public class ProductController {
 
         List<String> addScript = new ArrayList<>();
         if (subMenuCode.equals("save")) {
+            addScript.add("fileManager");
             addScript.add("ckeditor/ckeditor");
             addScript.add("product/form");
         }
 
         model.addAttribute("addScript", addScript);
 
+    }
+
+    @ExceptionHandler(CommonException.class)
+    public String errorHandler(CommonException e, HttpServletResponse response, Model model) {
+        e.printStackTrace();
+
+        response.setStatus(e.getStatus().value());
+        String script = String.format("alert('%s');history.back();", e.getMessage());
+        model.addAttribute("script", script);
+
+        return "commons/execute_script";
     }
 }
