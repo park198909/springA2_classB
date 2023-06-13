@@ -17,14 +17,14 @@
                 <th>상품이미지(상세)</th>
                 <td>
                     <div class="main_image"></div>
-                    <button type="button" class="uploadFiles sbtn" data-location="main">이미지 추가</button>
+                    <button type="button" class="uploadFiles sbtn" th:data-gid="*{gid}" data-location="main">이미지 추가</button>
                 </td>
             </tr>
             <tr>
                 <th>상품이미지(목록)</th>
                 <td>
                     <div class="list_image"></div>
-                    <button type="button" class="uploadFiles sbtn" data-location="list">이미지 추가</button>
+                    <button type="button" class="uploadFiles sbtn" th:data-gid="*{gid}" data-location="list">이미지 추가</button>
                 </td>
             </tr>
             <tr>
@@ -62,7 +62,7 @@
                 <th>상세 설명</th>
                 <td>
                     <textarea name="description" id="description" th:field="*{description}"></textarea>
-                    <button type="button" class="uploadFiles sbtn" data-location="editor">이미지 추가</button>
+                    <button type="button" class="uploadFiles sbtn" th:data-gid="*{gid}" data-location="editor">이미지 추가</button>
                 </td>
             </tr>
         </table>

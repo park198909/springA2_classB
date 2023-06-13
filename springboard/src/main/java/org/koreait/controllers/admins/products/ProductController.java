@@ -105,6 +105,7 @@ public class ProductController {
 
         List<String> addScript = new ArrayList<>();
         if (subMenuCode.equals("save")) {
+            addScript.add("fileManager");
             addScript.add("ckeditor/ckeditor");
             addScript.add("product/form");
         }
