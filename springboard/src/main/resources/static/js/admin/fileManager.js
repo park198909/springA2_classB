@@ -8,8 +8,45 @@ const fileManager = {
     * 파일 업로드
     *
     */
-    update() {
+    upload(files, gid, location, imageOnly) {
 
+        try {
+            if (!files || files.length == 0) {
+                throw new Error("업로드할 파일을 선택하세요.");
+            }
+
+            const formData = new FormData();
+
+            // 이미지 파일만 업로드 체크 S
+            if (imageOnly) {
+                formData.append("imageOnly", true);
+                for (const file of files) {
+                    if (file.type.indexOf("image") != -1) { // 이미지가 아닌 다른 형식의 파일
+                        throw new Error("이미지 형식의 파일만 업로드 하세요.");
+                    }
+                }
+            }
+            // 이미지 파일만 업로드 체크 E
+
+            /* 파일 양식에 첨부 S */
+            for (const file of files) {
+                formData.append("files", file);
+            }
+            /* 파일 양식에 첨부 E */
+
+            if (gid && gid.trim()) {
+                formData.append("gid", gid);
+            }
+
+            if (location && location.trim()) {
+                formData.append("location", location);
+            }
+
+
+        } catch(err) {
+            console.error(err);
+            alert(err.message);
+        }
     },
     /**
     * 파일 삭제
@@ -48,7 +85,7 @@ window.addEventListener("DOMContentLoaded", function() {
         const gid = this.gid;
         const location = this.location;
 
-        fileManager.upload(files, gid, location);
+        fileManager.upload(files, gid, location, true);
     });
     /** 파일 선택 처리 E */
 });
