@@ -29,6 +29,7 @@ public class BoardController {
     private final BoardConfigInfoService boardConfigInfoService;
     private final BoardConfigListService boardConfigListService;
 
+
     /**
      * 게시판 목록
      *
