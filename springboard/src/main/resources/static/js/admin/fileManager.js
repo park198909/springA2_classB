@@ -21,7 +21,7 @@ const fileManager = {
             if (imageOnly) {
                 formData.append("imageOnly", true);
                 for (const file of files) {
-                    if (file.type.indexOf("image") != -1) { // 이미지가 아닌 다른 형식의 파일
+                    if (file.type.indexOf("image") == -1) { // 이미지가 아닌 다른 형식의 파일
                         throw new Error("이미지 형식의 파일만 업로드 하세요.");
                     }
                 }
@@ -42,6 +42,15 @@ const fileManager = {
                 formData.append("location", location);
             }
 
+            /** 파일 업로드 처리 */
+            const url = "/file/upload";
+            commonLib
+                .setResponseType("json")
+                .ajaxLoad(url, "POST", formData)
+                .then((res) => {
+                    console.log(res);
+                })
+                .catch((err) => console.error(err));
 
         } catch(err) {
             console.error(err);
@@ -86,6 +95,7 @@ window.addEventListener("DOMContentLoaded", function() {
         const location = this.location;
 
         fileManager.upload(files, gid, location, true);
+        this.value = "";
     });
     /** 파일 선택 처리 E */
 });
