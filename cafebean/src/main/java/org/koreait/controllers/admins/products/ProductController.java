@@ -7,7 +7,9 @@ import lombok.RequiredArgsConstructor;
 import org.koreait.commons.CommonException;
 import org.koreait.commons.MenuDetail;
 import org.koreait.commons.Menus;
+import org.koreait.entities.Product;
 import org.koreait.models.product.ProductInfoService;
+import org.koreait.models.product.ProductListService;
 import org.koreait.models.product.ProductSaveService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,11 +27,20 @@ public class ProductController {
     private final HttpServletRequest request;
     private final ProductSaveService productSaveService;
     private final ProductInfoService productInfoService;
+    /* eunji 230614 추가 S */
+    private final ProductListService productListService;
+    /* eunji 230614 추가 S */
+
 
     @GetMapping
     public String index(Model model) {
         commonProcess(model, "상품목록");
 
+        /* eunji 230614 추가 S */
+        List<Product> list = productListService.gets();
+        model.addAttribute("list",list);
+
+        /* eunji 230614 추가 E */
 
         return "admin/product/index";
     }

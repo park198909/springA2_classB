@@ -3,6 +3,54 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{layouts/admin/main}">
 <section layout:fragment="content">
+    <!-- 230614 eunji S -->
+    <!--
+    <ul>
+        <li th:each="item : ${list}" th:object="${item}">
+            <a th:href="@{/admin/product/update/{pNo}(pNo=*{pNo})}" th:text="*{pName}"></a>
+        </li>
+    </ul>
+    -->
+    <form name='frmList' method="post" th:action="@{/admin/product}" autocomplete="off" target="ifrmProcess">
+        <input type="hidden" name="_method" value="patch">
+        <table class="table-rows">
+            <thead>
+            <tr>
+                <th width="40">
+                    <input type="checkbox" class="checkall" id="checkall" data-target-name="pNo">
+                    <label for="checkall"></label>
+                </th>
+                <th width="100">상품번호</th>
+                <th width="150">카테고리</th>
+                <th width="300">상품명</th>
+                <th width="150">상품가격</th>
+                <th width="100">재고</th>
+                <th></th>
+            </tr>
+            </thead>
 
+            <tbody>
+                <tr th:each="item, status : ${list}" th:object="${item}">
+                    <td align="center">
+                        <input type="checkbox" name="pNo" th:value="*{pNo}" th:id="${'pNo_'+status.index}">
+                        <label th:for="${'pNo_' + status.index}"></label>
+                    </td>
+                    <td align="center" th:text="*{pNo}"></td>
+                    <td align="center" th:text="*{cateCd}"></td>
+                    <td align="center" th:text="*{pName}"></td>
+                    <td align="center" th:text="*{consumerPrice}"></td>
+                    <td align="center" th:text="*{stock}"></td>
+                    <td>
+                        <a th:href="@{/admin/product/update/{pNo}(pNo=*{pNo})}" class="sbtn">수정하기</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="table-action">
+            <button type="button" class="sbtn">수정하기</button>
+            <button type="button" class="sbtn blue">삭제하기</button>
+        </div>
+    </form>
+    <!-- 230614 eunji E -->
 </section>
 </html>
