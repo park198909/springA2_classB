@@ -166,10 +166,10 @@
         - mypage
         - order
 
-- 관리자 페이지 상품 분류 기능 추가 (미구현, 500에러 발생)
+- 관리자 페이지 상품 분류 기능 추가
     - category 관련 Service, Entity, validator... 추가
-    - category templates 추가 (500)
-
+    - category templates 추가
+    
 - master merge
 
 - 참고 사이트
