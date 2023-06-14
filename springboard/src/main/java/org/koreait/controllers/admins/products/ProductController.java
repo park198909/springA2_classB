@@ -113,6 +113,21 @@ public class ProductController {
         model.addAttribute("addScript", addScript);
     }
 
+    @GetMapping("/category")
+    public String category(@ModelAttribute CategoryForm categoryForm, Model model) {
+        commonProcess(model, "상품분류");
+
+
+        return "admin/product/category";
+    }
+
+    @PostMapping("/category")
+    public String categorySave(@Valid CategoryForm categoryForm, Errors errors, Model model) {
+
+        return "redirect:/admin/product/categories";
+    }
+
+
     @ExceptionHandler(CommonException.class)
     public String errorHandler(CommonException e, HttpServletResponse response, Model model) {
         e.printStackTrace();
