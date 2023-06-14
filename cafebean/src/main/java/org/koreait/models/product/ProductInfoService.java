@@ -12,16 +12,16 @@ import org.springframework.stereotype.Service;
 public class ProductInfoService {
 
     private final ProductRepository productRepository;
-    public Product get(Long pNo){
-        Product product =productRepository.findById(pNo).orElseThrow(ProductNotFoundException::new);
+
+    public Product get(Long pNo) {
+        Product product = productRepository.findById(pNo).orElseThrow(ProductNotFoundException::new);
 
         return product;
-
     }
 
-    public ProductForm getFormData(Long pNo){
+    public ProductForm getFormData(Long pNo) {
         Product product = get(pNo);
 
-        return new ModelMapper().map(product,ProductForm.class);
+        return new ModelMapper().map(product, ProductForm.class);
     }
 }

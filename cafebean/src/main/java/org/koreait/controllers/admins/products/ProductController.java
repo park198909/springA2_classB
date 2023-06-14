@@ -18,8 +18,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-@RequiredArgsConstructor
 @RequestMapping("/admin/product")
+@RequiredArgsConstructor
 public class ProductController {
 
     private final HttpServletRequest request;
@@ -38,52 +38,52 @@ public class ProductController {
     public String register(@ModelAttribute ProductForm productForm, Model model) {
         commonProcess(model, "상품등록");
 
-
         return "admin/product/register";
     }
 
     @GetMapping("/update/{pNo}")
-    public String update(@PathVariable Long pNo, Model model){
-        commonProcess(model,"상품수정");
+    public String update(@PathVariable Long pNo, Model model) {
+        commonProcess(model, "상품수정");
 
         ProductForm productForm = productInfoService.getFormData(pNo);
-        model.addAttribute("productForm",productForm);
+        model.addAttribute("productForm", productForm);
 
         return "admin/product/update";
     }
 
     @PostMapping("/save")
-public String save(@Valid ProductForm productForm, Errors errors, Model model) {
+    public String save(@Valid ProductForm productForm, Errors errors, Model model) {
         Long pNo = productForm.getPNo();
         String title = null;
         String tpl = "admin/product/";
-        if (pNo == null) { // 상품 추가
+        if (pNo == null) { // 상품 등록
             title = "상품등록";
             tpl += "register";
-        } else {// 상품 수정
+        } else { // 상품 수정
             title = "상품수정";
             tpl += "update";
         }
 
         commonProcess(model, title);
 
-        if(productForm.getStock() == 0) {
+        if (productForm.getStock() == 0) {
             productForm.setStockType(0);
-        } else{
+        }  else {
             productForm.setStockType(1);
         }
-        try{
+
+        try {
             // 상품 등록/수정 처리
             productSaveService.save(productForm);
-        }catch (CommonException e){
+        } catch (CommonException e) {
             e.printStackTrace();
-            errors.reject("productSaveErr",e.getMessage());
+
+            errors.reject("productSaveErr", e.getMessage());
         }
+
         if (errors.hasErrors()) {
-            return "tpl";
+            return tpl;
         }
-
-
 
         return "redirect:/admin/product"; // 상품 등록/수정 성공 -> 상품 목록
     }
@@ -91,10 +91,10 @@ public String save(@Valid ProductForm productForm, Errors errors, Model model) {
     private void commonProcess(Model model, String title) {
         String URI = request.getRequestURI();
 
-
         // 서브 메뉴 처리
         String subMenuCode = Menus.getSubMenuCode(request);
-        if (title.equals("상품등록") || title.equals("상품수정")) subMenuCode="save";
+        if (title.equals("상품등록") ||  title.equals("상품수정")) subMenuCode = "save";
+
         model.addAttribute("subMenuCode", subMenuCode);
 
         List<MenuDetail> submenus = Menus.gets("product");
@@ -105,22 +105,21 @@ public String save(@Valid ProductForm productForm, Errors errors, Model model) {
 
         List<String> addScript = new ArrayList<>();
         if (subMenuCode.equals("save")) {
+            addScript.add("fileManager");
             addScript.add("ckeditor/ckeditor");
             addScript.add("product/form");
         }
 
         model.addAttribute("addScript", addScript);
-
     }
 
     @ExceptionHandler(CommonException.class)
-    public String errorHandler(CommonException e, HttpServletResponse response,Model model){
+    public String errorHandler(CommonException e, HttpServletResponse response, Model model) {
         e.printStackTrace();
 
         response.setStatus(e.getStatus().value());
-        String script = String.format("alert('%s');history.back();",e.getMessage());
-        model.addAttribute("script",script);
-
+        String script = String.format("alert('%s');history.back();", e.getMessage());
+        model.addAttribute("script", script);
 
         return "commons/execute_script";
     }

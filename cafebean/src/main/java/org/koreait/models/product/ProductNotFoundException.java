@@ -7,5 +7,4 @@ public class ProductNotFoundException extends CommonException {
     public ProductNotFoundException() {
         super(bundleValidation.getString("Validation.product.notExists"), HttpStatus.BAD_REQUEST);
     }
-
 }
