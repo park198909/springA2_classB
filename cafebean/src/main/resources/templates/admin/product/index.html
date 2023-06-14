@@ -3,8 +3,33 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{layouts/admin/main}">
 <section layout:fragment="content">
+    <h1>상품 검색</h1>
+    <form name="frmSearch" method="get" th:action="@{/admin/product}" autocomplete="off" th:object="${productSearch}">
+        <table class="table-cols">
+            <tr>
+                <th>검색어</th>
+                <td>
+                    <div class="input_grp">
+
+                        <select name="sopt" th:field="*{sopt}">
+                        <!--<select name="sopt" th:field="*{sopt}">-->
+                            <option value="all">통합검색</option>
+                            <option value="pName">상품명</option>
+                            <option value="cateCd">카테고리</option>
+                        </select>
+                        <input type="text" name="skey" th:field="*{skey}" placeholder="검색어 입력...">
+                        <!--<input type="text" name="skey" th:field="*{skey}" placeholder="검색어 입력...">-->
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="search_btn">
+            <button type="submit">조회하기</button>
+        </div>
+    </form>
+
     <h1>상품 목록</h1>
-    <form name='frmList' method="post" th:action="@{/admin/product}" autocomplete="off" target="ifrmProcess">
+    <form name="frmList" method="post" th:action="@{/admin/product}" autocomplete="off" target="ifrmProcess">
         <input type="hidden" name="_method" value="patch">
         <table class="table-rows">
             <thead>
