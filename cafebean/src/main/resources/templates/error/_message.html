@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-    <th:block th:fragment="message">
+<th:block th:fragment="message">
+    <div class="errorWrap">
+        <div class="errorImg">
+            <img src="../../images/errPage5.png" alt="errorImg">
+        </div>
         <div class="errorPage">
             <h1 class="err_status" th:text="${status}"></h1>
             <h2 class="err_path" th:text="${path}"></h2>
             <h3 class="err_message" th:text="${message}"></h3>
         </div>
-    </th:block>
+    </div>
+</th:block>
 </html>
