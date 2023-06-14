@@ -38,13 +38,11 @@ public class ProductController {
     }
 
     @GetMapping("/category")
-    public String category(Model model) {
+    public String category(@ModelAttribute CategoryForm categoryForm, Model model) {
         commonProcess(model, "상품분류");
-        CategoryForm categoryForm = new CategoryForm();
-        model.addAttribute("categoryForm", categoryForm);
+
 
         return "admin/product/category";
-
     }
 
     @PostMapping("/categoryPs")
