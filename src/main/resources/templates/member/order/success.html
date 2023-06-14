@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns="http://www.w3.org/1999/html"
+      layout:decorate="~{layouts/main}">
+<main layout:fragment="content">
+    <div>
+        <p class="order">결제 성공</p>
+    </div>
+    <div>
+        <p class="order_suc">성공적으로 결제가 되었습니다. <br>
+            주문 및 배송 현황은 주문 내역 페이지에서<br> 확인할 수 있습니다.</p>
+    </div>
+    <div class="order_div">
+        <button type="submit" class="order_btn" th:text="#{order.btn.main}"></button>
+        <button type="submit" class="order_btn" th:text="#{order.btn.list}"></button>
+    </div>
+</main>
+</html>
