@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<header th:fragment="common">
+    <section id="logo_menus">
+
+        <a href="#">
+            <img src="/images/logo.png" alt="메인 로고" id="main_logo">
+        </a>
+        <nav id="center_menu">
+            <a href="#">Coffee</a>
+            <a href="#">Non-Coffee</a>
+            <a href="#">Ade</a>
+            <a href="#">Tea</a>
+            <a href="#">Desert</a>
+            <a href="#">atc</a>
+        </nav>
+
+        <th:block sec:authorize="isAnonymous()">
+            <div id="right_header">
+                <a th:href="@{/member/join}">
+                    <i class="xi-user-plus-o"></i>
+                </a>
+                <a th:href="@{/member/login}">
+                    <i class="xi-log-in"></i>
+                </a>
+            </div>
+        </th:block>
+
+        <th:block sec:authorize="isAuthenticated()">
+            <div>
+                <a th:href="@{/member/logout}">
+                    <i class="xi-log-out"></i>
+                </a>
+                <a th:href="@{/mypage}">
+                    <i class="xi-user-o"></i>
+                </a>
+                <a th:href="@{/cart}">
+                    <i class="xi-cart-o"></i>
+                </a>
+                <a sec:authorize="hasAuthority('ADMIN')" th:href="@{/admin}" th:text="#{adminPage}"></a>
+            </div>
+        </th:block>
+    </section>
+</header>
+
+
+<header th:fragment="common">
+    <section >
+
+        <div >
+            <a th:href="@{/member/login}">
+
+            </a>
+            <a th:href="@{/member/join}">
+
+            </a>
+            <a th:href="@{/mypage}">
+
+            </a>
+            <a th:href="@{/mypage/cart}">
+
+            </a>
+            <a th:href="@{/member/logout}">
+
+            </a>
+        </div>
+    </section>
+</header>
+</html>

@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+* { margin:0; padding:0; list-style-type: none; box-sizing: border-box;  }
+a { text-decoration: none; color: inherit; }
+html{ height:100%;  background: url('../../images/errPage5.png'); background-size: cover; background-position:center;}
+
+.errorPage {
+    display: flex; align-items: center; justify-content: center; flex-direction: column;
+    width: 100%; /* min-height: 900px; margin: 0 auto; max-width: 900px; */font-size: 15px; color: maroon;
+    text-align: center; font-family: 'Noto Sans KR', sans-serif;
+}
+.err_status { font-family: 'Pacifico', cursive;  font-size: 7rem; margin-top: 2.5rem; padding-bottom: 5rem; }
+.err_path {}
+.err_message { font-family: 'Noto Sans KR', sans-serif;  font-size: 2rem; padding-top: 20px;}
+
+
