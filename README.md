@@ -170,6 +170,8 @@
     - category 관련 Service, Entity, validator... 추가
     - category templates 추가 (500)
 
+- master merge
+
 - 참고 사이트
 
 - http://n-mk.kr:3003/
