@@ -8,6 +8,8 @@ import org.koreait.commons.CommonException;
 import org.koreait.commons.MenuDetail;
 import org.koreait.commons.Menus;
 import org.koreait.entities.Product;
+import org.koreait.models.category.CategorySaveService;
+import org.koreait.models.category.DuplicateCateCdException;
 import org.koreait.models.product.ProductInfoService;
 import org.koreait.models.product.ProductListService;
 import org.koreait.models.product.ProductSaveService;
@@ -27,6 +29,7 @@ public class ProductController {
     private final HttpServletRequest request;
     private final ProductSaveService productSaveService;
     private final ProductInfoService productInfoService;
+    private final CategorySaveService categorySaveService;
     /* eunji 230614 추가 S */
     private final ProductListService productListService;
     /* eunji 230614 추가 S */
@@ -43,6 +46,30 @@ public class ProductController {
         /* eunji 230614 추가 E */
 
         return "admin/product/index";
+    }
+
+
+    @GetMapping("/category")
+    public String category(@ModelAttribute CategoryForm categoryForm, Model model) {
+        commonProcess(model, "상품분류");
+
+
+        return "admin/product/category";
+    }
+
+    @PostMapping("/categoryPs")
+    public String categoryPs(@Valid CategoryForm categoryForm, Errors errors) {
+        try {
+            categorySaveService.save(categoryForm, errors);
+        } catch (DuplicateCateCdException e) {
+            errors.rejectValue("cateCd", "Duplicate.categoryForm.cateCd");
+        }
+
+        if (errors.hasErrors()) {
+            return "admin/product/category";
+        }
+
+        return "redirect:/admin/product";
     }
 
     @GetMapping("/add")

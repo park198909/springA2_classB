@@ -3,14 +3,7 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{layouts/admin/main}">
 <section layout:fragment="content">
-    <!-- 230614 eunji S -->
-    <!--
-    <ul>
-        <li th:each="item : ${list}" th:object="${item}">
-            <a th:href="@{/admin/product/update/{pNo}(pNo=*{pNo})}" th:text="*{pName}"></a>
-        </li>
-    </ul>
-    -->
+    <h1>상품 목록</h1>
     <form name='frmList' method="post" th:action="@{/admin/product}" autocomplete="off" target="ifrmProcess">
         <input type="hidden" name="_method" value="patch">
         <table class="table-rows">
@@ -51,6 +44,5 @@
             <button type="button" class="sbtn blue">삭제하기</button>
         </div>
     </form>
-    <!-- 230614 eunji E -->
 </section>
 </html>

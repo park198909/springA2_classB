@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="form" th:object="${categoryForm}">
+  <table class="table-cols">
+    <tr>
+      <th>분류코드</th>
+      <td>
+        <input type="text" name="cateCd" id="cateCd" th:field="*{cateCd}">
+      </td>
+    </tr>
+    <tr>
+      <th>사용여부</th>
+      <td>
+        <input type="radio" name="used" value="0" id="used_0" th:field="*{used}">
+        <label for="used_0">사용</label>
+
+        <input type="radio" name="used" value="1" id="used_1" checked="checked" th:field="*{used}">
+        <label for="used_1">미사용</label>
+      </td>
+    </tr>
+    <tr>
+      <th>노출위치코드</th>
+      <td>
+        <input type="text" name="location" id="location" th:field="*{location}">
+      </td>
+    </tr>
+    <tr>
+      <th>분류명</th>
+      <td>
+        <input type="text" name="cateNm" id="cateNm" th:field="*{cateNm}">
+      </td>
+    </tr>
+    <tr>
+      <th>진열순서</th>
+      <td>
+        <input type="number" name="listOrder" id="listOrder" th:field="*{listOrder}">
+      </td>
+    </tr>
+    <tr>
+      <th>상위분류코드</th>
+      <td>
+        <input type="text" name="parentCateCd" th:field="*{parentCateCd}">
+      </td>
+    </tr>
+  </table>
+</th:block>
+</html>

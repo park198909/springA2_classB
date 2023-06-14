@@ -178,8 +178,8 @@ public class BoardController {
 
         // 비회원 비밀번호 확인 후 이동 경로
         /**
-        String url = mode == "comment" ? "/board/" + id + "/comment" : "/board/" + id + "/update";
-        */
+         String url = mode == "comment" ? "/board/" + id + "/comment" : "/board/" + id + "/update";
+         */
         String url = "/board/" + id + "/update";
         if (mode.equals("comment")) { // 댓글 삭제
             url = "/board/" + id + "/comment";
@@ -250,7 +250,7 @@ public class BoardController {
 
         if (member == null) { // 비회원일때는 비밀번호 검증이 되었는지 체크, 안되어 있다면 비밀번호 확인 페이지 이동
             /*
-            * 세션 키 - "board_게시글 번호" 가 있으면 비회원 비밀번호 검증 완료
+             * 세션 키 - "board_게시글 번호" 가 있으면 비회원 비밀번호 검증 완료
              */
             if (session.getAttribute(mode+"_" + boardData.getId()) == null) {
                 // 1. 위치 - 게시글 : board, 삭제:  board_delete, 댓글 comment
