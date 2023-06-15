@@ -86,12 +86,17 @@ public class ProductController {
 
     @PostMapping("/categories")
     public String categoryListPs(Model model) {
-
-        // 업데이트 처리
-        categoryUpdateService.update();
+        String script = null;
+        try {
+            // 업데이트 처리
+            categoryUpdateService.update();
+        } catch (CommonException e) {
+            e.printStackTrace();
+            script = String.format("alert('%s');", e.getMessage());
+        }
 
         // 업데이트 성공시
-        String script = String.format("alert('수정되었습니다.');parent.location.reload();");
+        script = String.format("alert('수정되었습니다.');parent.location.reload();");
         model.addAttribute("script", script);
         return "commons/execute_script";
     }
