@@ -5,7 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0295da2b-ca90-46bf-b027-9c1b8ffc3828" name="변경" comment="변경">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/members/JoinForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/members/JoinForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/members/MypageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/members/MypageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/members/OrderpageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/members/OrderpageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/entities/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/entities/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/messages/commons.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages/commons.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/member/mypage/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mypage/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/member/mypage/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mypage/info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/member/mypage/infoupdate.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mypage/infoupdate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/member/mypage/orderlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mypage/orderlist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/member/order/delivery.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/order/delivery.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/member/order/pickup.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/order/pickup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/member/order/success.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/order/success.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +89,7 @@
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Administrator/Desktop/addd/master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Administrator/Desktop/ㅁㅁ/master&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
@@ -88,6 +105,7 @@
       <recent name="C:\Users\djure\Desktop\_홍종표\홍종표\그룹 프로젝트 수정\src\main\resources\templates\layouts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\ㅁㅁ\ddd\src\main\resources\templates" />
       <recent name="C:\Users\Administrator\Desktop\addd\master\src\main\resources\templates\member" />
       <recent name="C:\Users\djure\Desktop\_홍종표\홍종표\그룹 프로젝트\src\main\resources\templates\member" />
       <recent name="C:\Users\djure\Desktop\_홍종표\홍종표\그룹 프로젝트 수정\src\main\resources\static\css" />

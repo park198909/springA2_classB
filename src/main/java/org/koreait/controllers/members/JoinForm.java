@@ -21,6 +21,9 @@ public class JoinForm {
     private String userPwRe;
 
     @NotBlank
+    private String userPwUp; // 변경할 비밀번호
+
+    @NotBlank
     private String userNm;
 
     @NotBlank @Email

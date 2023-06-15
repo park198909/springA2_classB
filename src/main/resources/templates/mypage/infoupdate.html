@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/front/main}">
+<main layout:fragment="content">
+    <form name="frmInfo" method="post" th:action="@{/mypage/info}" th:object="${joinForm}" autocomplete="off">
+    <section id="mypage_menu">
+        <div>
+            <p class="mypage"><a th:href="@{info}">마이페이지</a></p>
+        </div>
+        <div class="mypage_div">
+            <div class="info"><a th:href="@{info}">회원정보</a></div>
+            <div class="cart"><a th:href="@{cart}">장바구니</a></div>
+            <div class="orderlist"><a th:href="@{orderlist}">주문내역</a></div>
+        </div>
+    </section>
+    <table class="info_table">
+        <tr>
+            <td th:text="#{userPw}"></td>
+            <td><input type="password" name="password"></td>
+        </tr>
+        <tr>
+            <td th:text="#{userPwUp}"></td>
+            <td><input type="password" name="updatePw"></td>
+        </tr>
+        <tr>
+            <td th:text="#{userPwRe}"></td>
+            <td><input type="password" name="passwordRe"></td>
+        </tr>
+        <tr>
+            <td th:text="#{email}"></td>
+            <td><input type="email" name="email"></td>
+        </tr>
+        <tr>
+            <td th:text="#{mobile}"></td>
+            <td><input type="number" name="mobile"></td>
+        </tr>
+        <tr>
+            <td th:text="#{address}"></td>
+            <td>
+                <div>
+                    <input type="text" name="zipcode" id="zipcode1" th:field="*{zipcode}" readonly>
+                    <button type="button" class="search_address" data-address-id="address1" data-zipcode-id="zipcode1">검색</button>
+                </div>
+
+                <input type="text" name="address" id="address1" th:field="*{address}" readonly>
+                <input type="text" name="addressSub" th:field="*{addressSub}">
+
+            </td>
+        </tr>
+        <tr>
+            <td><a th:href="@{info}"><button type="submit" class="info_btn" th:text="#{member.btn.infosave}"></button></a></td>
+            <td><a th:href="@{delete}"><button type="submit" class="info_btn" th:text="#{member.btn.infodelete}"></button></a></td>
+        </tr>
+
+    </table>
+    </form>
+</main>
+</html>

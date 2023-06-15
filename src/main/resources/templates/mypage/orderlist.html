@@ -5,12 +5,12 @@
 <main layout:fragment="content">
     <section id="mypage_menu">
         <div>
-            <p class="mypage">마이페이지</p>
+            <p class="mypage"><a th:href="@{info}">마이페이지</a></p>
         </div>
         <div class="mypage_div">
-            <div class="info" th:href="@{mypage/info}">회원정보</div>
-            <div class="cart" th:href="@{mypage/cart}">장바구니</div>
-            <div class="orderlist" th:href="@{mypage/orderlist}">주문내역</div>
+            <div class="info"><a th:href="@{info}">회원정보</a></div>
+            <div class="cart"><a th:href="@{cart}">장바구니</a></div>
+            <div class="orderlist"><a th:href="@{orderlist}">주문내역</a></div>
         </div>
     </section>
     <table class = "order_list">

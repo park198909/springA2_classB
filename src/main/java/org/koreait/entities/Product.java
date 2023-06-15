@@ -14,6 +14,7 @@ import lombok.NoArgsConstructor;
 public class Product extends BaseEntity {
 
     @Id @GeneratedValue
+    @Column(name = "product_id")
     private Long pNo; // 상품번호
 
     @Column(length = 60, nullable = false)
