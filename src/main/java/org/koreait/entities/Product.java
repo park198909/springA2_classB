@@ -19,8 +19,9 @@ public class Product extends BaseEntity {
     @Column(length = 60, nullable = false)
     private String gid;
 
-    @Column(length = 45)
-    private String cateCd; // 상품분류
+    @ManyToOne
+    @JoinColumn(name="cateCd")
+    private Category category; // 상품분류
 
     @Column(nullable = false)
     private String pName; // 상품명

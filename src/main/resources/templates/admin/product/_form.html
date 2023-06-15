@@ -5,7 +5,11 @@
         <table class="table-cols">
         <tr>
             <th>상품분류</th>
-            <td></td>
+            <td>
+               <select name="cateCd" th:field="*{cateCd}">
+                   <option th:each="category : ${categories}" th:value="${category.cateCd}" th:text="${category.cateNm}"></option>
+               </select>
+            </td>
         </tr>
         <tr>
             <th>상품명</th>

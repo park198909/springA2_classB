@@ -110,3 +110,9 @@ footer ul li { font-size : 20px; color: #dddee4; }
 footer div { height:60px;  display: flex; align-items:center; }
 footer div p { font-size: large; font-weight: bold; font-size:20px; padding:10px; color: #dddee4; }
 .footer_p {cursor: pointer;}
+
+/** 페이징 공통 */
+.pagination { text-align: center; margin: 20px 0; }
+.pagination li { display: inline-block; }
+.pagination a { font-size: 12px; border: 1px solid #dbdbdb; color: #363636; display: block; padding: 5px 10px; }
+.pagination li.on a { background-color: #596b99; border-color: #596b99; color: #fff; }

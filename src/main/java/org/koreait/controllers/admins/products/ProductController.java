@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.koreait.commons.CommonException;
 import org.koreait.commons.MenuDetail;
 import org.koreait.commons.Menus;
+import org.koreait.commons.Pagination;
 import org.koreait.entities.Category;
 import org.koreait.entities.Product;
 import org.koreait.models.category.CategoryListService;
@@ -44,6 +45,10 @@ public class ProductController {
 
         Page<Product> data = productConfigListService.gets(productSearch);
         model.addAttribute("items", data.getContent());
+
+        String url = request.getRequestURI();
+        Pagination pagination = new Pagination(data, url);
+        model.addAttribute("pagination", pagination);
 
         return "admin/product/index";
     }
@@ -177,6 +182,9 @@ public class ProductController {
             addScript.add("fileManager");
             addScript.add("ckeditor/ckeditor");
             addScript.add("product/form");
+
+            List<Category> categories = categoryListService.getAll();
+            model.addAttribute("categories", categories);
         }
 
         model.addAttribute("addScript", addScript);
