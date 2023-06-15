@@ -11,6 +11,7 @@ import org.koreait.entities.Category;
 import org.koreait.entities.Product;
 import org.koreait.models.category.CategoryListService;
 import org.koreait.models.category.CategorySaveService;
+import org.koreait.models.category.CategoryUpdateService;
 import org.koreait.models.category.DuplicateCateCdException;
 import org.koreait.models.product.ProductConfigListService;
 import org.koreait.models.product.ProductInfoService;
@@ -34,6 +35,7 @@ public class ProductController {
     private final ProductInfoService productInfoService;
     private final CategorySaveService categorySaveService;
     private final CategoryListService categoryListService;
+    private final CategoryUpdateService categoryUpdateService;
     private final ProductConfigListService productConfigListService;
 
     @GetMapping
@@ -78,11 +80,22 @@ public class ProductController {
 
         List<Category> items = categoryListService.getAll();
         model.addAttribute("items", items);
-        System.out.println("---------------------------");
-        items.stream().forEach(System.out::println);
 
         return "admin/product/category_list";
     }
+
+    @PostMapping("/categories")
+    public String categoryListPs(Model model) {
+
+        // 업데이트 처리
+        categoryUpdateService.update();
+
+        // 업데이트 성공시
+        String script = String.format("alert('수정되었습니다.');parent.location.reload();");
+        model.addAttribute("script", script);
+        return "commons/execute_script";
+    }
+
 
     @GetMapping("/add")
     public String register(@ModelAttribute ProductForm productForm, Model model) {
