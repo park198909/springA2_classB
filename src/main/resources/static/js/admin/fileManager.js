@@ -48,7 +48,10 @@ const fileManager = {
                 .setResponseType("json")
                 .ajaxLoad(url, "POST", formData)
                 .then((res) => {
-                    console.log(res);
+                    if (res.success && res.data && typeof fileUploadCallback == 'function') {
+                        fileUploadCallback(res.data);
+                    }
+
                 })
                 .catch((err) => console.error(err));
 

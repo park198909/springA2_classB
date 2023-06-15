@@ -67,8 +67,10 @@
             <td>
                 <textarea name="description" id="description" th:field="*{description}"></textarea>
                 <button type="button" class="uploadFiles editor sbtn" data-location="editor" th:data-gid="*{gid}">이미지 추가</button>
+                <div class="attachedFiles editor"></div>
             </td>
         </tr>
         </table>
+        <th:block th:replace="~{admin/commons/_file_tpl::tpl}"></th:block>
     </th:block>
 </html>

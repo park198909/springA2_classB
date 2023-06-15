@@ -48,6 +48,11 @@ public class FileUploadService {
 
             Long id = item.getId();
             String folder = "" + id % 10;
+            File folderPath = new File(fileUploadPath + folder);
+            if (!folderPath.exists()) {
+                folderPath.mkdir();
+            }
+
             String path = fileUploadPath + folder + "/" + id;
             String url = request.getContextPath() + "/uploads/" + folder + "/" + id;
             if (extension != null && !extension.isBlank()) {
