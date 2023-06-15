@@ -26,7 +26,9 @@
                             <label th:for="${'cateCd_' + status.index}"></label>
                         </td>
                         <td th:text="*{cateCd}" align="center"></td>
-                        <td th:text="*{cateNm}" align="center"></td>
+                        <td>
+                            <input type="text" th:name="*{'cateNm_' + cateCd}" th:value="*{cateNm}">
+                        </td>
                         <td align="center">
                             <input type="radio" th:name="*{'use_' + cateCd}" value="false" th:id="${'use_0' + status.index}" th:checked="*{use == false}">
                             <label th:for="${'use_0' + status.index}">미사용</label>
