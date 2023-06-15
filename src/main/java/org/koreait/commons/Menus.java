@@ -25,7 +25,7 @@ public class Menus {
             menus.add(new MenuDetail("category", "상품분류", "/admin/product/category"));
         } else if (code.equals("order")) { // 주문 관리
             menus.add(new MenuDetail("order", "주문 목록", "/admin/order"));
-            menus.add(new MenuDetail("save", "주문 수정", "/admin/order/add"));
+            menus.add(new MenuDetail("save", "주문 수정", "/admin/order/update/${orderForm.orderNo}"));
         }
 
 
