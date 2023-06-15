@@ -6,10 +6,8 @@ import lombok.RequiredArgsConstructor;
 import org.koreait.commons.CommonException;
 import org.koreait.commons.MenuDetail;
 import org.koreait.commons.Menus;
-import org.koreait.controllers.admins.products.ProductForm;
 import org.koreait.models.order.OrderInfoService;
 import org.koreait.models.order.OrderSaveService;
-import org.koreait.repositories.OrderRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
@@ -21,7 +19,7 @@ import java.util.List;
 @Controller
 @RequestMapping("/admin/order")
 @RequiredArgsConstructor
-public class OrderContorller {
+public class OrderController {
 
     private final HttpServletRequest request;
     private final OrderInfoService orderInfoService;
@@ -29,7 +27,7 @@ public class OrderContorller {
 
     @GetMapping
     public String index(Model model) {
-        commonProcess(model, "주문목록");
+        commonProcess(model,"주문목록");
 
         return "admin/order/index";
     }
@@ -54,7 +52,7 @@ public class OrderContorller {
     @PostMapping("/save")
     public String register(OrderForm orderForm, Errors errors, Model model) {
         Long orderNo = orderForm.getOrderNo();
-        String tpl = "admin/product/update";
+        String tpl = "admin/order/update";
 
         commonProcess(model, "주문수정");
 
@@ -78,7 +76,6 @@ public class OrderContorller {
 
     private void commonProcess(Model model, String title) {
         String URI = request.getRequestURI();
-
 
         // 서브 메뉴 처리
         String subMenuCode = Menus.getSubMenuCode(request);

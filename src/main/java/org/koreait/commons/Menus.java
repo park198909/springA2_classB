@@ -23,6 +23,9 @@ public class Menus {
             menus.add(new MenuDetail("product","상품 목록","/admin/product"));
             menus.add(new MenuDetail("save", "상품 등록/수정", "/admin/product/add"));
             menus.add(new MenuDetail("category", "상품 분류", "/admin/product/category"));
+        } else if (code.equals("order")) {
+            menus.add(new MenuDetail("order", "주문 목록", "/admin/order"));
+            menus.add(new MenuDetail("save", "주문 수정", "/admin/add"));
         }
 
         return menus;

@@ -58,14 +58,13 @@ main #main_menu div a p { font-size:2rem }
 /** 메인 - 메뉴 영역 E */
 
 /** 푸터 영역 S */
-footer { background-color:#ddd; height:210px }
+footer { background-color: #596b99; height:210px }
 footer ul { margin:0px 10px }
-footer ul li { font-size : 20px}
+footer ul li { font-size : 20px; color: #dddee4; }
 footer div { height:60px;  display: flex; align-items:center; }
-footer div p { font-size:20px; padding:10px}
+footer div p { font-size: large; font-weight: bold; font-size:20px; padding:10px; color: #dddee4; }
 .footer_p {cursor: pointer;}
 /** 푸터 영역 E */
-
 
 
 /* 마이페이지 - 주문내역 S */
