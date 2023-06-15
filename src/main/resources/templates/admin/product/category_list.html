@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/admin/main}">
+    <section layout:fragment="content">
+        <h1 th:text="${title}"></h1>
+        <table class="table-rows">
+            <thead>
+            <tr>
+                <th>
+                    <input type="checkbox" class="checkall" data-target-name="cateCd" id="checkall">
+                    <label for="checkall"></label>
+                </th>
+                <th>분류코드</th>
+                <th>분류명</th>
+                <th>사용여부</th>
+                <th>진열순서</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr th:each="item, status : ${items}" th:object="${item}">
+                    <td>
+                        <input type="checkbox" name="cateCd" th:value="*{cateCd}" th:id="${'cateCd_' + status.index}">
+                        <label th:for="${'cateCd_' + status.index}"></label>
+                    </td>
+                    <td th:text="*{cateCd}"></td>
+                    <td th:text="*{cateNm}"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</html>

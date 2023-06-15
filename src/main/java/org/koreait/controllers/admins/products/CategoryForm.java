@@ -12,15 +12,11 @@ import org.modelmapper.ModelMapper;
 public class CategoryForm {
     private String cateCd; // 상품분류
 
-    private int used;
-
-    private String location;
+    private boolean use;
 
     private String cateNm;
 
     private int listOrder;
-
-    private String parentCateCd;
 
     public static Category of (CategoryForm categoryForm) {
         return new ModelMapper().map(categoryForm, Category.class);

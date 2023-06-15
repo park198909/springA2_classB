@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-import static org.koreait.commons.Menus.gets;
 import static org.springframework.data.domain.Sort.Order.desc;
 
 @Service
@@ -24,7 +23,7 @@ public class CategoryListService {
 
     public List<Category> gets(CategorySearch search, int page, int limit) {
 
-        Sort sort = Sort.by(desc("listOrder"), desc("createAt"));
+        Sort sort = Sort.by(desc("listOrder"), desc("createdAt"));
         List<Category> categories = repository.findAll(sort);
 
         return categories;

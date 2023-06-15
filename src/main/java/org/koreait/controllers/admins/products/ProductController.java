@@ -7,7 +7,9 @@ import lombok.RequiredArgsConstructor;
 import org.koreait.commons.CommonException;
 import org.koreait.commons.MenuDetail;
 import org.koreait.commons.Menus;
+import org.koreait.entities.Category;
 import org.koreait.entities.Product;
+import org.koreait.models.category.CategoryListService;
 import org.koreait.models.category.CategorySaveService;
 import org.koreait.models.category.DuplicateCateCdException;
 import org.koreait.models.product.ProductConfigListService;
@@ -31,6 +33,7 @@ public class ProductController {
     private final ProductSaveService productSaveService;
     private final ProductInfoService productInfoService;
     private final CategorySaveService categorySaveService;
+    private final CategoryListService categoryListService;
     private final ProductConfigListService productConfigListService;
 
     @GetMapping
@@ -53,8 +56,9 @@ public class ProductController {
 
     }
 
-    @PostMapping("/categoryPs")
-    public String categoryPs(@Valid CategoryForm categoryForm, Errors errors) {
+    @PostMapping("/category")
+    public String categoryPs(@Valid CategoryForm categoryForm, Errors errors, Model model) {
+        commonProcess(model, "상품분류");
         try {
             categorySaveService.save(categoryForm, errors);
         } catch (DuplicateCateCdException e) {
@@ -65,9 +69,18 @@ public class ProductController {
             return "admin/product/category";
         }
 
-        return "redirect:/admin/product";
+        return "redirect:/admin/product/categories";
     }
 
+    @GetMapping("/categories")
+    public String categoryList(Model model) {
+        commonProcess(model, "상품분류");
+
+        List<Category> items = categoryListService.getAll();
+        model.addAttribute("items", items);
+
+        return "admin/product/category_list";
+    }
 
     @GetMapping("/add")
     public String register(@ModelAttribute ProductForm productForm, Model model) {
