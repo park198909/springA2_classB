@@ -8,9 +8,9 @@
             <p class="mypage">마이페이지</p>
         </div>
         <div class="mypage_div">
-            <div class="info">회원정보</div>
-            <div class="cart">장바구니</div>
-            <div class="orderlist">주문내역</div>
+            <div class="info" th:href="@{mypage/info}">회원정보</div>
+            <div class="cart" th:href="@{mypage/cart}">장바구니</div>
+            <div class="orderlist" th:href="@{mypage/orderlist}">주문내역</div>
         </div>
     </section>
     <table class="info_table">
@@ -40,8 +40,8 @@
                 <input type="submit" value="검색"></td>
         </tr>
         <tr>
-            <td><button type="submit" class="info_btn" th:text="#{member.btn.infosave}" th:onclick="|location.href='@{/mypage/info}'|"></button></td>
-            <td><button type="submit" class="info_btn" th:text="#{member.btn.infodelete}"></button></td>
+            <td><button type="submit" class="info_btn" th:text="#{member.btn.infosave}" th:href="@{/mypage/info}"></button></td>
+            <td><button type="submit" class="info_btn" th:text="#{member.btn.infodelete}" th:href="@{/mypage/delete}"></button></td>
         </tr>
 
     </table>

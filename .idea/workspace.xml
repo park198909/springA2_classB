@@ -4,7 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0295da2b-ca90-46bf-b027-9c1b8ffc3828" name="변경" comment="변경" />
+    <list default="true" id="0295da2b-ca90-46bf-b027-9c1b8ffc3828" name="변경" comment="변경">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/members/OrderpageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/members/OrderpageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/messages/commons.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages/commons.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/member/maypage/cart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/member/maypage/info.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/member/maypage/infoupdate.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/member/maypage/orderlist.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/member/order/delivery.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/member/order/delivery.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/member/order/order.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/member/order/success.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/member/order/success.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mypage/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/member/mypage/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mypage/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/member/mypage/info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mypage/infoupdate.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/member/mypage/infoupdate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mypage/orderlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/member/mypage/orderlist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/order/delivery.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/order/pickup.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/member/order/pickup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/order/success.html" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,7 +88,7 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Administrator/Desktop/PYG/springA2_classB/src/main/resources/templates",
+    "last_opened_file_path": "C:/Users/Administrator/Desktop/addd/master",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -86,6 +104,7 @@
       <recent name="C:\Users\djure\Desktop\_홍종표\홍종표\그룹 프로젝트 수정\src\main\resources\templates\layouts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\addd\master\src\main\resources\templates\member" />
       <recent name="C:\Users\djure\Desktop\_홍종표\홍종표\그룹 프로젝트\src\main\resources\templates\member" />
       <recent name="C:\Users\djure\Desktop\_홍종표\홍종표\그룹 프로젝트 수정\src\main\resources\static\css" />
     </key>

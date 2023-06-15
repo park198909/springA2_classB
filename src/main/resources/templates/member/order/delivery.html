@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns="http://www.w3.org/1999/html"
-      layout:decorate="~{layouts/main}">
+      layout:decorate="~{layouts/front/main}">
 <main layout:fragment="content">
     <div>
-        <p class="order">배달결제하기</p>
+        <p class="order">결제하기</p>
     </div>
     <table class="order_delivery">
         <thead>
@@ -88,7 +88,7 @@
             <input type="checkbox">휴대폰 결제
             <input type="checkbox">무통장 입금
         </div>
-        <button type="submit" class="order_pay" th:text="#{order.pay}"></button>
+        <button type="submit" class="order_pay" th:text="#{order.pay}" th:href="@{order/success}"></button>
     </div>
 </main>
 </html>

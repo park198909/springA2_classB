@@ -11,11 +11,11 @@ public class OrderpageController {
     public String delivery() {
         return "/order/delivery";
     }
-
-    @GetMapping("/pickup")
-    public String pickup() {
-        return "/order/pickup";
-    }
+//
+//    @GetMapping("/pickup")
+//    public String pickup() {
+//        return "/order/pickup";
+//    }
 
     @GetMapping("/success")
     public String success() {

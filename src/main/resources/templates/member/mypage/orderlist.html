@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns="http://www.w3.org/1999/html"
-      layout:decorate="~{layouts/main}">
+      layout:decorate="~{layouts/front/main}">
 <main layout:fragment="content">
     <section id="mypage_menu">
         <div>
             <p class="mypage">마이페이지</p>
         </div>
         <div class="mypage_div">
-            <div class="info">회원정보</div>
-            <div class="cart">장바구니</div>
-            <div class="orderlist">주문내역</div>
+            <div class="info" th:href="@{mypage/info}">회원정보</div>
+            <div class="cart" th:href="@{mypage/cart}">장바구니</div>
+            <div class="orderlist" th:href="@{mypage/orderlist}">주문내역</div>
         </div>
     </section>
     <table class = "order_list">

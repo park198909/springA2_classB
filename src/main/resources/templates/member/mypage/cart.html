@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorate="~{layouts/main}">
+      layout:decorate="~{layouts/front/main}">
 
 <main layout:fragment="content">
     <section id="mypage_menu">
@@ -9,9 +9,9 @@
             <p class="mypage">마이페이지</p>
         </div>
         <div class="mypage_div">
-            <div class="info">회원정보</div>
-            <div class="cart">장바구니</div>
-            <div class="orderlist">주문내역</div>
+            <div class="info" th:href="@{mypage/info}">회원정보</div>
+            <div class="cart" th:href="@{mypage/cart}">장바구니</div>
+            <div class="orderlist" th:href="@{mypage/orderlist}">주문내역</div>
         </div>
     </section>
     <table class="cart_list">
@@ -23,8 +23,6 @@
                 <td>옵션</td>
                 <td>상품 금액</td>
                 <td>수량</td>
-                <td><input type="checkbox">배달
-                    <input type="checkbox">픽업</td>
             </tr>
             </thead>
             <tbody>
@@ -34,9 +32,7 @@
                 <td>선택 안 함</td>
                 <td>5,000원</td>
                 <td>
-                    <img src="/images/minus.png">
-                    1
-                    <img src="/images/plus.png"></td>
+                    <input type="number" min="1" value="1"></td>
             </tr>
             <tr class="cart_list_detail">
                 <td><input type="checkbox"></td>
@@ -61,16 +57,16 @@
             <tr>
                 <td></td>
                 <td></td>
-                <td></td>
                 <td colspan="2">총 금액</td>
                 <td>15,000원</td>
             </tr>
             <tr>
-                <td colspan="3">
-                    <button class="cart_btn" th:text="#{cart.btn.shop}"></button>
+                <td colspan="2">
+                    <button class="cart_btn" th:text="#{cart.btn.shop}" th:href="@{/index}"></button>
                 </td>
-                <td colspan="3">
-                    <button class="cart_btn" th:text="#{cart.btn.order}"></button>
+                <td></td>
+                <td colspan="2">
+                    <button class="cart_btn" th:text="#{cart.btn.order}" th:href="@{/order/delivery}"></button>
             </tr>
             </tbody>
         </form>
