@@ -13,35 +13,9 @@
                
 
 ## 2023/06/14
-<<<<<<< HEAD
     - 관리자 페이지 주문관리 구현
         - controllers/admins/orders/**
         - entities/Order.java
         - models/order/**
         - repositories/OrderRepository.java
         - templates/admin/order/**
-=======
-
-### Log
-
-- 에러페이지 커스텀 (eunji)
-
-- templates 연동 (mayeeun)
-    - member
-        - mypage
-        - order
-
-- 관리자 페이지 상품 분류 기능 추가 (미구현, 500에러 발생)
-    - category 관련 Service, Entity, validator... 추가
-    - category templates 추가 (500)
-
-- master merge
-
-- 참고 사이트
-
-- 관리자 페이지
-    - 주문관리 구현1 : controllers/admins/orders/**
-    - 주문관리 구현2 : entities/Order.java
-    - 주문관리 구현3 : templates/admin/order/**
-
->>>>>>> 1210bdd14fd0a539a662477f924ed74509442435
