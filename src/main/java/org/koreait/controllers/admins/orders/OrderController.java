@@ -34,6 +34,13 @@ public class OrderContorller {
         return "admin/order/index";
     }
 
+    @GetMapping("/add")
+    public String register(@ModelAttribute OrderForm orderForm, Model model) {
+        commonProcess(model, "주문수정");
+
+        return "admin/order/register";
+    }
+
     @GetMapping("/update/{orderNo}")
     public String update(@PathVariable Long orderNo, Model model) {
         commonProcess(model, "주문수정");
