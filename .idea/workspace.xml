@@ -6,17 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0295da2b-ca90-46bf-b027-9c1b8ffc3828" name="변경" comment="변경">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/admins/products/CategoryForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/admins/products/CategoryForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/admins/products/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/admins/products/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/entities/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/entities/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/models/category/CategorySaveService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/models/category/CategorySaveService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/models/category/CategorySaveValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/models/category/CategorySaveValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/messages/validations.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages/validations.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/product/category_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/product/category_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/messages/validations.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/messages/validations.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/koreait/entities/QCategory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/koreait/entities/QCategory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/models/category/CategoryListService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/models/category/CategoryListService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/repositories/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/repositories/CategoryRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +154,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="yonggyo2" />
+                        <option value="origin/yonggyo2" />
                       </list>
                     </value>
                   </entry>

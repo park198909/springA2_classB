@@ -78,6 +78,8 @@ public class ProductController {
 
         List<Category> items = categoryListService.getAll();
         model.addAttribute("items", items);
+        System.out.println("---------------------------");
+        items.stream().forEach(System.out::println);
 
         return "admin/product/category_list";
     }
