@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="0295da2b-ca90-46bf-b027-9c1b8ffc3828" name="변경" comment="변경">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/product/category_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/product/category_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/commons/Menus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/commons/Menus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/configs/interceptors/SiteConfigInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/configs/interceptors/SiteConfigInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/outlines/admin/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/outlines/admin/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/outlines/front/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/outlines/front/header.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686809801958</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="변경">
+      <created>1686809979090</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1686809979090</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

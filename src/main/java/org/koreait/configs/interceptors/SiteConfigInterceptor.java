@@ -5,10 +5,12 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import org.koreait.commons.configs.ConfigInfoService;
+import org.koreait.entities.Category;
+import org.koreait.models.category.CategoryListService;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 
-import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -20,6 +22,7 @@ import java.util.Map;
 public class SiteConfigInterceptor implements HandlerInterceptor {
 
     private final ConfigInfoService infoService;
+    private final CategoryListService listService;
     private final HttpServletRequest request;
 
     @Override
@@ -29,6 +32,10 @@ public class SiteConfigInterceptor implements HandlerInterceptor {
         Map<String, String> siteConfigs = infoService.get("siteConfig", new TypeReference<Map<String, String>>() {});
         request.setAttribute("siteConfig", siteConfigs);
 
+        /** 사이트 공통 메뉴(상품분류) 조회 */
+        List<Category> categories = listService.gets(false);
+        request.setAttribute("commonMenus", categories);
+        
         return true;
     }
 
