@@ -175,3 +175,12 @@
 - 참고 사이트
 
 - http://n-mk.kr:3003/
+
+## 2023/06/15
+
+### Log
+
+- 관리자 페이지 기능 추가
+    - order관련 Service, Entity, validator..
+    - order templates 추가
+    - 페이지 바로가기 버튼 추가 (관리자, annonymous)
