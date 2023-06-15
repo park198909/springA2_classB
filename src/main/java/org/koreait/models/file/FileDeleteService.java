@@ -53,8 +53,19 @@ public class FileDeleteService {
      * @param gid : 그룹 ID
      */
     public void delete(String gid) {
-        List<FileInfo> files = infoService.gets(gid);
-
+        List<FileInfo> files = infoService.gets(gid, null, false); // 미완료 파일
+        files.addAll(infoService.gets(gid, null, true));// 완료 파일 +
         files.stream().forEach(f -> delete(f.getId()));
+    }
+
+    public void delete(String gid, String location) {
+        if (location == null) {
+            delete(gid);
+        } else {
+            List<FileInfo> files = infoService.gets(gid, location, false); // 미완료 파일
+            List<FileInfo> files2 = infoService.gets(gid, location, true); // 완료 파일
+            files.addAll(files2);
+            files.stream().forEach(f -> delete(f.getId()));
+        }
     }
 }

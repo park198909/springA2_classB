@@ -20,15 +20,27 @@
         <tr>
             <th>상품 이미지(상세)</th>
             <td>
-                <div class="main_image"></div>
-                <button type="button" class="uploadFiles sbtn" th:data-gid="*{gid}" data-location="main">이미지 추가</button>
+                <div class="main_image">
+                    <span th:if="*{mainImage}" th:id="*{'file_' + mainImage.id}">
+                        <img th:src="*{mainImage.fileUrl}">
+                        <br>
+                        <a th:href="@{/file/delete/{id}(id=*{mainImage.id})}" class="sbtn blue" onclick="return confirm('정말 삭제하시겠습니까?');" target="ifrmProcess">이미지 삭제</a>
+                    </span>
+                </div>
+                <button type="button" class="uploadFiles sbtn" th:data-gid="*{gid}" data-location="main" data-image-only="true" data-single="true">이미지 추가</button>
             </td>
         </tr>
         <tr>
             <th>상품 이미지(목록)</th>
             <td>
-                <div class="list_image"></div>
-                <button type="button" class="uploadFiles sbtn" th:data-gid="*{gid}" data-location="list">이미지 추가</button>
+                <div class="list_image">
+                    <span th:if="*{listImage}" th:id="*{'file_' + listImage.id}">
+                        <img th:src="*{listImage.fileUrl}">
+                        <br>
+                        <a th:href="@{/file/delete/{id}(id=*{listImage.id})}" class="sbtn blue" onclick="return confirm('정말 삭제하시겠습니까?');" target="ifrmProcess">이미지 삭제</a>
+                    </span>
+                </div>
+                <button type="button" class="uploadFiles sbtn" th:data-gid="*{gid}" data-location="list" data-image-only="true" data-single="true">이미지 추가</button>
             </td>
         </tr>
         <tr>
@@ -51,7 +63,7 @@
 
                 <input type="radio" name="stockType" value="1" id="stockType_1" th:field="*{stockType}">
                 <label for="stockType_1">고정수량</label>
-                <div class="stocks" th:classappend="${stock == 0 ? 'dn' : ''}">
+                <div class="stocks" th:classappend="*{stockType == 0 ? 'dn' : ''}">
                     <input type="number" name="stock" th:field="*{stock}">
                 </div>
             </td>
@@ -66,11 +78,18 @@
             <th>상세 설명</th>
             <td>
                 <textarea name="description" id="description" th:field="*{description}"></textarea>
-                <button type="button" class="uploadFiles editor sbtn" data-location="editor" th:data-gid="*{gid}">이미지 추가</button>
-                <div class="attachedFiles editor"></div>
+                <button type="button" class="uploadFiles editor sbtn" data-location="editor" th:data-gid="*{gid}" data-image-only="true">이미지 추가</button>
+                <div class="attachedFiles editor">
+                    <span class="file_info_box" th:each="file : *{editorImages}" th:object="${file}" th:id="*{'file_' + id}">
+                        <a th:href="@{/file/download/{id}(id=*{id})}" th:text="*{fileName}"></a>
+                        <i class="xi-arrow-up insert_editor" th:data-url="*{fileUrl}"></i>
+                        <a th:href="@{/file/delete/{id}(id=*{id})}" class='remove' target="ifrmProcess" onclick="return confirm('정말 삭제하시겠습니까?');">X</a>
+                    </span>
+                </div>
             </td>
         </tr>
         </table>
         <th:block th:replace="~{admin/commons/_file_tpl::tpl}"></th:block>
+        <th:block th:replace="~{admin/commons/_file_tpl::tpl_image}"></th:block>
     </th:block>
 </html>

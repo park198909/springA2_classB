@@ -6,11 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="0295da2b-ca90-46bf-b027-9c1b8ffc3828" name="변경" comment="변경">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/admins/products/ProductForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/admins/products/ProductForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/entities/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/entities/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/models/file/FileDeleteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/models/file/FileDeleteService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/models/file/FileUploadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/models/file/FileUploadService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/admin/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/admin/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/models/product/ProductInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/models/product/ProductInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/models/product/ProductSaveService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/models/product/ProductSaveService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/restcontrollers/FileUploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/restcontrollers/files/FileUploadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/messages/validations.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages/validations.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/admin/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/admin/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/admin/fileManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/admin/fileManager.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/admin/product/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/admin/product/form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/commons/_file_tpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/commons/_file_tpl.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/product/_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/product/_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/messages/validations.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/messages/validations.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686811596710</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="변경">
+      <created>1686813048779</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1686813048779</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
