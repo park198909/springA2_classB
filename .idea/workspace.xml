@@ -6,7 +6,30 @@
   <component name="ChangeListManager">
     <list default="true" id="0295da2b-ca90-46bf-b027-9c1b8ffc3828" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/outlines/admin/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/outlines/admin/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/messages/validations.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/koreait/controllers/admins/orders/OrderForm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/koreait/entities/Order$OrderBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/koreait/entities/Order.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/koreait/entities/QBaseEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/koreait/entities/QBaseMemberEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/koreait/entities/QBoard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/koreait/entities/QBoardData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/koreait/entities/QBoardView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/koreait/entities/QCategory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/koreait/entities/QConfigs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/koreait/entities/QFileInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/koreait/entities/QMember.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/koreait/entities/QOrder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/koreait/entities/QProduct.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/koreait/repositories/OrderRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/order/_form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/order/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/order/update.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/org/koreait/entities/QOrder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/koreait/BoardApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/koreait/tests/BoardSaveTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/koreait/tests/BoardViewTests.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,11 +75,11 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Administrator/Desktop/홍종표/그룹 프로젝트",
+    "last_opened_file_path": "D:/홍종표_/그룹 프로젝트",
     "project.structure.last.edited": "프로젝트",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.general"
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -96,11 +119,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.BoardApplication" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
