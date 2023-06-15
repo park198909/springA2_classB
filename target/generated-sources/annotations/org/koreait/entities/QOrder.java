@@ -19,11 +19,24 @@ public class QOrder extends EntityPathBase<Order> {
 
     public static final QOrder order = new QOrder("order1");
 
+    public final QBaseEntity _super = new QBaseEntity(this);
+
+    //inherited
+    public final DateTimePath<java.time.LocalDateTime> createdAt = _super.createdAt;
+
+    //inherited
+    public final DateTimePath<java.time.LocalDateTime> deletedAt = _super.deletedAt;
+
     public final StringPath gid = createString("gid");
+
+    //inherited
+    public final DateTimePath<java.time.LocalDateTime> modifiedAt = _super.modifiedAt;
 
     public final StringPath orderId = createString("orderId");
 
     public final StringPath orderlist = createString("orderlist");
+
+    public final StringPath orderNm = createString("orderNm");
 
     public final NumberPath<Long> orderNo = createNumber("orderNo", Long.class);
 

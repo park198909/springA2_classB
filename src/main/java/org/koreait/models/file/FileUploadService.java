@@ -34,7 +34,8 @@ public class FileUploadService {
         List<FileInfo> items = new ArrayList<>();
         for (MultipartFile file : files) {
             String fileName = file.getOriginalFilename();
-            String extension = fileName.lastIndexOf('.') != -1 ? fileName.substring(fileName.lastIndexOf('.') + 1) : null;
+            String extension = fileName.lastIndexOf('.') != -1 ? fileName
+                    .substring(fileName.lastIndexOf('.') + 1) : null;
 
             FileInfo item = FileInfo.builder()
                     .gid(gid)

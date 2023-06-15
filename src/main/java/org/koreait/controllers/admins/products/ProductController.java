@@ -7,10 +7,13 @@ import lombok.RequiredArgsConstructor;
 import org.koreait.commons.CommonException;
 import org.koreait.commons.MenuDetail;
 import org.koreait.commons.Menus;
+import org.koreait.entities.Product;
 import org.koreait.models.category.CategorySaveService;
 import org.koreait.models.category.DuplicateCateCdException;
+import org.koreait.models.product.ProductConfigListService;
 import org.koreait.models.product.ProductInfoService;
 import org.koreait.models.product.ProductSaveService;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
@@ -28,11 +31,14 @@ public class ProductController {
     private final ProductSaveService productSaveService;
     private final ProductInfoService productInfoService;
     private final CategorySaveService categorySaveService;
+    private final ProductConfigListService productConfigListService;
 
     @GetMapping
-    public String index(Model model) {
+    public String index(@ModelAttribute ProductSearch productSearch, Model model) {
         commonProcess(model, "상품목록");
 
+        Page<Product> data = productConfigListService.gets(productSearch);
+        model.addAttribute("items", data.getContent());
 
         return "admin/product/index";
     }

@@ -48,10 +48,12 @@ aside li > a * { color: #dddee4; font-size: 18px; }
 aside li > a:hover,
 aside li > a.on { background: #3c4e7a; font-weight: bold; }
 aside li > a:hover:after,
-aside li > a.on:after { content: ''; display: block; position: absolute; width: 8px; height: 100%; right: 0; top: 0; background: #00d0d7; }
+aside li > a.on:after { content: ''; display: block; position: absolute;
+width: 8px; height: 100%; right: 0; top: 0; background: #00d0d7; }
 
 /** 기본 버튼 스타일 */
-.sbtn { display: inline-block; border: 1px solid #596b99; color: #596b99; min-width: 90px; padding: 0 20px; height: 28px; line-height: 26px; text-align: center; border-radius: 5px; }
+.sbtn { display: inline-block; border: 1px solid #596b99; color: #596b99;
+min-width: 90px; padding: 0 20px; height: 28px; line-height: 26px; text-align: center; border-radius: 5px; }
 .sbtn.blue { color: #fff; background:#596b99; }
 
 .btns { display: flex; width: 400px; margin: 0 auto; }
@@ -59,7 +61,8 @@ aside li > a.on:after { content: ''; display: block; position: absolute; width: 
 .btns > button:last-of-type { background: #000; color: #fff; }
 
 .search_btn { text-align: center; margin: 20px 0 35px; }
-.search_btn button { text-align: center; height: 45px; line-height: 45px; background: #36466d; color: #fff; padding: 0 30px; border: 0; font-size: 16px; }
+.search_btn button { text-align: center; height: 45px; line-height: 45px;
+background: #36466d; color: #fff; padding: 0 30px; border: 0; font-size: 16px; }
 
 
 /** 기본 메세지 상자 스타일 */
@@ -99,8 +102,6 @@ nav.submenus a { line-height: 60px; padding: 0 40px; font-size: 18px; }
 /** 메인 */
 .ad_mainH2 { margin-top: 0; }
 .ad_explainBox li { cursor: pointer; font-size 20px; font-size: 20px; width: fit-content; }
-
-
 
 /** 푸터 */
 footer { background-color: #596b99; height:210px }

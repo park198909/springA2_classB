@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns="http://www.w3.org/1999/html"
+      layout:decorate="~{layouts/front/main}">
+<main layout:fragment="content">
+    <div>
+        <p class="order">픽업결제하기</p>
+    </div>
+    <table class="order_pickup">
+        <thead>
+        <tr>
+            <td>상품정보</td>
+            <td>수량</td>
+            <td>배송비</td>
+            <td>상품 금액</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                <img src="/images/americano.png">
+            </td>
+            <td>3</td>
+            <td>0원</td>
+            <td>15,000원</td>
+        </tr>
+        <tr>
+            <td>
+                <img src="/images/americano.png">
+            </td>
+            <td>1</td>
+            <td>3,000원</td>
+            <td>5,000원</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>총 상품 금액</td>
+            <td colspan="2">23,000원</td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="pay">
+        <p>결제 방법</p>
+        <input type="checkbox">카드결제
+        <input type="checkbox">실시간 계좌이체
+        <input type="checkbox">휴대폰 결제
+        <input type="checkbox">무통장 입금
+    </div>
+    <button type="submit" class="order_pay" th:text="#{order.pay}"></button>
+</main>
+</html>

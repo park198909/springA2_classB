@@ -6,9 +6,11 @@ import lombok.RequiredArgsConstructor;
 import org.koreait.commons.CommonException;
 import org.koreait.commons.MenuDetail;
 import org.koreait.commons.Menus;
-import org.koreait.controllers.admins.products.ProductForm;
+import org.koreait.entities.Order;
+import org.koreait.models.order.OrderConfigListService;
 import org.koreait.models.order.OrderInfoService;
 import org.koreait.models.order.OrderSaveService;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
@@ -25,10 +27,14 @@ public class OrderController {
     private final HttpServletRequest request;
     private final OrderInfoService orderInfoService;
     private final OrderSaveService orderSaveService;
+    private final OrderConfigListService orderConfigListService;
 
     @GetMapping
-    public String index(Model model) {
+    public String index(@ModelAttribute OrderSearch orderSearch, Model model) {
         commonProcess(model,"주문목록");
+
+        Page<Order> data = orderConfigListService.gets(orderSearch);
+        model.addAttribute("items", data.getContent());
 
         return "admin/order/index";
     }

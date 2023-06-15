@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Entity @Data @Builder
 @NoArgsConstructor @AllArgsConstructor
 @Table(name = "_ORDER")
-public class Order {
+public class Order extends BaseEntity {
  
     @Id @GeneratedValue
     private Long orderNo;   // 주문 번호
@@ -18,6 +18,8 @@ public class Order {
     private String gid;
 
     private String orderlist; // 주문품목
+    
+    private String orderNm; // 주문자명
 
     @Column(nullable = false, length = 20)
     private String orderId; // 주문자

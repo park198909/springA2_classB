@@ -5,7 +5,6 @@
 
     <section layout:fragment="content">
         <h1 th:text="${title}"></h1>
-
         <th:block th:replace="~{admin/commons/_message::message}"></th:block>
 
         <form name="frmSave" method="post" th:action="@{/admin/config}" autocomplete="off" th:object="${configForm}">

@@ -58,11 +58,11 @@ main #main_menu div a p { font-size:2rem }
 /** 메인 - 메뉴 영역 E */
 
 /** 푸터 영역 S */
-footer { background-color:#ddd; height:210px }
+footer { background-color: #596b99; height:210px }
 footer ul { margin:0px 10px }
-footer ul li { font-size : 20px}
+footer ul li { font-size : 20px; color: #dddee4; }
 footer div { height:60px;  display: flex; align-items:center; }
-footer div p { font-size:20px; padding:10px}
+footer div p { font-size: large; font-weight: bold; font-size:20px; padding:10px; color: #dddee4; }
 .footer_p {cursor: pointer;}
 /** 푸터 영역 E */
 
@@ -95,6 +95,53 @@ footer div p { font-size:20px; padding:10px}
 .order_addr { margin-left:auto; margin-right:auto; text-align:center;}
 
 
+
+
+/* 마이페이지 - 회원정보 S */
+.mypage_table, .info_table { margin-left: auto; margin-right: auto; padding-top: 30px;}
+#mypage_menu{ text-align: center; width: 70%; margin-left: auto; margin-right: auto; }
+.mypage_div { display: flex; text-align: center; }
+.info, .cart, .orderlist { width:calc(100% / 3); border: 1px solid; font-size:20px; height: 35px; }
+.mypage { font-size: 30px; }
+.mypage_table td, .info_table td { font-size:1.3rem; padding:10px; }
+.info_btn { width:250px; height:40px; font-size:1.3rem; text-align:center; border-radius:5px; border:2px solid; background:white;}
+.update_btn {width:100%; height:35px; font-size:1.3rem; text-align:center; border:2px solid; border-radius:5px; background:white;}
+/* 마이페이지 - 회원정보 E */
+
+/* 마이페이지 - 장바구니 S */
+.cart_list { margin-left: auto; margin-right: auto; padding-top: 30px; width:60%; }
+.cart_list thead { text-align: center; font-weight: bold; font-size:15px; }
+.cart_list tbody { font-size:18px; }
+.cart_list td { padding:10px; text-align:center; }
+.cart_list_detail img { weight:25px; height:25px; }
+.cart_list_detail .cart_img img{ height:100px; }
+.cart_btn { width:100%; height:40px; font-size:1.3rem; text-align:center; border-radius:5px; border:2px solid; background:white;}
+/* 마이페이지 - 장바구니 E */
+
+/* 마이페이지 - 주문내역 S */
+.order_list { margin-left: auto; margin-right: auto; margin-top:2%; margin-bottom:5%; width:60%; }
+.order_list thead { font-size:20px; font-weight:bold; text-align:center; border:solid 1px; }
+.order_list tbody { font-size:15px; text-align:center; }
+.order_list tr { border:1px solid; margin:10px; }
+.order_img img{ weight:100px; height:100px; }
+/* 마이페이지 - 주문내역 E */
+
+/* 결제 페이지 S */
+.order { margin-left:auto; margin-right:auto; border:solid 2px; width:70%; height:6%; text-align:center; font-size:1.7rem; border-radius:5px;}
+.order_delivery, .order_pickup { margin-left:auto; margin-right:auto; margin-bottom:10px; text-align:center; font-size:1.4rem; width:50%; }
+.order_delivery img, .order_pickup img{ height:150px; width:150px; margin:10px;}
+.order_addr td { font-size:1.3rem; padding:10px; }
+.pay {text-align:center; margin:auto; font-size:1.4rem; padding:30px;}
+.order_suc { font-size: 1.5rem; text-align:center; margin:auto; padding:10px;}
+.order_div {margin:auto; display:block; width:30%;}
+.order_btn {margin-bottom:10px; margin-top:10px; width:49.66%; height:40px; font-size:1.3rem; text-align:center; border-radius:5px; border:2px solid; background:white;}
+.order_pay {margin:auto; margin-bottom:10px; display:block; width:30%; height:40px; font-size:1.3rem; text-align:center; border-radius:5px; border:2px solid; background:white;}
+/* 결제 페이지 - 배달 결제 S */
+.order { margin-left:auto; margin-right:auto; border:solid 1px; width:80%; height:5%; text-align:center; font-size:2rem;}
+.order_delivery { margin-left:auto; margin-right:auto; margin-bottom:100px; text-align:center; font-size:1.4rem; width:60%; }
+.order_delivery img{ height:200px; width:200px; margin:10px;}
+
+.order_addr { margin-left:auto; margin-right:auto; text-align:center;}
 
 
 /** 관리자 페이지 공통 영역 S */

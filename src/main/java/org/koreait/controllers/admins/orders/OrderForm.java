@@ -13,7 +13,8 @@ public class OrderForm {
 
     private String[] orderlist; // 주문품목
     @NotBlank
-    private String orderId; // 주문자
+    private String orderId; // 주문자Id
+    private String orderNm; // 주문자명
     @NotBlank
     private String orderStat; // 주문 진행 상태
     @NotBlank
