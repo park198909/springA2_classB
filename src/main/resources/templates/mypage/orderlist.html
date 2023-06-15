@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns="http://www.w3.org/1999/html"
+      layout:decorate="~{layouts/front/main}">
+<main layout:fragment="content">
+    <section id="mypage_menu">
+        <div>
+            <p class="mypage">마이페이지</p>
+        </div>
+        <div class="mypage_div">
+            <div class="info">회원정보</div>
+            <div class="cart">장바구니</div>
+            <div class="orderlist">주문내역</div>
+        </div>
+    </section>
+    <table class = "order_list">
+        <form>
+            <thead>
+            <tr>
+                <td>주문 일자/주문 번호</td>
+                <td>주문 상품</td>
+                <td>수량</td>
+                <td>주문 금액</td>
+                <td>주문 상태</td>
+            </tr>
+            </thead>
+
+            </tbody>
+            <tr>
+                <td>2023-06-08<br>20230608-000001</td>
+                <td class="order_img"><img src="/images/americano.png"><br>아메리카노 외2건</td>
+                <td>3</td>
+                <td>15,000원</td>
+                <td>주문 확인</td>
+            </tr>
+            <tr>
+                <td>2023-06-06<br>20230606-004581</td>
+                <td class="order_img"><img src="/images/americano.png"><br>아메리카노</td>
+                <td>1</td>
+                <td>5,000원</td>
+                <td>픽업 완료</td>
+            </tr>
+            <tr>
+                <td>2023-06-01<br>20230601-000589</td>
+                <td class="order_img"><img src="/images/americano.png"><br>자몽에이드</td>
+                <td>1</td>
+                <td>6.500원</td>
+                <td>배송 완료</td>
+            </tr>
+            </tbody>
+
+        </form>
+    </table>
+</main>
+</html>

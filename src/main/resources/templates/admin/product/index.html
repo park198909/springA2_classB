@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/admin/main}">
+<section layout:fragment="content">
+    <h1>상품 검색</h1>
+    <form name="frmSearch" method="get" th:action="@{/admin/product}" autocomplete="off" th:object="${productSearch}">
+        <table class="table-cols">
+            <tr>
+                <th>검색어</th>
+                <td>
+                    <div class="input_grp">
+
+                        <select name="sopt" th:field="*{sopt}">
+                            <!--<select name="sopt" th:field="*{sopt}">-->
+                            <option value="all">통합검색</option>
+                            <option value="pName">상품명</option>
+                            <option value="cateCd">카테고리</option>
+                        </select>
+                        <input type="text" name="skey" th:field="*{skey}" placeholder="검색어 입력...">
+                        <!--<input type="text" name="skey" th:field="*{skey}" placeholder="검색어 입력...">-->
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="search_btn">
+            <button type="submit">조회하기</button>
+        </div>
+    </form>
+
+    <h1>상품 목록</h1>
+    <form name="frmList" method="post" th:action="@{/admin/product}" autocomplete="off" target="ifrmProcess">
+        <input type="hidden" name="_method" value="patch">
+        <table class="table-rows">
+            <thead>
+            <tr>
+                <th width="40">
+                    <input type="checkbox" class="checkall" id="checkall" data-target-name="pNo">
+                    <label for="checkall"></label>
+                </th>
+                <th width="100">상품번호</th>
+                <th width="150">카테고리</th>
+                <th width="300">상품명</th>
+                <th width="150">상품가격</th>
+                <th width="100">재고</th>
+                <th></th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr th:each="item, status : ${items}" th:object="${item}">
+                <td align="center">
+                    <input type="checkbox" name="pNo" th:value="*{pNo}" th:id="${'pNo_'+status.index}">
+                    <label th:for="${'pNo_' + status.index}"></label>
+                </td>
+                <td align="center" th:text="*{pNo}"></td>
+                <td align="center" th:text="*{cateCd}"></td>
+                <td align="center" th:text="*{pName}"></td>
+                <td align="center" th:text="*{consumerPrice}"></td>
+                <td align="center" th:text="*{stock}"></td>
+                <td>
+                    <a th:href="@{/admin/product/update/{pNo}(pNo=*{pNo})}" class="sbtn">수정하기</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="table-action">
+            <button type="button" class="sbtn">수정하기</button>
+            <button type="button" class="sbtn blue">삭제하기</button>
+        </div>
+    </form>
+</section>
+</html>

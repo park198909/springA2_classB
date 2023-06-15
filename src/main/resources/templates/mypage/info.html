@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/front/main}">
+<main layout:fragment="content">
+    <section id="mypage_menu">
+        <div>
+            <p class="mypage">마이페이지</p>
+        </div>
+        <div class="mypage_div">
+            <div class="info">회원정보</div>
+            <div class="cart">장바구니</div>
+            <div class="orderlist">주문내역</div>
+        </div>
+    </section>
+    <table class="mypage_table">
+        <tr>
+            <td th:text="#{userId}"></td>
+            <td th:text="${member.userId}"></td>
+        </tr>
+        <tr>
+            <td th:text="#{userNm}"></td>
+            <td th:text="${member.userNm}"></td>
+        </tr>
+        <tr>
+            <td th:text="#{email}"></td>
+            <td th:text="${member.email}"></td>
+        </tr>
+        <tr>
+            <td th:text="#{mobile}"></td>
+            <td th:text="${member.mobile}"></td>
+        </tr>
+        <tr>
+            <td th:text="#{address}"></td>
+            <td th:text="${member.address}"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button type="button" class="update_btn" th:text="#{member.btn.infoupdate}" th:onclick="|location.href='@{/mypage/infoupdate}'|"></button></td>
+        </tr>
+    </table>
+</main>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/main}">
+<main layout:fragment="content">
+    <section id="mypage_menu">
+        <div>
+            <p class="mypage">마이페이지</p>
+        </div>
+        <div class="mypage_div">
+            <div class="info">회원정보</div>
+            <div class="cart">장바구니</div>
+            <div class="orderlist">주문내역</div>
+        </div>
+    </section>
+    <table class="mypage_table">
+        <tr>
+            <td>아이디</td>
+            <td><input type="text" name="id"></td>
+        </tr>
+        <tr>
+            <td>이름</td>
+            <td><input type="text" name="name"></td>
+        </tr>
+        <tr>
+            <td>이메일</td>
+            <td><input type="email" name="email"></td>
+        </tr>
+        <tr>
+            <td>휴대전화번호</td>
+            <td><input type="number" name="phone_num"></td>
+        </tr>
+        <tr>
+            <td>주소</td>
+            <td><input type="text" name="address"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button type="button" class="update_btn" th:text="#{member.btn.infoupdate}"></button></td>
+        </tr>
+    </table>
+</main>
+</html>

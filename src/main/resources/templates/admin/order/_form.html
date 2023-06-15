@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <th:block th:fragment="form" th:object="${orderForm}">
+        <input type="hidden" name="gid" th:field="*{gid}">
+        <table class="table-cols">
+            <tr>
+                <th>주문품목</th>
+                <td>
+                    <input type="text" name="orderlist" th:field="*{orderlist}">
+                </td>
+            </tr>
+            <tr>
+                <th>주문자</th>
+                <td>
+                    <input type="text" name="orderId" th:field="*{orderId}">
+                </td>
+            </tr>
+            <tr>
+                <th>주문 진행 상태</th>
+                <td>
+                    <input type="text" name="orderStat" th:field="*{orderStat}">
+                </td>
+            </tr>
+            <tr>
+                <th>주문 가격</th>
+                <td>
+                    <input type="text" name="price" th:field="*{price}">
+                </td>
+            </tr>
+        </table>
+    </th:block>
+</html>

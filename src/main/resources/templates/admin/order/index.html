@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/admin/main}">
+<section layout:fragment="content">
+    <h1>주문 목록</h1>
+    <form name='frmList' method="post" th:action="@{/admin/order}" autocomplete="off" target="ifrmProcess">
+        <input type="hidden" name="_method" value="patch">
+
+        <table class="table-rows">
+            <thead>
+            <tr>
+                <th width="40">
+                    <input type="checkbox" class="checkall" id="checkall" data-target-name="orderNo">
+                    <label for="checkall"></label>
+                </th>
+                <th width="150">주문번호</th>
+                <th width="300">주문품목</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="item, status : ${items}" th:object="${item}">
+                <td align="center">
+                    <input type="checkbox" name="orderNo" th:value="*{orderNo}" th:id="${'orderNo_' + status.index}">
+                    <label th:for="${'orderNo_' + status.index}"></label>
+                </td>
+                <td align="center" th:text="*{orderNo}"></td>
+                <td align="center" th:text="*{orderlist}"></td>
+                <td>
+                    <a th:href="@{/admin/order/{orderNo}/update(orderNo=*{orderNo})}" class="sbtn">설정수정</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="table-action">
+            <button type="button" class="sbtn"> 수정하기</button>
+            <button type="button" class="sbtn blue"> 삭제하기</button>
+        </div>
+    </form>
+</section>
+</html>

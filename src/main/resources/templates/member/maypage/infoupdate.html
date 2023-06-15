@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/main}">
+<main layout:fragment="content">
+    <section id="mypage_menu">
+        <div>
+            <p class="mypage">마이페이지</p>
+        </div>
+        <div class="mypage_div">
+            <div class="info">회원정보</div>
+            <div class="cart">장바구니</div>
+            <div class="orderlist">주문내역</div>
+        </div>
+    </section>
+    <table class="info_table">
+        <tr>
+            <td>현재 비밀번호</td>
+            <td><input type="password" name="password"></td>
+        </tr>
+        <tr>
+            <td>변경할 비밀번호</td>
+            <td><input type="password" name="updatePw"></td>
+        </tr>
+        <tr>
+            <td>비밀번호 확인</td>
+            <td><input type="password" name="updatePwRe"></td>
+        </tr>
+        <tr>
+            <td>이메일</td>
+            <td><input type="email" name="email"></td>
+        </tr>
+        <tr>
+            <td>휴대전화번호</td>
+            <td><input type="number" name="phone_num"></td>
+        </tr>
+        <tr>
+            <td>주소</td>
+            <td><input type="text" name="address">
+                <input type="submit" value="검색"></td>
+        </tr>
+        <tr>
+            <td><button type="submit" class="info_btn" th:text="#{member.btn.infosave}"></button></td>
+            <td><button type="submit" class="info_btn" th:text="#{member.btn.infodelete}"></button></td>
+        </tr>
+
+    </table>
+</main>
+</html>
