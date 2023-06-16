@@ -56,6 +56,13 @@ public class ProductController {
         return "product/view";
     }
 
+    @PostMapping
+    public String process(@ModelAttribute ProductViewForm productViewForm, Model model) {
+        System.out.println(productViewForm);
+
+        return "commons/execute_script";
+    }
+
     private void commonProcess(Model model, String title) {
         model.addAttribute("pageTitle", title);
     }

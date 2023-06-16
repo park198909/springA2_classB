@@ -9,9 +9,10 @@
                 <img th:if="*{mainImage != null}" th:src="*{mainImage.fileUrl}">
             </div>
             <div class="right">
-                <form name="frmProduct" method="post" th:action="@{/product}" autocomplete="off">
+                <form name="frmProduct" method="post" th:action="@{/product}" autocomplete="off" target="ifrmProcess">
                     <input type="hidden" name="mode" value="cart">
-                    <div class="tit" th:text="*{pName}"></div>
+                    <input type="hidden" name="pNo" th:value="*{pNo}">
+                     <div class="tit" th:text="*{pName}"></div>
                     <div class="short_desc" th:text="*{shortDescription}"></div>
                     <div class="salePrice">
                         <span th:text="*{#numbers.formatInteger(salePrice, 3, 'COMMA')}"></span>원
