@@ -6,15 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0295da2b-ca90-46bf-b027-9c1b8ffc3828" name="변경" comment="변경">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/admins/products/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/admins/products/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/admins/products/ProductSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/admins/products/ProductSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/models/product/ProductConfigListService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/models/product/ProductInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/models/product/ProductInfoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/models/product/ProductSaveService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/models/product/ProductSaveService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/admin/product/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/admin/product/form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/product/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/product/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/outlines/front/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/outlines/front/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/products/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/products/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/product/view.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/product/view.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686819241261</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="변경">
+      <created>1686898603075</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1686898603075</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

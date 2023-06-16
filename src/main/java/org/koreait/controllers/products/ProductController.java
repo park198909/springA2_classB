@@ -50,6 +50,9 @@ public class ProductController {
 
         commonProcess(model, product.getPName());
 
+        model.addAttribute("product", product);
+        model.addAttribute("addCss", new String[] { "product/view"});
+        model.addAttribute("addScript", new String[] { "product/form"} );
         return "product/view";
     }
 
