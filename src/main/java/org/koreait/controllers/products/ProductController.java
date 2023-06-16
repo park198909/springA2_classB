@@ -1,14 +1,14 @@
-package org.koreait.controllers.admins.products;
+package org.koreait.controllers.products;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import org.koreait.commons.CommonException;
 import org.koreait.commons.Pagination;
+import org.koreait.controllers.admins.products.ProductSearch;
 import org.koreait.controllers.carts.CartForm;
 import org.koreait.entities.Category;
 import org.koreait.entities.Product;
-import org.koreait.models.cart.CartSaveService;
 import org.koreait.models.category.CategoryInfoService;
 import org.koreait.models.product.ProductInfoService;
 import org.springframework.data.domain.Page;
@@ -17,13 +17,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-@Controller
+@Controller("frontProductController")
 @RequestMapping("/product")
 @RequiredArgsConstructor
 public class ProductController {
     private final ProductInfoService productInfoService;
     private final CategoryInfoService categoryInfoService;
-    private final CartSaveService cartSaveService;
     private final HttpServletRequest request;
     private final HttpServletResponse response;
 
@@ -60,19 +59,9 @@ public class ProductController {
     }
 
     @PostMapping
-    public String process(@ModelAttribute CartForm form, Model model) {
-        String script = null;
-        try {
-            cartSaveService.save(form);
-            String url = request.getContextPath();
-            url += form.getMode().equals("order") ? "/order" : "/cart";
-            script = String.format("parent.locaion.replace('%s');", url);
-        } catch (CommonException e) {
-            e.printStackTrace();
-            script = String.format("Swal.fire('%s');", e.getMessage());
-        }
+    public String process(@ModelAttribute CartForm cartForm, Model model) {
 
-        return "commons/sweetalert_script";
+        return "commons/execute_script";
     }
 
     private void commonProcess(Model model, String title) {
