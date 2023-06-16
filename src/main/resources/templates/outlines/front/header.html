@@ -9,12 +9,10 @@
             <img src="/images/logo.png" alt="메인 로고" id="main_logo">
         </a>
         <nav id="center_menu">
-            <a href="#">Coffee</a>
-            <a href="#">Non-Coffee</a>
-            <a href="#">Ade</a>
-            <a href="#">Tea</a>
-            <a href="#">Desert</a>
-            <a href="#">atc</a>
+            <a th:each="menu : ${commonMenus}" th:object="${menu}">
+                <a th:href="@{/product/{cateCd}(cateCd=*{cateCd})}" th:text="*{cateNm}"></a>
+            </a>
+
         </nav>
 
         <th:block sec:authorize="isAnonymous()">

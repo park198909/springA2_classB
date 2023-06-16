@@ -18,7 +18,6 @@ public class CategorySaveValidator implements ServiceValidator<CategoryForm>, Re
         nullCheck(categoryForm, new CommonException("잘못된 접근입니다."));
 
         requiredCheck(categoryForm.getCateCd(), new CommonException("분류코드를 입력하세요."));
-        requiredCheck(categoryForm.getLocation(), new CommonException("노출위치를 입력하세요"));
         requiredCheck(categoryForm.getCateNm(), new CommonException("분류명을 입력하세요."));
 
         if (repository.exists(categoryForm.getCateCd())) {

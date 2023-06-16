@@ -54,7 +54,9 @@
                     <label th:for="${'pNo_' + status.index}"></label>
                 </td>
                 <td align="center" th:text="*{pNo}"></td>
-                <td align="center" th:text="*{cateCd}"></td>
+                <td align="center">
+                    <a th:href="@{/product/{cateCd}(cateCd=*{category.cateCd})}" th:text="*{category.cateNm + '(' + category.cateCd + ')'}" target="_blank"></a>
+                </td>
                 <td align="center" th:text="*{pName}"></td>
                 <td align="center" th:text="*{consumerPrice}"></td>
                 <td align="center" th:text="*{stock}"></td>
@@ -69,5 +71,6 @@
             <button type="button" class="sbtn blue">삭제하기</button>
         </div>
     </form>
+    <th:block th:replace="~{commons/_pagination::pagination}"></th:block>
 </section>
 </html>

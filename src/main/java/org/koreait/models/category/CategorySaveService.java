@@ -30,7 +30,6 @@ public class CategorySaveService {
             category = repository.findById(cateCd).orElseGet(() -> CategoryForm.of(categoryForm));
             category.setCateCd(cateCd);
             category.setCateNm(categoryForm.getCateNm());
-            category.setLocation(categoryForm.getLocation());
         }
 
         if (category == null) {

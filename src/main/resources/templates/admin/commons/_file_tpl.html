@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <th:block th:fragment="tpl">
+        <script type="text/html" id="file_tpl">
+            <span class="file_info_box" id="file_<%=id%>">
+                <a href="/file/download/<%=id%>"><%=fileName%></a>
+                <i class="xi-arrow-up insert_editor" data-url="<%=url%>"></i>
+                <a href="/file/delete/<%=id%>" target="ifrmProcess" onclick="return confirm('정말 삭제하시겠습니까?');" class="remove">X</a>
+            </span>
+        </script>
+    </th:block>
+
+    <th:block th:fragment="tpl_image">
+        <script type="text/html" id="image_tpl">
+            <span id="<%=id%>">
+                <img src="<%=url%>">
+                <br>
+                <a href="/file/delete/<%=id%>" class="sbtn blue" onclick="return confirm('정말 삭제하시겠습니까?');" target="ifrmProcess">이미지 삭제</a>
+             </span>
+        </script>
+    </th:block>
+</html>

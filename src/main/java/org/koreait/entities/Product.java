@@ -6,6 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Entity @Data @Builder
 @NoArgsConstructor @AllArgsConstructor
 @Table(indexes = {
@@ -19,8 +21,9 @@ public class Product extends BaseEntity {
     @Column(length = 60, nullable = false)
     private String gid;
 
-    @Column(length = 45)
-    private String cateCd; // 상품분류
+    @ManyToOne
+    @JoinColumn(name="cateCd")
+    private Category category; // 상품분류
 
     @Column(nullable = false)
     private String pName; // 상품명
@@ -33,5 +36,14 @@ public class Product extends BaseEntity {
 
     @Lob
     private String description;
+
+    @Transient
+    private FileInfo mainImage; // 메인 이미지
+
+    @Transient
+    private FileInfo listImage; // 목록 이미지
+
+    @Transient
+    private List<FileInfo> editorImages; // 에디터 이미지
 
 }
