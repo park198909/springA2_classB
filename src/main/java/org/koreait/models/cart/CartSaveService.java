@@ -25,6 +25,8 @@ public class CartSaveService {
             cart = cartRepository.findById(id).orElseGet(Cart::new);
         }
 
+        if (cart == null) cart = new Cart();
+
         cart.setMode(form.getMode());
         cart.setProduct(product);
         cart.setProductCnt(form.getProductCnt());

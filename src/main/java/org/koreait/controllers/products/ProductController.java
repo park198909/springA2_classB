@@ -71,7 +71,7 @@ public class ProductController {
             e.printStackTrace();
             script = String.format("alert('%s');", e.getMessage());
         }
-
+        model.addAttribute("script", script);
         return "commons/execute_script";
     }
 

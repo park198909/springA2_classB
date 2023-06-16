@@ -17,7 +17,7 @@ public class Cart extends BaseMemberEntity {
     @JoinColumn(name="pNo")
     private Product product;
 
-    @Column(length=10, nullable = false)
+    @Column(name="mode_", length=10, nullable = false)
     private String mode = "Cart";
 
     private long productCnt; // 구매 수량
