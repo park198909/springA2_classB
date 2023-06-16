@@ -5,8 +5,10 @@ import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import org.koreait.commons.CommonException;
 import org.koreait.commons.Pagination;
+import org.koreait.controllers.carts.CartForm;
 import org.koreait.entities.Category;
 import org.koreait.entities.Product;
+import org.koreait.models.cart.CartSaveService;
 import org.koreait.models.category.CategoryInfoService;
 import org.koreait.models.product.ProductInfoService;
 import org.springframework.data.domain.Page;
@@ -21,6 +23,7 @@ import org.springframework.web.bind.annotation.*;
 public class ProductController {
     private final ProductInfoService productInfoService;
     private final CategoryInfoService categoryInfoService;
+    private final CartSaveService cartSaveService;
     private final HttpServletRequest request;
     private final HttpServletResponse response;
 
@@ -57,8 +60,17 @@ public class ProductController {
     }
 
     @PostMapping
-    public String process(@ModelAttribute ProductViewForm productViewForm, Model model) {
-        System.out.println(productViewForm);
+    public String process(@ModelAttribute CartForm form, Model model) {
+        String script = null;
+        try {
+            cartSaveService.save(form);
+            String url = request.getContextPath();
+            url += form.getMode().equals("order") ? "/order" : "/cart";
+            script = String.format("parent.location.replace('%s');", url);
+        } catch (CommonException e) {
+            e.printStackTrace();
+            script = String.format("alert('%s');", e.getMessage());
+        }
 
         return "commons/execute_script";
     }
