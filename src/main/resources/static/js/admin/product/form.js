@@ -13,6 +13,26 @@ window.addEventListener("DOMContentLoaded", function() {
         });
     }
     /** 이미지 첨부 클릭시 처리 E */
+
+    /** 재고 선택 클릭시 처리 S */
+    const stockTypeEls = document.getElementsByName("stockType");
+    const stocksEl = document.querySelector(".stocks");
+    const stockEl = document.querySelector(".stocks input[name='stock']");
+    for (const el of stockTypeEls) {
+        el.addEventListener("click", function() {
+            stocksEl.classList.remove("dn")
+            stocksEl.classList.add("dn");
+            if (this.value == 1) { // 고정 재고
+                stocksEl.classList.remove("dn");
+            } else { // 무제한
+                console.log(stocksEl.value);
+                stockEl.value = 0;
+            }
+        });
+    }
+    /** 재고 선택 클릭시 처리 E */
+
+
 });
 
 /** 파일 업로드 콜백 처리 */

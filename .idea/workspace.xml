@@ -6,20 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="0295da2b-ca90-46bf-b027-9c1b8ffc3828" name="변경" comment="변경">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/admins/products/ProductForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/admins/products/ProductForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/entities/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/entities/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/models/file/FileDeleteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/models/file/FileDeleteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/models/file/FileUploadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/models/file/FileUploadService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/admins/products/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/admins/products/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/admins/products/ProductSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/admins/products/ProductSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/models/product/ProductConfigListService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/models/product/ProductInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/models/product/ProductInfoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/models/product/ProductSaveService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/models/product/ProductSaveService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/restcontrollers/FileUploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/restcontrollers/files/FileUploadController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/messages/validations.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages/validations.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/admin/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/admin/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/admin/fileManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/admin/fileManager.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/admin/product/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/admin/product/form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/commons/_file_tpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/commons/_file_tpl.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/product/_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/product/_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/messages/validations.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/messages/validations.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/product/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/product/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/outlines/front/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/outlines/front/header.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,18 +76,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "E:/오후반(A2) 포트폴리오/springA2_classB",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "File.Encoding"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/오후반(A2) 포트폴리오/springA2_classB&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\Desktop\PYG\springA2_classB\src\main\resources\templates" />
@@ -109,6 +104,12 @@
       <recent name="org.koreait.models.order" />
       <recent name="org.koreait.controllers.admins.orders" />
     </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+      <command value="mvn clean package" />
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="BoardApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -208,7 +209,21 @@
       <option name="project" value="LOCAL" />
       <updated>1686813048779</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="변경">
+      <created>1686819154406</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1686819154406</updated>
+    </task>
+    <task id="LOCAL-00010" summary="변경">
+      <created>1686819241261</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1686819241261</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
