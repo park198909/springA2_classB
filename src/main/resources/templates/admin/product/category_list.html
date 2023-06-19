@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/admin/main}">
+    <section layout:fragment="content">
+        <h1 th:text="${title}"></h1>
+        <form name="frmList" method="post" th:action="@{/admin/product/categories}" autocomplete="off" target="ifrmProcess">
+            <table class="table-rows">
+                <thead>
+                <tr>
+                    <th width="30">
+                        <input type="checkbox" class="checkall" data-target-name="cateCd" id="checkall">
+                        <label for="checkall"></label>
+                    </th>
+                    <th width="150">분류코드</th>
+                    <th width="200">분류명</th>
+                    <th width="220">사용여부</th>
+                    <th width="150">진열순서</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="item, status : ${items}" th:object="${item}">
+                        <td align="center">
+                            <input type="checkbox" name="cateCd" th:value="*{cateCd}" th:id="${'cateCd_' + status.index}">
+                            <label th:for="${'cateCd_' + status.index}"></label>
+                        </td>
+                        <td th:text="*{cateCd}" align="center"></td>
+                        <td>
+                            <input type="text" th:name="*{'cateNm_' + cateCd}" th:value="*{cateNm}">
+                        </td>
+                        <td align="center">
+                            <input type="radio" th:name="*{'use_' + cateCd}" value="false" th:id="${'use_0' + status.index}" th:checked="*{use == false}">
+                            <label th:for="${'use_0' + status.index}">미사용</label>
+                            <input type="radio" th:name="*{'use_' + cateCd}" value="true" th:id="${'use_1' + status.index}" th:checked="*{use == true}">
+                            <label th:for="${'use_1' + status.index}">사용</label>
+                        </td>
+                        <td>
+                            <input type="number" th:name="*{'listOrder_' + cateCd}" th:value="*{listOrder}">
+                        </td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="table-action">
+                <select name="mode">
+                    <option value="update">수정</option>
+                    <option value="delete">삭제</option>
+                </select>
+                <button type="submit" class="sbtn blue" onclick="return confirm('정말 처리하시겠습니까?');">처리하기</button>
+            </div>
+        </form>
+    </section>
+</html>

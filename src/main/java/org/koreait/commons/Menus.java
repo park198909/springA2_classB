@@ -22,7 +22,8 @@ public class Menus {
         } else if (code.equals("product")) { // 상품 관리
             menus.add(new MenuDetail("product","상품 목록","/admin/product"));
             menus.add(new MenuDetail("save", "상품 등록/수정", "/admin/product/add"));
-            menus.add(new MenuDetail("category", "상품분류", "/admin/product/category"));
+            menus.add(new MenuDetail("categories", "상품분류 목록", "/admin/product/categories"));
+            menus.add(new MenuDetail("category", "상품분류 등록", "/admin/product/category"));
         } else if (code.equals("order")) { // 주문 관리
             menus.add(new MenuDetail("order", "주문 목록", "/admin/order"));
             menus.add(new MenuDetail("save", "주문 수정", "/admin/order/add"));

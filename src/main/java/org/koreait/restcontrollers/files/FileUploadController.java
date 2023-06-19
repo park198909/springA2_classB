@@ -1,4 +1,4 @@
-package org.koreait.restcontrollers;
+package org.koreait.restcontrollers.files;
 
 import lombok.RequiredArgsConstructor;
 import org.koreait.commons.rests.JSONData;
@@ -18,8 +18,8 @@ public class FileUploadController {
     private final FileUploadService uploadService;
 
     @PostMapping("/file/upload")
-    public ResponseEntity<JSONData<List<FileInfo>>> upload(MultipartFile[] files, String gid, String location) {
-        List<FileInfo> items = uploadService.upload(files, gid, location);
+    public ResponseEntity<JSONData<List<FileInfo>>> upload(MultipartFile[] files, String gid, String location,boolean imageOnly, boolean single) {
+        List<FileInfo> items = uploadService.upload(files, gid, location, imageOnly, single);
 
         JSONData<List<FileInfo>> jsonData = new JSONData<>();
         jsonData.setSuccess(true);

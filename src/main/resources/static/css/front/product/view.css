@@ -1,0 +1,23 @@
+main { width: 1200px; margin: 20px auto; }
+
+.product_top { display: flex; justify-content: space-between; }
+.product_top .left { flex-grow: 1; }
+.product_top .right { width: 510px; }
+.product_top .tit { font-size: 24px; color:#222; font-weight: 700; margin-bottom: 10px; }
+.product_top .short_desc { font-size: 14px; color: #666; }
+.product_top .salePrice { font-size: 20px; margin: 10px 0 30px; }
+.product_top .salePrice span { font-size: 28px; color: #111; font-weight: 700; }
+.product_top dl { display: flex; align-items: center; margin-bottom: 10px; }
+.product_top dt { width: 80px; }
+.product_top dd { flex-grow: 1; }
+
+.productCnt_wrap { display: flex;   }
+.productCnt_wrap button { width: 45px; background: #000; border-color: #000; cursor: pointer; color: #fff; }
+.productCnt_wrap button * { color: #fff; }
+.productCnt_wrap input[type='number'] { width: 50px; text-align: center; margin: 0 3px; border-color: #000; }
+
+.processBtns { margin-top: 30px; display: flex; }
+.processBtns button { flex-grow: 1; width: 0; font-size: 16px; height: 50px; font-weight: 500; cursor: pointer; background: #fff; }
+.processBtns button:last-of-type { background: #000; color: #fff; }
+
+

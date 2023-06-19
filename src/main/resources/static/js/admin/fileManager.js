@@ -8,7 +8,8 @@ const fileManager = {
     * 파일 업로드
     *
     */
-    upload(files, gid, location, imageOnly) {
+    upload(files, gid, location, imageOnly, single) {
+        single = single || false;
 
         try {
             if (!files || files.length == 0) {
@@ -42,13 +43,19 @@ const fileManager = {
                 formData.append("location", location);
             }
 
+            /** 단일파일 업로드 여부 */
+            formData.append("single", single);
+
             /** 파일 업로드 처리 */
             const url = "/file/upload";
             commonLib
                 .setResponseType("json")
                 .ajaxLoad(url, "POST", formData)
                 .then((res) => {
-                    console.log(res);
+                    if (res.success && res.data && typeof fileUploadCallback == 'function') {
+                        fileUploadCallback(res.data);
+                    }
+
                 })
                 .catch((err) => console.error(err));
 
@@ -84,6 +91,8 @@ window.addEventListener("DOMContentLoaded", function() {
         el.addEventListener("click", function() {
             fileEl.gid = el.dataset.gid;
             fileEl.location = el.dataset.location;
+            fileEl.imageOnly = el.dataset.imageOnly;
+            fileEl.single = el.dataset.single;
             fileEl.click();
         });
     }
@@ -93,8 +102,9 @@ window.addEventListener("DOMContentLoaded", function() {
         const files = this.files;
         const gid = this.gid;
         const location = this.location;
-
-        fileManager.upload(files, gid, location, true);
+        const imageOnly = this.imageOnly == 'true' ? true:false;
+        const single = this.single == 'true' ? true : false;
+        fileManager.upload(files, gid, location, imageOnly, single);
         this.value = "";
     });
     /** 파일 선택 처리 E */

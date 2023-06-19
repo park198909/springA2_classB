@@ -1,0 +1,19 @@
+    <!DOCTYPE html>
+    <html xmlns:th="http://www.thymeleaf.org"
+          xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+          layout:decorate="~{layouts/front/main}">
+
+        <main layout:fragment="content">
+            <h1 th:text="${category.cateNm}"></h1>
+            <ul class="product_list">
+                <li th:if="${items != null}" th:each="item : ${items}" th:object="${item}">
+                    <a th:href="@{/product/view/{pNo}(pNo=*{pNo})}">
+                        <div th:if="*{listImage != null}" class="pImage" th:style="*{'background:url(' + listImage.fileUrl + ') no-repeat; background-size: cover;'}"></div>
+                        <div class="pName" th:text="*{pName}"></div>
+                        <div class="salePrice" th:text="*{#numbers.formatInteger(salePrice, 3, 'COMMA') + '원'}"></div>
+                    </a>
+                </li>
+                <li th:unless="${items != null}">등록된 상품이 없습니다.</li>
+            </ul>
+        </main>
+    </html>

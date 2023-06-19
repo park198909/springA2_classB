@@ -19,7 +19,9 @@ const commonLib = {
             xhr.onreadystatechange = function() {
                 if (xhr.status == 200 && xhr.readyState == XMLHttpRequest.DONE) {
                     let res = xhr.responseText;
-                    const type = fileManager.responseType;
+                    const type = commonLib.responseType;
+                    console.log("type", type);
+
                     if (type && type.toLowerCase() == 'json') res = JSON.parse(res);
 
                     resolve(res); // 성공시 응답
@@ -70,7 +72,6 @@ window.addEventListener("DOMContentLoaded", function() {
 /** 푸터 이용약관 */
 window.addEventListener("DOMContentLoaded", function() {
     const terms_use = document.querySelectorAll('.footer_p p')
-    console.log(terms_use);
     for (const el of terms_use) {
         el.addEventListener('click', ()=> {
             Swal.fire({

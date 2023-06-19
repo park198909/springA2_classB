@@ -21,6 +21,7 @@ public class FileUploadService {
     private String fileUploadPath;
     private final FileInfoRepository repository;
     private final HttpServletRequest request;
+    private final FileDeleteService deleteService;
 
     /**
      * 
@@ -28,8 +29,26 @@ public class FileUploadService {
      * @param gid - null 값이거나 "" 일때는 랜덤하게 하나 생성
      * @param location
      */
-    public List<FileInfo> upload(MultipartFile[] files, String gid, String location) {
+    public List<FileInfo> upload(MultipartFile[] files, String gid, String location, boolean imageOnly, boolean single) {
         gid = gid == null || gid.isBlank() ? UUID.randomUUID().toString() : gid;
+
+        // 이미지 형식의 파일만 업로드 가능 여부 체크 S
+        if (imageOnly) {
+            for (MultipartFile file : files) {
+                if (file.getContentType().indexOf("image") == -1) { // 이미지 이외 형식인 경우
+                    throw new FileTypeException("File.imageOnly");
+                }
+            }
+        }
+        // 이미지 형식의 파일만 업로드 가능 여부 체크 E
+
+        /*
+         * 단일파일만 업로드 처리
+         * 기존 파일을 삭제하고 다시 올린다(gid, location)
+         */
+        if (single) {
+            deleteService.delete(gid, location);
+        }
 
         List<FileInfo> items = new ArrayList<>();
         for (MultipartFile file : files) {
@@ -48,6 +67,11 @@ public class FileUploadService {
 
             Long id = item.getId();
             String folder = "" + id % 10;
+            File folderPath = new File(fileUploadPath + folder);
+            if (!folderPath.exists()) {
+                folderPath.mkdir();
+            }
+
             String path = fileUploadPath + folder + "/" + id;
             String url = request.getContextPath() + "/uploads/" + folder + "/" + id;
             if (extension != null && !extension.isBlank()) {
@@ -71,7 +95,7 @@ public class FileUploadService {
     }
 
     public void upload(MultipartFile[] files, String gid) {
-        upload(files, gid, null);
+        upload(files, gid, null, false, false);
     }
 
     public void upload(MultipartFile[] files) {
