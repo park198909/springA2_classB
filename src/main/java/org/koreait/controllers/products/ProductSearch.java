@@ -5,5 +5,5 @@ import lombok.Data;
 @Data
 public class ProductSearch extends org.koreait.controllers.admins.products.ProductSearch{
 
-
+    
 }

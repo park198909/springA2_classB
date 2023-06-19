@@ -55,9 +55,9 @@
                 </td>
                 <td align="center" th:text="*{pNo}"></td>
                 <td align="center">
-                    <th:block th:if="*{category != null}">
-                        <a th:href="@{/product/list/{cateCd}(cateCd=*{category.cateCd})}" th:text="*{category.cateNm + '(' + category.cateCd + ')'}" target="_blank"></a>
-                    </th:block>
+                   <th:block th:if="*{category != null}">
+                       <a th:href="@{/product/list/{cateCd}(cateCd=*{category.cateCd})}" th:text="*{category.cateNm + '(' + category.cateCd + ')'}" target="_blank"></a>
+                   </th:block>
                 </td>
                 <td width="80" align="center">
                     <a th:if="*{listImage != null}" th:href="@{/product/view/{id}(id=*{pNo})}" target="_blank">

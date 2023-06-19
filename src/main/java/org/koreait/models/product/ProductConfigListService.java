@@ -46,13 +46,13 @@ public class ProductConfigListService {
             if (sopt.equals("all")) { // 통합 검색 - pName, cateCd
                 BooleanBuilder orBuilder = new BooleanBuilder();
                 orBuilder.or(product.pName.contains(skey))
-                        .or(product.category.cateCd.contains(skey));
+                        .or(product.cateCd.contains(skey));
                 andBuilder.and(orBuilder);
 
             } else if (sopt.equals("pName")) { // 게시판 아이디 bId
                 andBuilder.and(product.pName.contains(skey));
             } else if (sopt.equals("cateCd")) { // 게시판명 bName
-                andBuilder.and(product.category.cateCd.contains(skey));
+                andBuilder.and(product.cateCd.contains(skey));
             }
         }
         /** 검색 조건 처리 E */

@@ -13,5 +13,6 @@ public class ProductSearch {
 
     private String sopt; //검색 조건
     private String skey; // 검색 키워드
+
     private String cateCd;
 }

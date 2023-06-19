@@ -5,11 +5,12 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.koreait.commons.constants.CartStatus;
 
 @Entity
 @Data @Builder
 @NoArgsConstructor @AllArgsConstructor
-public class Cart {
+public class Cart extends BaseMemberEntity {
     @Id @GeneratedValue
     private Long id;
 
@@ -17,8 +18,14 @@ public class Cart {
     @JoinColumn(name="pNo")
     private Product product;
 
-    @Column(length = 10, nullable = false, name = "mode_")
+    @Column(name="mode_", length=10, nullable = false)
     private String mode = "Cart";
 
     private long productCnt; // 구매 수량
+
+    private int guestId;
+
+    @Enumerated(EnumType.STRING)
+    @Column(length = 20)
+    private CartStatus status = CartStatus.READY;
 }

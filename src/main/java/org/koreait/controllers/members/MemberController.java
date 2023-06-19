@@ -5,7 +5,6 @@ import lombok.RequiredArgsConstructor;
 import org.koreait.models.member.MemberSaveService;
 import org.koreait.models.member.MemberSearch;
 import org.koreait.models.member.MemberSearchService;
-import org.koreait.repositories.MemberRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
@@ -22,7 +21,6 @@ public class MemberController {
     private final MemberSaveService saveService;
     private final JoinValidator joinValidator;
     private final MemberSearchService searchService;
-    private final MemberRepository memberRepository;
 
     @GetMapping("/join")
     public String join(@ModelAttribute JoinForm joinForm, Model model) {

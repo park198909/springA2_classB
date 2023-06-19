@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/front/main}">
+
+    <main layout:fragment="content" class="layout_width">
+        <h1 th:text="*{pageTitle}"></h1>
+        <form name="frmCart" id="frmCart" method="post" th:action="@{/cart}" target="ifrmProcess" autocomplete="off">
+            <input type="hidden" name="mode" value="order">
+            <th:block th:replace="~{cart/_items::items}"></th:block>
+            <div class="btns">
+                <button type="button" class="cart_btn processBtn" data-mode="delete">선택상품 삭제</button>
+                <button type="button" class="cart_btn processBtn" data-mode="all_delete">전체상품 삭제</button>
+                <button type="button" class="cart_btn blue processBtn" data-mode="order">선택상품 주문</button>
+            </div>
+        </form>
+    </main>
+</html>

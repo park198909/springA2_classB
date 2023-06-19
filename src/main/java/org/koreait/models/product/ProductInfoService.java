@@ -49,7 +49,7 @@ public class ProductInfoService {
         return productForm;
     }
 
-    private void updateImageInfo(Product product) {
+    public void updateImageInfo(Product product) {
         String gid = product.getGid();
 
         // 에디터 이미지

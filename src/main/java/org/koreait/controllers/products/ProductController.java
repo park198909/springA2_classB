@@ -5,10 +5,10 @@ import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import org.koreait.commons.CommonException;
 import org.koreait.commons.Pagination;
-import org.koreait.controllers.admins.products.ProductSearch;
 import org.koreait.controllers.carts.CartForm;
 import org.koreait.entities.Category;
 import org.koreait.entities.Product;
+import org.koreait.models.cart.CartSaveService;
 import org.koreait.models.category.CategoryInfoService;
 import org.koreait.models.product.ProductInfoService;
 import org.springframework.data.domain.Page;
@@ -23,6 +23,7 @@ import org.springframework.web.bind.annotation.*;
 public class ProductController {
     private final ProductInfoService productInfoService;
     private final CategoryInfoService categoryInfoService;
+    private final CartSaveService cartSaveService;
     private final HttpServletRequest request;
     private final HttpServletResponse response;
 
@@ -59,9 +60,19 @@ public class ProductController {
     }
 
     @PostMapping
-    public String process(@ModelAttribute CartForm cartForm, Model model) {
-
-        return "commons/execute_script";
+    public String process(@ModelAttribute CartForm form, Model model) {
+        String script = null;
+        try {
+            cartSaveService.save(form);
+            String url = request.getContextPath();
+            url += form.getMode().equals("order") ? "/order" : "/cart";
+            script = String.format("parent.location.replace('%s');", url);
+        } catch (CommonException e) {
+            e.printStackTrace();
+            script = String.format("Swal.fire('%s');", e.getMessage());
+        }
+        model.addAttribute("script", script);
+        return "commons/sweetalert_script";
     }
 
     private void commonProcess(Model model, String title) {
@@ -76,8 +87,8 @@ public class ProductController {
         HttpStatus status = e.getStatus();
         response.setStatus(status.value());
 
-        String script = String.format("alert('%s');history.back();", message);
+        String script = String.format("Swal.fire('%s');history.back();", message);
         model.addAttribute("script", script);
-        return "commons/execute_script";
+        return "commons/sweetalert_script";
     }
 }
