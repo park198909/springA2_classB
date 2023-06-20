@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/admin/main}">
+<section layout:fragment="content">
+    <h1>회원 목록</h1>
+    <form name='frmList' method="post" th:action="@{/admin/member}" autocomplete="off" target="ifrmProcess">
+        <input type="hidden" name="_method" value="patch">
+
+        <table class="table-rows">
+            <thead>
+            <tr>
+                <th width="40">
+                    <input type="checkbox" class="checkall" id="checkall" data-target-name="userNo">
+                    <label for="checkall"></label>
+                </th>
+                <th width="150">회원번호</th>
+                <th width="300">회원명</th>
+                <th width="300">ID</th>
+                <th width="300">이메일</th>
+                <th width="300">전화번호</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="item, status : ${items}" th:object="${item}">
+                <td align="center">
+                    <input type="checkbox" name="userNo" th:value="*{userNo}" th:id="${'userNo' + status.index}">
+                    <label th:for="${'userNo' + status.index}"></label>
+                </td>
+                <td align="center" th:text="*{userNo}"></td>
+                <td align="center" th:text="*{userNm}"></td>
+                <td align="center" th:text="*{userId}"></td>
+                <td align="center" th:text="*{email}"></td>
+                <td align="center" th:text="*{mobile}"></td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="table-action">
+            <button type="button" class="sbtn blue"> 삭제하기</button>
+        </div>
+    </form>
+</section>
+</html>

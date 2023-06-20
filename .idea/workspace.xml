@@ -5,17 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0295da2b-ca90-46bf-b027-9c1b8ffc3828" name="변경" comment="변경">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/commons/Menus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/commons/Menus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/commons/constants/CartStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/commons/constants/CartStatus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/carts/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/carts/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/members/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/members/MemberController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/orders/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/orders/OrderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/products/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/products/ProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/entities/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/entities/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/models/cart/CartDeleteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/models/cart/CartDeleteService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/models/cart/CartInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/models/cart/CartInfoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/models/product/ProductInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/models/product/ProductInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/models/cart/CartListForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/models/cart/CartListForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/models/cart/CartUpdateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/models/cart/CartUpdateService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/models/member/MemberInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/models/member/MemberInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/models/product/ProductConfigListService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/models/product/ProductConfigListService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/repositories/MemberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/repositories/MemberRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/front/cart/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/front/cart/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/front/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/front/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/front/cart/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/front/cart/form.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/front/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/front/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cart/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cart/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cart/_items.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cart/_items.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/order/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/order/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/product/view.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/product/view.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,8 +43,8 @@
       <list>
         <option value="HTML File" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -78,18 +88,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Administrator/Documents/카카오톡 받은 파일/springA2_classB",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "File.Encoding"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/오후반(A2) 포트폴리오/springA2_classB&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\Desktop\PYG\springA2_classB\src\main\resources\templates" />
@@ -109,8 +119,8 @@
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
-      <command value="mvn clean package" />
       <command value="mvn clean" />
+      <command value="mvn clean package" />
     </option>
   </component>
   <component name="RunManager">
@@ -260,7 +270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686905340374</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="변경">
+      <created>1687150571042</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1687150571042</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

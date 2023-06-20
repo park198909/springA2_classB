@@ -26,13 +26,17 @@ window.addEventListener("DOMContentLoaded", function() {
             }
             try {
                 cart.checkSelected(); // 처리전 상품 선택 여부
-
-                if (Swal.fire('정말 처리하시겠습니까?')) {
+                Swal.fire({
+                  title: '정말 처리하시겠습니까?',
+                  showCancelButton: true,
+                }).then((result) => {
+                  if (result.isConfirmed) {
                     frmCart.mode.value = mode;
                     frmCart.submit();
-                }
+                  }
+                })
             } catch (err) {
-                alert(err.message);
+                Swal.fire(err.message);
                 console.error(err);
             }
         });

@@ -6,7 +6,7 @@
     <main layout:fragment="content" th:object="${product}">
         <section class="product_top">
             <div class="left">
-                <img th:if="*{mainImage != null}" th:src="*{mainImage.fileUrl}">
+                <img width="500" height="400" th:if="*{mainImage != null}" th:src="*{mainImage.fileUrl}">
             </div>
             <div class="right">
                 <form name="frmProduct" method="post" th:action="@{/product}" autocomplete="off" target="ifrmProcess">

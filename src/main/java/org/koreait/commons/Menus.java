@@ -27,8 +27,9 @@ public class Menus {
         } else if (code.equals("order")) { // 주문 관리
             menus.add(new MenuDetail("order", "주문 목록", "/admin/order"));
             menus.add(new MenuDetail("save", "주문 수정", "/admin/order/add"));
+        } else if (code.equals("member")) { // 회원 관리
+            menus.add(new MenuDetail("member", "회원 목록", "/admin/member"));
         }
-
 
         return menus;
     }
