@@ -39,6 +39,7 @@ public class ProductInfoService {
         Product product = get(pNo);
 
         ProductForm productForm = new ModelMapper().map(product, ProductForm.class);
+        productForm.setCateCd(product.getCategory().getCateCd());
 
         if(productForm.getStock() == 0) {
             productForm.setStockType(0);
