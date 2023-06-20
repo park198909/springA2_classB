@@ -5,7 +5,9 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.koreait.entities.FileInfo;
 
+import java.util.List;
 import java.util.UUID;
 
 @Data @Builder
@@ -27,4 +29,11 @@ public class ProductForm {
 
     private String shortDescription; // 짧은 설명
     private String description; // 상세 설명
+
+    private FileInfo mainImage; // 메인 이미지
+
+    private FileInfo listImage; // 목록 이미지
+
+    private List<FileInfo> editorImages; // 에디터 이미지
+
 }

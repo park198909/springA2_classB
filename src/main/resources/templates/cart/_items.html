@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <th:block th:fragment="items">
+        <table class="cart_list">
+            <thead>
+            <tr>
+                <th width="30" th:if="${mode == null}">
+                    <input type="checkbox" class="checkall" id="checkall" data-target-name="id">
+                    <label for="checkall"></label>
+                </th>
+                <th colspan="2">상품정보</th>
+                <th width="150">수량</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr th:each="item, status : ${items}" th:object="${item}">
+                    <td th:if="${mode == null}">
+                        <input type="checkbox" name="id" th:value="*{id}" th:id="${'id_' + status.index}">
+                        <label th:for="${'id_' + status.index}"></label>
+                    </td>
+                    <td width="100" align="center">
+                        <img th:if="*{product.listImage != null}" th:src="*{product.listImage.fileUrl}" class="pImage">
+                    </td>
+                    <td class="pName" th:text="*{product.pName}"></td>
+                    <td th:if="${mode == null}">
+                        <div class="productCnt_wrap">
+                            <input type="number" th:name="*{'productCnt_' + id}" th:value="*{productCnt}">
+                            <button type="button" class="changeCnt down">
+                                <i class="xi-minus"></i>
+                            </button>
+                            <button type="button" class="changeCnt up">
+                                <i class="xi-plus"></i>
+                            </button>
+                        </div>
+                        <button type="button" class="sbtn processBtn" data-mode="update">변경하기</button>
+                    </td>
+                    <td th:unless="${mode == null}" th:text="*{productCnt + '개'}"></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </th:block>
+</html>

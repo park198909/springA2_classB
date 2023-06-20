@@ -6,6 +6,7 @@
             <a th:href="@{/admin}"><img src="/images/logo.png" class=".logo" alt="로고"></a>
         </section>
         <section class="right">
+            <a th:href="@{/}" class="sbtn" target="_blank">사이트 바로가기</a>
             <th:block sec:authorize="isAuthenticated()">
                 <a th:href="@{/admin/myinfo}" class="sbtn">회원정보수정</a>
                 <a th:href="@{/member/logout}" class="sbtn blue">로그아웃</a>

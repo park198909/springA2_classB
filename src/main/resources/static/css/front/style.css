@@ -11,6 +11,11 @@ img { border: 0; }
 /** 기준 너비 */
 .layout_width { max-width: 1300px; min-width: 1100px; margin: 0 auto; padding: 0 10px; }
 
+/** 기본 버튼 스타일 */
+.sbtn { display: inline-block; border: 1px solid #596b99; color: #596b99;
+min-width: 90px; padding: 0 20px; height: 28px; line-height: 26px; text-align: center; border-radius: 5px; }
+.sbtn.blue { color: #fff; background:#596b99; }
+
 /** 기본 스타일 - 입력 */
 input[type='text'],
 input[type='number'],

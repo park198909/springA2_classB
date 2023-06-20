@@ -9,6 +9,8 @@ public interface MemberRepository extends JpaRepository<Member, Long>, QuerydslP
     // 아이디로 회원 조회
     Member findByUserId(String userId);
 
+    Member findByUserNmAndMobile(String userNm, String mobile);
+
     // 아이디로 회원 존재 유무 체크
     default boolean exists (String userId) {
         QMember member = QMember.member;

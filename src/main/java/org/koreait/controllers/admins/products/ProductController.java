@@ -7,10 +7,13 @@ import lombok.RequiredArgsConstructor;
 import org.koreait.commons.CommonException;
 import org.koreait.commons.MenuDetail;
 import org.koreait.commons.Menus;
+import org.koreait.commons.Pagination;
+import org.koreait.entities.Category;
 import org.koreait.entities.Product;
+import org.koreait.models.category.CategoryListService;
 import org.koreait.models.category.CategorySaveService;
+import org.koreait.models.category.CategoryUpdateService;
 import org.koreait.models.category.DuplicateCateCdException;
-import org.koreait.models.product.ProductConfigListService;
 import org.koreait.models.product.ProductInfoService;
 import org.koreait.models.product.ProductSaveService;
 import org.springframework.data.domain.Page;
@@ -31,14 +34,20 @@ public class ProductController {
     private final ProductSaveService productSaveService;
     private final ProductInfoService productInfoService;
     private final CategorySaveService categorySaveService;
-    private final ProductConfigListService productConfigListService;
+    private final CategoryListService categoryListService;
+    private final CategoryUpdateService categoryUpdateService;
 
     @GetMapping
     public String index(@ModelAttribute ProductSearch productSearch, Model model) {
         commonProcess(model, "상품목록");
 
-        Page<Product> data = productConfigListService.gets(productSearch);
+        Page<Product> data = productInfoService.gets(productSearch);
         model.addAttribute("items", data.getContent());
+        data.getContent().stream().forEach(System.out::println);
+
+        String url = request.getRequestURI();
+        Pagination pagination = new Pagination(data, url);
+        model.addAttribute("pagination", pagination);
 
         return "admin/product/index";
     }
@@ -53,8 +62,9 @@ public class ProductController {
 
     }
 
-    @PostMapping("/categoryPs")
-    public String categoryPs(@Valid CategoryForm categoryForm, Errors errors) {
+    @PostMapping("/category")
+    public String categoryPs(@Valid CategoryForm categoryForm, Errors errors, Model model) {
+        commonProcess(model, "상품분류");
         try {
             categorySaveService.save(categoryForm, errors);
         } catch (DuplicateCateCdException e) {
@@ -65,7 +75,34 @@ public class ProductController {
             return "admin/product/category";
         }
 
-        return "redirect:/admin/product";
+        return "redirect:/admin/product/categories";
+    }
+
+    @GetMapping("/categories")
+    public String categoryList(Model model) {
+        commonProcess(model, "상품분류");
+
+        List<Category> items = categoryListService.getAll();
+        model.addAttribute("items", items);
+
+        return "admin/product/category_list";
+    }
+
+    @PostMapping("/categories")
+    public String categoryListPs(Model model) {
+        String script = null;
+        try {
+            // 업데이트 처리
+            categoryUpdateService.update();
+        } catch (CommonException e) {
+            e.printStackTrace();
+            script = String.format("alert('%s');", e.getMessage());
+        }
+
+        // 업데이트 성공시
+        script = String.format("alert('수정되었습니다.');parent.location.reload();");
+        model.addAttribute("script", script);
+        return "commons/execute_script";
     }
 
 
@@ -144,6 +181,9 @@ public class ProductController {
             addScript.add("fileManager");
             addScript.add("ckeditor/ckeditor");
             addScript.add("product/form");
+
+            List<Category> categories = categoryListService.getAll();
+            model.addAttribute("categories", categories);
         }
 
         model.addAttribute("addScript", addScript);
