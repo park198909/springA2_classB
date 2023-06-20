@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.koreait.commons.constants.CartStatus;
 
 @Entity
 @Data @Builder
@@ -21,4 +22,10 @@ public class Cart extends BaseMemberEntity {
     private String mode = "Cart";
 
     private long productCnt; // 구매 수량
+
+    private int guestId;
+
+    @Enumerated(EnumType.STRING)
+    @Column(length=20)
+    private CartStatus status = CartStatus.READY;
 }

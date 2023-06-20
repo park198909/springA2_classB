@@ -11,6 +11,11 @@ img { border: 0; }
 /** 기준 너비 */
 .layout_width { max-width: 1300px; min-width: 1100px; margin: 0 auto; padding: 0 10px; }
 
+/** 버튼 공통 스타일 */
+.sbtn { display: inline-block; border: 1px solid #596b99; color: #596b99;
+min-width: 90px; padding: 0 20px; height: 28px; line-height: 26px; text-align: center; border-radius: 5px; }
+.sbtn.blue { color: #fff; background:#596b99; }
+
 /** 기본 스타일 - 입력 */
 input[type='text'],
 input[type='number'],
@@ -117,6 +122,8 @@ footer div p { font-size: large; font-weight: bold; font-size:20px; padding:10px
 .cart_list_detail .cart_img img{ height:100px; }
 .cart_btn { width:100%; height:40px; font-size:1.3rem; text-align:center; border-radius:5px; border:2px solid; background:white;}
 /* 마이페이지 - 장바구니 E */
+
+
 
 /* 마이페이지 - 주문내역 S */
 .order_list { margin-left: auto; margin-right: auto; margin-top:2%; margin-bottom:5%; width:60%; }
