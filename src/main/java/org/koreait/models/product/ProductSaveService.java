@@ -32,18 +32,18 @@ public class ProductSaveService {
         if (pNo != null) { // 수정일 때
             product = productRepository.findById(pNo).orElseThrow(ProductNotFoundException::new);
 
-            product.setCategory(category);
+
             product.setPName(productForm.getPName());
             product.setStock(productForm.getStock());
             product.setConsumerPrice(productForm.getConsumerPrice());
             product.setSalePrice(productForm.getSalePrice());
             product.setShortDescription(productForm.getShortDescription());
             product.setDescription(productForm.getDescription());
-
         } else { // 추가할 때
             product = new ModelMapper().map(productForm, Product.class);
         }
 
+        product.setCategory(category);
         product = productRepository.saveAndFlush(product);
         productForm.setPNo(product.getPNo()); // 상품 등록 번호
 

@@ -10,7 +10,7 @@
         </a>
         <nav id="center_menu">
             <a th:each="menu : ${commonMenus}" th:object="${menu}">
-                <a th:href="@{/product/{cateCd}(cateCd=*{cateCd})}" th:text="*{cateNm}"></a>
+                <a th:href="@{/product/list/{cateCd}(cateCd=*{cateCd})}" th:text="*{cateNm}"></a>
             </a>
 
         </nav>

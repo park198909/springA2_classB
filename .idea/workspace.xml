@@ -5,18 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0295da2b-ca90-46bf-b027-9c1b8ffc3828" name="변경" comment="변경">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/src/.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/.idea/misc.xml" afterDir="false" />
@@ -29,6 +18,8 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/commons/MemberUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/commons/MemberUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/commons/MenuDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/commons/MenuDetail.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/commons/Menus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/commons/Menus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/commons/Pagination.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/commons/Pagination.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/commons/UrlUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/commons/UrlUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/commons/configs/ConfigDeleteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/commons/configs/ConfigDeleteService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/commons/configs/ConfigInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/commons/configs/ConfigInfoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/commons/configs/ConfigSaveService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/commons/configs/ConfigSaveService.java" afterDir="false" />
@@ -65,6 +56,8 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/members/JoinForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/members/JoinForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/members/JoinValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/members/JoinValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/members/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/members/MemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/members/MypageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/members/MypageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/members/OrderpageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/controllers/members/OrderpageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/entities/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/entities/BaseEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/entities/BaseMemberEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/entities/BaseMemberEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/entities/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/entities/Board.java" afterDir="false" />
@@ -96,11 +89,15 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/models/category/CategoryListService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/models/category/CategoryListService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/models/category/CategorySaveService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/models/category/CategorySaveService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/models/category/CategorySaveValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/models/category/CategorySaveValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/models/category/CategoryUpdateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/models/category/CategoryUpdateService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/models/category/DuplicateCateCdException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/models/category/DuplicateCateCdException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/models/category/NotRegisteredCateCdException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/models/category/NotRegisteredCateCdException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/models/file/FileDeleteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/models/file/FileDeleteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/models/file/FileDoneService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/models/file/FileDoneService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/models/file/FileDownloadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/models/file/FileDownloadService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/models/file/FileInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/models/file/FileInfoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/models/file/FileNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/models/file/FileNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/models/file/FileTypeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/models/file/FileTypeException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/models/file/FileUploadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/models/file/FileUploadService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/models/member/LoginFailureHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/models/member/LoginFailureHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/models/member/LoginSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/models/member/LoginSuccessHandler.java" afterDir="false" />
@@ -126,7 +123,9 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/repositories/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/repositories/OrderRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/repositories/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/repositories/ProductRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/restcontrollers/CommonRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/restcontrollers/CommonRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/restcontrollers/FileUploadController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/restcontrollers/files/FileDeleteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/restcontrollers/files/FileDeleteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/restcontrollers/files/FileDownloadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/restcontrollers/files/FileDownloadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/koreait/restcontrollers/files/FileUploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/koreait/restcontrollers/files/FileUploadController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/main.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-prod.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application-test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-test.properties" afterDir="false" />
@@ -854,6 +853,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/front/fileManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/front/fileManager.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/board/config.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/board/config.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/board/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/board/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/commons/_file_tpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/commons/_file_tpl.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/commons/_message.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/commons/_message.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/commons/_submenu.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/commons/_submenu.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/config.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/config.html" afterDir="false" />
@@ -865,6 +865,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/product/_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/product/_form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/product/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/product/category.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/product/category_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/product/category_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/product/category_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/product/category_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/product/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/product/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/product/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/product/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/product/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/product/update.html" afterDir="false" />
@@ -885,6 +886,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/board/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/board/update.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/board/view.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/board/view.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/board/write.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/board/write.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/commons/_pagination.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/commons/_pagination.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/commons/execute_script.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/commons/execute_script.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error/401.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error/401.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error/403.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error/403.html" afterDir="false" />
@@ -904,6 +906,13 @@
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/member/order/delivery.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/member/order/delivery.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/member/order/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/member/order/order.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/member/order/success.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/member/order/success.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mypage/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mypage/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mypage/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mypage/info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mypage/infoupdate.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mypage/infoupdate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mypage/orderlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mypage/orderlist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/order/delivery.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/order/delivery.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/order/pickup.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/order/pickup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/order/success.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/order/success.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/outlines/admin/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/outlines/admin/footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/outlines/admin/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/outlines/admin/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/outlines/admin/side.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/outlines/admin/side.html" afterDir="false" />
@@ -913,30 +922,6 @@
       <change beforePath="$PROJECT_DIR$/src/test/java/org/koreait/tests/BoardSaveTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/koreait/tests/BoardSaveTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/koreait/tests/BoardViewTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/koreait/tests/BoardViewTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/messages/validations.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/koreait/controllers/admins/orders/OrderForm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/koreait/entities/Order$OrderBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/koreait/entities/Order.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/koreait/entities/QBaseEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/koreait/entities/QBaseMemberEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/koreait/entities/QBoard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/koreait/entities/QBoardData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/koreait/entities/QBoardView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/koreait/entities/QCategory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/koreait/entities/QConfigs.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/koreait/entities/QFileInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/koreait/entities/QMember.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/koreait/entities/QOrder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/koreait/entities/QProduct.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/koreait/repositories/OrderRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/order/_form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/order/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/order/update.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/org/koreait/entities/QOrder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/koreait/BoardApplicationTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/koreait/tests/BoardSaveTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/koreait/tests/BoardViewTests.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -998,18 +983,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Administrator/Desktop/PYG/springA2_classB",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propCompiler"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Administrator/Desktop/PYG/springA2_classB&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\Desktop\PYG\springA2_classB\src\main\resources\templates" />

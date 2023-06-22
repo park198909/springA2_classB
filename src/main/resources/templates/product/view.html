@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/front/main}">
+
+    <main layout:fragment="content" th:object="${product}">
+        <section class="product_top">
+            <div class="left">
+                <img width="500" height="400" th:if="*{mainImage != null}" th:src="*{mainImage.fileUrl}">
+            </div>
+            <div class="right">
+                <form name="frmProduct" method="post" th:action="@{/product}" autocomplete="off" target="ifrmProcess">
+                    <input type="hidden" name="mode" value="cart">
+                    <input type="hidden" name="pNo" th:value="*{pNo}">
+                     <div class="tit" th:text="*{pName}"></div>
+                    <div class="short_desc" th:text="*{shortDescription}"></div>
+                    <div class="salePrice">
+                        <span th:text="*{#numbers.formatInteger(salePrice, 3, 'COMMA')}"></span>원
+                    </div>
+                    <dl>
+                        <dt>구매수량</dt>
+                        <dd>
+                            <div class="productCnt_wrap">
+                                <button type="button" class="down">
+                                    <i class="xi-minus"></i>
+                                </button>
+                                <input type="number" name="productCnt" value="1">
+                                <button type="button" class="up">
+                                    <i class="xi-plus"></i>
+                                </button>
+                            </div>
+                        </dd>
+                    </dl>
+                    <div class="processBtns">
+                        <button type="button" class="processBtn cart">장바구니</button>
+                        <button type="button" class="processBtn ord">주문하기</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="product_bottom" th:utext="*{description}"></section>
+    </main>
+</html>

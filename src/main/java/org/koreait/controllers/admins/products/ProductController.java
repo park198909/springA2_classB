@@ -14,7 +14,6 @@ import org.koreait.models.category.CategoryListService;
 import org.koreait.models.category.CategorySaveService;
 import org.koreait.models.category.CategoryUpdateService;
 import org.koreait.models.category.DuplicateCateCdException;
-import org.koreait.models.product.ProductConfigListService;
 import org.koreait.models.product.ProductInfoService;
 import org.koreait.models.product.ProductSaveService;
 import org.springframework.data.domain.Page;
@@ -37,14 +36,14 @@ public class ProductController {
     private final CategorySaveService categorySaveService;
     private final CategoryListService categoryListService;
     private final CategoryUpdateService categoryUpdateService;
-    private final ProductConfigListService productConfigListService;
 
     @GetMapping
     public String index(@ModelAttribute ProductSearch productSearch, Model model) {
         commonProcess(model, "상품목록");
 
-        Page<Product> data = productConfigListService.gets(productSearch);
+        Page<Product> data = productInfoService.gets(productSearch);
         model.addAttribute("items", data.getContent());
+        data.getContent().stream().forEach(System.out::println);
 
         String url = request.getRequestURI();
         Pagination pagination = new Pagination(data, url);

@@ -40,7 +40,7 @@
                 </th>
                 <th width="100">상품번호</th>
                 <th width="150">카테고리</th>
-                <th width="300">상품명</th>
+                <th width="300" colspan="2">상품</th>
                 <th width="150">상품가격</th>
                 <th width="100">재고</th>
                 <th></th>
@@ -55,9 +55,16 @@
                 </td>
                 <td align="center" th:text="*{pNo}"></td>
                 <td align="center">
-                    <a th:href="@{/product/{cateCd}(cateCd=*{category.cateCd})}" th:text="*{category.cateNm + '(' + category.cateCd + ')'}" target="_blank"></a>
+                   <th:block th:if="*{category != null}">
+                       <a th:href="@{/product/list/{cateCd}(cateCd=*{category.cateCd})}" th:text="*{category.cateNm + '(' + category.cateCd + ')'}" target="_blank"></a>
+                   </th:block>
                 </td>
-                <td align="center" th:text="*{pName}"></td>
+                <td width="80" align="center">
+                    <a th:if="*{listImage != null}" th:href="@{/product/view/{id}(id=*{pNo})}" target="_blank">
+                        <img th:src="*{listImage.fileUrl}" width="75">
+                    </a>
+                </td>
+                <td th:text="*{pName}"></td>
                 <td align="center" th:text="*{consumerPrice}"></td>
                 <td align="center" th:text="*{stock}"></td>
                 <td>

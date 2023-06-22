@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/front/main}">
+
+
+<main layout:fragment="content" class="layout_width">
+    <h1 th:text="*{pageTitle}"></h1>
+    <form name="frmOrder" id="frmCart" method="post" th:action="@{/order}" autocomplete="off">
+        <input type="hidden" name="mode" value="order">
+        <th:block th:replace="~{cart/_items::items}"></th:block>
+
+        <h2>주문자 정보</h2>
+
+        <table class="order_info">
+            <tbody>
+            <tr>
+                <th>주문자명</th>
+                <td>
+                    <input type="text" name="orderName">
+                </td>
+            </tr>
+            <tr>
+                <th>이메일</th>
+                <td>
+                    <input type="email" name="orderEmail">
+                </td>
+            </tr>
+            <tr>
+                <th>휴대전화번호</th>
+                <td>
+                    <input type="text" name="orderMobile">
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h2>배송지 정보</h2>
+
+        <h2>결제 정보</h2>
+
+        <div class="btns">
+            <button type="reset">다시입력</button>
+            <button type="submit">주문하기</button>
+        </div>
+    </form>
+</main>
+</html>
